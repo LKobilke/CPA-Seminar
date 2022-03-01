@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title> 2 Tutorial: Workflow in R | R for Conditional Process Analysis</title>
+  <meta name="description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content=" 2 Tutorial: Workflow in R | R for Conditional Process Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content=" 2 Tutorial: Workflow in R | R for Conditional Process Analysis" />
+  
+  <meta name="twitter:description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
+  
+
+<meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
+
+
+<meta name="date" content="2022-03-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="tutorial-installing-understanding-rr-studio.html"/>
+<link rel="next" href="tutorial-using-r-as-a-calculator.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>General information on the course</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-tutorial"><i class="fa fa-check"></i>How to use this tutorial</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-can-i-do-if-questions-arise"><i class="fa fa-check"></i>What can I do if questions arise?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-can-i-do-if-i-have-problems-with-my-r-code"><i class="fa fa-check"></i>What can I do if I have problems with my R code?</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html"><i class="fa fa-check"></i><b>1</b> Tutorial: Installing &amp; Understanding R/R Studio</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#installing-r"><i class="fa fa-check"></i><b>1.1</b> Installing R</a></li>
+<li class="chapter" data-level="1.2" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#installing-r-studio"><i class="fa fa-check"></i><b>1.2</b> Installing R Studio</a></li>
+<li class="chapter" data-level="1.3" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#updating-r-and-r-studio"><i class="fa fa-check"></i><b>1.3</b> Updating R and R Studio</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#on-windows"><i class="fa fa-check"></i><b>1.3.1</b> On Windows</a></li>
+<li class="chapter" data-level="1.3.2" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#on-mac"><i class="fa fa-check"></i><b>1.3.2</b> On MAC</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#how-does-r-work"><i class="fa fa-check"></i><b>1.4</b> How does R work?</a></li>
+<li class="chapter" data-level="1.5" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#how-does-r-studio-work"><i class="fa fa-check"></i><b>1.5</b> How does R Studio work?</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#source-writing-your-own-code"><i class="fa fa-check"></i><b>1.5.1</b> Source: Writing your own code</a></li>
+<li class="chapter" data-level="1.5.2" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#console-printing-results"><i class="fa fa-check"></i><b>1.5.2</b> Console: Printing results</a></li>
+<li class="chapter" data-level="1.5.3" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#environment-overview-of-objects"><i class="fa fa-check"></i><b>1.5.3</b> Environment: Overview of objects</a></li>
+<li class="chapter" data-level="1.5.4" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#plotshelppackages-do-everything-else"><i class="fa fa-check"></i><b>1.5.4</b> Plots/Help/Packages: Do everything else</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#take-aways"><i class="fa fa-check"></i><b>1.6</b> Take-Aways</a></li>
+<li class="chapter" data-level="1.7" data-path="tutorial-installing-understanding-rr-studio.html"><a href="tutorial-installing-understanding-rr-studio.html#more-tutorials-on-this"><i class="fa fa-check"></i><b>1.7</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html"><i class="fa fa-check"></i><b>2</b> Tutorial: Workflow in R</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#defining-your-working-directory"><i class="fa fa-check"></i><b>2.1</b> Defining your working directory</a></li>
+<li class="chapter" data-level="2.2" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#packages"><i class="fa fa-check"></i><b>2.2</b> Packages</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#installing-packages"><i class="fa fa-check"></i><b>2.2.1</b> Installing packages</a></li>
+<li class="chapter" data-level="2.2.2" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#activating-packages"><i class="fa fa-check"></i><b>2.2.2</b> Activating packages</a></li>
+<li class="chapter" data-level="2.2.3" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#getting-information-about-packages"><i class="fa fa-check"></i><b>2.2.3</b> Getting information about packages</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#help"><i class="fa fa-check"></i><b>2.3</b> Help?!</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#finding-information-about-packages"><i class="fa fa-check"></i><b>2.3.1</b> Finding information about packages</a></li>
+<li class="chapter" data-level="2.3.2" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#finding-information-about-functions"><i class="fa fa-check"></i><b>2.3.2</b> Finding information about functions</a></li>
+<li class="chapter" data-level="2.3.3" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#searching-for-help-online"><i class="fa fa-check"></i><b>2.3.3</b> Searching for help online</a></li>
+<li class="chapter" data-level="2.3.4" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#interrupting-r"><i class="fa fa-check"></i><b>2.3.4</b> Interrupting R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#saving-loading-cleaning-coderesults"><i class="fa fa-check"></i><b>2.4</b> Saving, loading &amp; cleaning code/results</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#saving-your-code"><i class="fa fa-check"></i><b>2.4.1</b> Saving your code</a></li>
+<li class="chapter" data-level="2.4.2" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#saving-your-results"><i class="fa fa-check"></i><b>2.4.2</b> Saving your results</a></li>
+<li class="chapter" data-level="2.4.3" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#loading-working-spaces"><i class="fa fa-check"></i><b>2.4.3</b> Loading working spaces</a></li>
+<li class="chapter" data-level="2.4.4" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#clean-your-working-space"><i class="fa fa-check"></i><b>2.4.4</b> Clean your working space</a></li>
+<li class="chapter" data-level="2.4.5" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#take-aways-1"><i class="fa fa-check"></i><b>2.4.5</b> Take Aways</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="tutorial-workflow-in-r.html"><a href="tutorial-workflow-in-r.html#more-tutorials-on-this-1"><i class="fa fa-check"></i><b>2.5</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tutorial-using-r-as-a-calculator.html"><a href="tutorial-using-r-as-a-calculator.html"><i class="fa fa-check"></i><b>3</b> Tutorial: Using R as a calculator</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tutorial-using-r-as-a-calculator.html"><a href="tutorial-using-r-as-a-calculator.html#using-variables-for-calculation"><i class="fa fa-check"></i><b>3.1</b> Using variables for calculation</a></li>
+<li class="chapter" data-level="3.2" data-path="tutorial-using-r-as-a-calculator.html"><a href="tutorial-using-r-as-a-calculator.html#using-vectors-for-calculation"><i class="fa fa-check"></i><b>3.2</b> Using vectors for calculation</a></li>
+<li class="chapter" data-level="3.3" data-path="tutorial-using-r-as-a-calculator.html"><a href="tutorial-using-r-as-a-calculator.html#take-aways-2"><i class="fa fa-check"></i><b>3.3</b> Take-Aways</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html"><i class="fa fa-check"></i><b>4</b> Tutorial: Objects &amp; structures in R</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#types-of-data"><i class="fa fa-check"></i><b>4.1</b> Types of data</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#accessing-variables-in-data-sets"><i class="fa fa-check"></i><b>4.1.1</b> Accessing variables in data sets</a></li>
+<li class="chapter" data-level="4.1.2" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#numbers"><i class="fa fa-check"></i><b>4.1.2</b> Numbers</a></li>
+<li class="chapter" data-level="4.1.3" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#text"><i class="fa fa-check"></i><b>4.1.3</b> Text</a></li>
+<li class="chapter" data-level="4.1.4" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#factors"><i class="fa fa-check"></i><b>4.1.4</b> Factors</a></li>
+<li class="chapter" data-level="4.1.5" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#dates"><i class="fa fa-check"></i><b>4.1.5</b> Dates</a></li>
+<li class="chapter" data-level="4.1.6" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#missing-datanas"><i class="fa fa-check"></i><b>4.1.6</b> Missing data/NAs</a></li>
+<li class="chapter" data-level="4.1.7" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#logicalother-operators"><i class="fa fa-check"></i><b>4.1.7</b> Logical/other operators</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#types-of-objects"><i class="fa fa-check"></i><b>4.2</b> Types of objects</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#scalars"><i class="fa fa-check"></i><b>4.2.1</b> Scalars</a></li>
+<li class="chapter" data-level="4.2.2" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#vectors"><i class="fa fa-check"></i><b>4.2.2</b> Vectors</a></li>
+<li class="chapter" data-level="4.2.3" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#data-frames-matrices"><i class="fa fa-check"></i><b>4.2.3</b> Data frames &amp; matrices</a></li>
+<li class="chapter" data-level="4.2.4" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#lists"><i class="fa fa-check"></i><b>4.2.4</b> Lists</a></li>
+<li class="chapter" data-level="4.2.5" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#other-types-of-objects"><i class="fa fa-check"></i><b>4.2.5</b> Other types of objects</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#take-aways-3"><i class="fa fa-check"></i><b>4.3</b> Take Aways</a></li>
+<li class="chapter" data-level="4.4" data-path="tutorial-objects-structures-in-r.html"><a href="tutorial-objects-structures-in-r.html#more-tutorials-on-this-2"><i class="fa fa-check"></i><b>4.4</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="tutorial-reading-data-inout.html"><a href="tutorial-reading-data-inout.html"><i class="fa fa-check"></i><b>5</b> Tutorial: Reading data in/out</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="tutorial-reading-data-inout.html"><a href="tutorial-reading-data-inout.html#getting-data-into-r"><i class="fa fa-check"></i><b>5.1</b> Getting data into R</a></li>
+<li class="chapter" data-level="5.2" data-path="tutorial-reading-data-inout.html"><a href="tutorial-reading-data-inout.html#getting-data-out-of-r"><i class="fa fa-check"></i><b>5.2</b> Getting data out of R</a></li>
+<li class="chapter" data-level="5.3" data-path="tutorial-reading-data-inout.html"><a href="tutorial-reading-data-inout.html#other-packages-for-getting-data-intoout-of-r"><i class="fa fa-check"></i><b>5.3</b> Other packages for getting data into/out of R</a></li>
+<li class="chapter" data-level="5.4" data-path="tutorial-reading-data-inout.html"><a href="tutorial-reading-data-inout.html#take-aways-4"><i class="fa fa-check"></i><b>5.4</b> Take Aways</a></li>
+<li class="chapter" data-level="5.5" data-path="tutorial-reading-data-inout.html"><a href="tutorial-reading-data-inout.html#more-tutorials-on-this-3"><i class="fa fa-check"></i><b>5.5</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="tutorial-test-your-knowledge.html"><a href="tutorial-test-your-knowledge.html"><i class="fa fa-check"></i><b>6</b> Tutorial: Test your knowledge</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="tutorial-test-your-knowledge.html"><a href="tutorial-test-your-knowledge.html#task-1"><i class="fa fa-check"></i><b>6.1</b> Task 1</a></li>
+<li class="chapter" data-level="6.2" data-path="tutorial-test-your-knowledge.html"><a href="tutorial-test-your-knowledge.html#task-2"><i class="fa fa-check"></i><b>6.2</b> Task 2</a></li>
+<li class="chapter" data-level="6.3" data-path="tutorial-test-your-knowledge.html"><a href="tutorial-test-your-knowledge.html#task-3"><i class="fa fa-check"></i><b>6.3</b> Task 3</a></li>
+<li class="chapter" data-level="6.4" data-path="tutorial-test-your-knowledge.html"><a href="tutorial-test-your-knowledge.html#task-4"><i class="fa fa-check"></i><b>6.4</b> Task 4</a></li>
+<li class="chapter" data-level="6.5" data-path="tutorial-test-your-knowledge.html"><a href="tutorial-test-your-knowledge.html#task-5"><i class="fa fa-check"></i><b>6.5</b> Task 5</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html"><i class="fa fa-check"></i><b>7</b> Tutorial: Data management with tidyverse</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html#why-not-stick-with-base-r"><i class="fa fa-check"></i><b>7.1</b> Why not stick with Base R?</a></li>
+<li class="chapter" data-level="7.2" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html#tidyverse-packages"><i class="fa fa-check"></i><b>7.2</b> Tidyverse packages</a></li>
+<li class="chapter" data-level="7.3" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html#tidy-data"><i class="fa fa-check"></i><b>7.3</b> Tidy data</a></li>
+<li class="chapter" data-level="7.4" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html#the-pipe-operator"><i class="fa fa-check"></i><b>7.4</b> The pipe operator</a></li>
+<li class="chapter" data-level="7.5" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html#data-transformation-with-dplyr"><i class="fa fa-check"></i><b>7.5</b> Data transformation with dplyr</a></li>
+<li class="chapter" data-level="7.6" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html#take-aways-5"><i class="fa fa-check"></i><b>7.6</b> Take-Aways</a></li>
+<li class="chapter" data-level="7.7" data-path="tutorial-data-management-with-tidyverse.html"><a href="tutorial-data-management-with-tidyverse.html#more-tutorials-on-this-4"><i class="fa fa-check"></i><b>7.7</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-tutorial-6"><i class="fa fa-check"></i>Solutions for Tutorial 6</a>
+<ul>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-1"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-1"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-1"><i class="fa fa-check"></i>Task 3</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-1"><i class="fa fa-check"></i>Task 4</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-1"><i class="fa fa-check"></i>Task 5</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for Conditional Process Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tutorial-workflow-in-r" class="section level1" number="2">
+<h1><span class="header-section-number"> 2</span> Tutorial: Workflow in R</h1>
+<p>Tutorial 2 will not yet deal with how to write code and do your own analyses in R (don’t worry, we’ll get there soon!).</p>
+<p>Before you write your own code, you should understand the basic workflow when working with R and R Studio - independent of whether you want to calculate a regression model, do an automated content analysis, or visualize results of an analysis.</p>
+<p><strong>After working through Tutorial 2, you’ll…</strong></p>
+<ul>
+<li>understand the basic work flow in R.</li>
+</ul>
+<div id="defining-your-working-directory" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Defining your working directory</h2>
+<p>The first step of any type of analysis is to define your working directory. You may wonder: What’s that?</p>
+<p><strong>Your working directory is the folder from which data can be imported into R or to which you can export and save data created with R</strong>.</p>
+<p>Create a folder that you want to use as your working directory for this tutorial (or use an existing one, that also works). Go to that folder and copy the path to it:</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Working Directory</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_wd_1.JPG" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Copy Working Directory</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_wd_2.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<p>Now you know where this working directory is located - but R should know, too! Telling R from which folder to import data or where to export data to is also called <em>setting your working directory</em>. We call a function called <em>setwd()</em> (you guessed right: short for “setting you working directory”) which allows us to do exactly that.</p>
+<p><strong>Important</strong>: The way this working directory is set differs between Windows- and Mac-Operating Systems.</p>
+<p><strong>Windows:</strong>
+The dashes need to be pointing towards the right direction (if you simply copy the path to the folder, you may need to replace these signs “\” with “/”)</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="tutorial-workflow-in-r.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;C:/Users/LaraK/Documents/CPA-Seminar&quot;</span>)</span></code></pre></div>
+<p><strong>Mac:</strong>
+You may need to add a “/” at the beginning like so:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="tutorial-workflow-in-r.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;/Users/LaraK/Documents/CPA-Seminar&quot;</span>)</span></code></pre></div>
+<p>If you have forgotten where you set your working directory, you can also ask R about the path of your current working directory with <em>getwd()</em>:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="tutorial-workflow-in-r.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<pre><code>## [1] &quot;C:/Users/LaraK/Documents/CPA-Seminar&quot;</code></pre>
+</div>
+<div id="packages" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Packages</h2>
+<p>I’ve been talking about packages before: While base R, i.e., the standard version of R, already includes many helpful functions, you may at times need other, additional functions. For instance, in the case of conditional process analysis - the method, we’ll focus on in this seminar - we’ll need to use specific packages including additional functions.</p>
+<p><strong>Packages are collections of topic-specific functions that extend the functions implemented in base R</strong>.</p>
+<p>In the spirit of “open science”, anyone can write and publish these additional functions and related packages and anyone can also access the code used to do so.</p>
+<p>You’ll find a list of all of R packages <a href="https://cran.r-project.org/web/packages/">here</a>. In this seminar, we’ll for instance use packages like <a href="https://cran.r-project.org/web/packages/processR/index.html">ProcessR</a> or <a href="https://cran.r-project.org/web/packages/lavaan/index.html">lavaan</a> for conditional process analysis.</p>
+<div id="installing-packages" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Installing packages</h3>
+<p>To use a package, you have to install it first. Let’s say you’re interested in using the package <a href="https://cran.r-project.org/web/packages/processR/index.html">ProcessR</a>. Using the command <em>install.packages()</em>, you can install the package on your computer. You’ll have to give the function the name of the package you are interested in installing.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="tutorial-workflow-in-r.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>)</span></code></pre></div>
+<p>Now the package has been installed on your computer and is accessible locally. We only have to use <em>install.packages()</em> for any package <strong>once</strong>. Afterwards, the only thing you’ll have to do after open R is to activate the already installed package - which we’ll learn next.</p>
+</div>
+<div id="activating-packages" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Activating packages</h3>
+<p>Before we are able to use a package, we need to activate it <strong>in each session</strong>. Thus, you should not only define a working directory at the beginning of each session but also activate the packages you want to use via the <em>library</em>()_ command. Again, you’ll have to give R the name of the package you want to activate:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="tutorial-workflow-in-r.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;processR&quot;</span>)</span></code></pre></div>
+<p>Else, you can also use the name of the package followed by two colons <em>::</em> to activate a package directly before calling one of its function. For instance, I do not need use to activate the <code>ProcessR</code> package (by using the <em>library()</em> function) to use the function <code>meanCentering()</code> if I use the following code:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="tutorial-workflow-in-r.html#cb18-1" aria-hidden="true" tabindex="-1"></a>processR<span class="sc">::</span><span class="fu">meanCentering</span>()</span></code></pre></div>
+</div>
+<div id="getting-information-about-packages" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Getting information about packages</h3>
+<p>The package is installed and activated - but how can we use it? To get an overview of functions included in a given package, you can consult its corresponding “reference manual” (overview document containing all of a package’s functions) or, if available, its “vignette” (tutorials on how to use selected functions for the corresponding package) provided by a package’s author on a website called “CRAN”.</p>
+<p>The easiest way to finding these manuals/vignettes is Google: Simply google <em>CRAN ProcessR</em>, for instance, and you’ll be guided to the following <a href="https://cran.r-project.org/web/packages/processR/index.html">website</a>:</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Cran Overview ProcessR package</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_packages.JPG" /></td>
+</tr>
+</tbody>
+</table>
+<p>The first paragraph (circled in red) gives you an overview of aspects for which this package may be useful. The second red-circled area links to the reference manual and the vignette. You can, for instance, check out the reference manual to get an idea of the many functions the <code>processR</code> package contains.</p>
+<p>Another way of getting there is to simply use the <em>help()</em>-function provided by R, which we’ll get to now.</p>
+</div>
+</div>
+<div id="help" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Help?!</h2>
+<p>The one thing you can count on in this seminar is that many things will not work right away: You’ll forget commands or what to use them for, the name of packages you need, or be confronted with errors messages that you need to understand to fix a given problem. This happens to anyone: from beginners to those having worked with R for many years. In this case, you need: <em>help()</em>.</p>
+<div id="finding-information-about-packages" class="section level3" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Finding information about packages</h3>
+<p>If you have a package installed and you’re interested in this specific package, you can also use R and the <em>help()</em> function (or simply use <em>?</em>, which leads to the same result):</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="tutorial-workflow-in-r.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(dplyr) <span class="co">#Version 1 of asking for help</span></span>
+<span id="cb19-2"><a href="tutorial-workflow-in-r.html#cb19-2" aria-hidden="true" tabindex="-1"></a>?dplyr <span class="co">#Version 2 of asking for help</span></span></code></pre></div>
+<p>In turn, you’ll get more information via the window “Help”:</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Overview for the dplyr package</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_help2.jpg" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="finding-information-about-functions" class="section level3" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Finding information about functions</h3>
+<p>Oftentimes, you need help with a specific function.</p>
+<p>I’ll give you an example: Let’s say I teach a seminar with 10 students. I have asked all of them about their age. I have now saved their answers (i.e., 10 different numbers) in an object called <em>age</em>. This object is a vector, i.e. an object that consists of several values of the same data type - we’ll get to this in <a href="tutorial-objects-structures-in-r.html#tutorial-objects-structures-in-r">Tutorial: Objects &amp; structures in R</a>.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="tutorial-workflow-in-r.html#cb20-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">26</span>, <span class="dv">19</span>, <span class="dv">28</span>, <span class="dv">24</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="dv">27</span>, <span class="dv">24</span>, <span class="dv">24</span>)</span></code></pre></div>
+<p>Now we want R to compute the mean age of students in the seminar using the <em>mean()</em> function. We thus ask R to compute the mean of the vector <em>age</em> like so: We call the function <em>mean()</em>. We specify all necessary conditions to run it - here that <em>x = age</em>, i.e. that R should compute the mean of all values in the vector <em>age</em>:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="tutorial-workflow-in-r.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="at">x =</span> age)</span></code></pre></div>
+<pre><code>## [1] 23.8</code></pre>
+<p>That looks good - R tells us that the mean age of our students is 23.8 years. Let’s say I did the same thing for a different seminar: I also asked students about their age. while most chose to answer, some refused to answer. Thus, I recorded missing answers as <em>NA</em> (NA is used to record missing values, short for “not available”).</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="tutorial-workflow-in-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">23</span>, <span class="dv">26</span>, <span class="cn">NA</span>, <span class="dv">28</span>, <span class="dv">24</span>, <span class="dv">22</span>, <span class="dv">21</span>, <span class="cn">NA</span>, <span class="dv">24</span>, <span class="cn">NA</span>)</span>
+<span id="cb23-2"><a href="tutorial-workflow-in-r.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="at">x =</span> age)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>However, when trying to get the students’ mean age, R tells us that the mean is NA (i.e., missing). But do we really only have missing values? Let’s inspect our data again:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="tutorial-workflow-in-r.html#cb25-1" aria-hidden="true" tabindex="-1"></a>age</span></code></pre></div>
+<pre><code>##  [1] 23 26 NA 28 24 22 21 NA 24 NA</code></pre>
+<p>That’s not true: 7 out of 10 students told us their age; only 3 refused to answer (here recorded as <em>NA</em>). So why does R tell us that the overall mean is missing - shouldn’t the function simply ignore NAs and tells us the mean age of all of those 7 students who answered our question?</p>
+<p>To do some troubleshooting, we use the <em>help()</em> function. We specify for which function we need help:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="tutorial-workflow-in-r.html#cb27-1" aria-hidden="true" tabindex="-1"></a>?mean</span></code></pre></div>
+<p>This is where our fourth window comes into place as results for our search for help are depicted here (the paragraph depicted here is the reference manual including information on the <em>mean()</em> function).</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Help for error with mean()-function</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_help.JPG" /></td>
+</tr>
+</tbody>
+</table>
+<p>It includes important information on the function (of which we’ll discuss only some, namely those circled in red):</p>
+<ul>
+<li><strong>Description</strong>: explains for which types of tasks the function <em>mean()</em> should be used</li>
+<li><strong>Usage</strong>: explains how the function <em>mean()</em> should be used</li>
+<li><strong>Arguments</strong>: explains which elements need to be or can be defined for using <em>mean()</em> and how these elements need to be specified</li>
+<li><strong>Examples</strong>: exemplifies how the function <em>mean()</em> can be used</li>
+</ul>
+<p>When inspecting the section “Arguments”, we’ll soon discover something very important: <em>mean()</em> is a function that needs an object <em>x</em> for which the mean should be calculated. In this case, we specified <em>x</em> to consist of the vector <em>age</em> by typing <em>x = age</em>.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="tutorial-workflow-in-r.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="at">x =</span> age)</span></code></pre></div>
+<p>Upon further inspection, however, we see something else: The <em>mean()</em> function needs more information. In particular, we have to specify how R should deal with missing values, here <em>NAs</em> (see the section circled in red). This wasn’t a problem in the first example (since we had no <em>NAs</em>), but seems to be a problem for the second example. The manual reads as follows:</p>
+<ul>
+<li>“na.rm: a logical value indicating whether NA values should be stripped before the computation proceeds”.</li>
+</ul>
+<p>This indicates that <em>if</em> our x contains any <em>NAs</em>, we need to tell R and the <em>mean()</em> function how to deal with these. We haven’t specified this yet, which is why R includes all missing values for calculation and thus tells us that - given that some values are missing - the mean is missing. If we want R to ignore all <em>NAs</em>, we need to actively set <em>na.rm</em> (short for removal of NAs) to TRUE. This tells R that the mean should be computed for all of those values for <em>x</em> that are <em>not</em> missing.</p>
+<p>The following command therefore gives us the mean age of all those students who chose to answer the question:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="tutorial-workflow-in-r.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 24</code></pre>
+</div>
+<div id="searching-for-help-online" class="section level3" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Searching for help online</h3>
+<p>For some questions, using the <em>help()</em>-function won’t cut it. In this case, <strong>Google is your new best friend</strong>.</p>
+<p>I’ve almost never encountered a problem that others haven’t had and asked for answers online (and usually received a helpful response).</p>
+<p>When googling, look out for the following websites that often offer help for statistical/programming issues:</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/tagged/r">Stackoverflow</a></li>
+<li><a href="https://stats.stackexchange.com/?tags=r">StatsExchange</a></li>
+<li><a href="https://rseek.org/">Rseek</a></li>
+</ul>
+<div id="make-sure-to-use-relevant-search-terms" class="section level4" number="2.3.3.1">
+<h4><span class="header-section-number">2.3.3.1</span> Make sure to use relevant search terms</h4>
+<p>When googling, make sure to use all relevant search terms. This includes at least:</p>
+<ul>
+<li>parts of the error message you are receiving or descriptions of the error</li>
+<li>the search term “R” (there are a lot of other programming languages and you should make sure that your answers are tailored to R)</li>
+<li>the function throwing the error</li>
+</ul>
+<p>Let’s say you are trying to find out how to set your working directory since your R throws the following error: <em>“cannot find directory”</em>.
+Googling for help via search terms such as <em>“directory programming define”</em> will likely lead to insufficient results because: <em>(a)</em> the specific command you are having trouble with is missing, <em>(b)</em> the specific error message you are getting is missing, <em>(c)</em> the search request does not specify that you need answers for the programming language R.</p>
+<p>A better way to go around this would be something like: <em>“setwd() R error message cannot find directory”</em>: <em>(a)</em> you are specifying the command that gives you trouble, <em>(b)</em> you are specifying the error message, and <em>(c)</em> you are specifying that you want answers for R.</p>
+</div>
+<div id="dont-trust-every-result-you-get" class="section level4" number="2.3.3.2">
+<h4><span class="header-section-number">2.3.3.2</span> Don’t trust every result you get</h4>
+<p>While most Google searches will get you a multitude of different answers for your questions, not all of them are necessarily right for your specific problem. Moreover, there may be different solutions for the same problem - so don’t be confused when people are proposing different approaches. Contrary to common conception, the internet is not always right - you may also get answers that are wrong or inefficient. Its often best to scroll through some search results and then try the solution that seems most understandable and/or suitable for you.</p>
+</div>
+<div id="make-your-problem-reproducible" class="section level4" number="2.3.3.3">
+<h4><span class="header-section-number">2.3.3.3</span> Make your problem reproducible</h4>
+<p>It is often vital that others can reproduce your problem: Others need to see which lines of codes exactly created an error message, what the error message looked liked, which data you used, and on which type of machine/system you ran the analysis to help.</p>
+<p>For instance: Nobody is likely going to be able to help you with a request like this</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="tutorial-workflow-in-r.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;If I try to set my working directory, my computer tells me that I can&#39;t (the error says: Error: unpexted input in setwd(C:\. What is the problem?&quot;</span></span></code></pre></div>
+<p>This isn’t great because no one knows the code that created the problem or the machine/system you used.
+Thus, you need to make your error replicable by giving the exact command and potentially information about your machine via <em>sessionInfo()</em>:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="tutorial-workflow-in-r.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;I am trying to set my working directory on a Windows System using the following code:</span></span>
+<span id="cb32-2"><a href="tutorial-workflow-in-r.html#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="st">setwd(C:\Users\LaraK\Documents\CPA-Seminar)</span></span>
+<span id="cb32-3"><a href="tutorial-workflow-in-r.html#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="tutorial-workflow-in-r.html#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="st">While the path to the folder that I want to be my working directory is definitely correct, R gives me the following error message:</span></span>
+<span id="cb32-5"><a href="tutorial-workflow-in-r.html#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="st">Error: unpexted input in setwd(C:\.&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="tutorial-workflow-in-r.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
+<pre><code>## R version 4.1.2 (2021-11-01)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 19044)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=German_Germany.1252  LC_CTYPE=German_Germany.1252   
+## [3] LC_MONETARY=German_Germany.1252 LC_NUMERIC=C                   
+## [5] LC_TIME=German_Germany.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## loaded via a namespace (and not attached):
+##  [1] bookdown_0.24   digest_0.6.29   R6_2.5.1        jsonlite_1.8.0 
+##  [5] magrittr_2.0.2  evaluate_0.15   stringi_1.7.6   rlang_1.0.1    
+##  [9] cli_3.2.0       rstudioapi_0.13 jquerylib_0.1.4 bslib_0.3.1    
+## [13] rmarkdown_2.11  tools_4.1.2     stringr_1.4.0   xfun_0.29      
+## [17] yaml_2.3.5      fastmap_1.1.0   compiler_4.1.2  htmltools_0.5.2
+## [21] knitr_1.37      sass_0.4.0</code></pre>
+</div>
+</div>
+<div id="interrupting-r" class="section level3" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Interrupting R</h3>
+<p>Some commands run for a longer time - and you may realize while they are running that the code still contains an error. In this case, you may want to stop R in executing the command. If you want to do this manually, you can use the <em>stop</em> button in the window “Console” (only visible while R is executing code).</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Interrupting R</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_interrupt.JPG" /></td>
+</tr>
+</tbody>
+</table>
+<p>Else, you can use the menu via <em>Session / Interrupt R</em>.</p>
+</div>
+</div>
+<div id="saving-loading-cleaning-coderesults" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Saving, loading &amp; cleaning code/results</h2>
+<div id="saving-your-code" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Saving your code</h3>
+<p>A great feature of R is that it makes analyses easily reproducible - given that you save your code. When reopening R Studio and you script, you can simply “rerun” the code with one click and your analysis will be reproduced.</p>
+<p>To save code, you have two options:</p>
+<ul>
+<li>Choose the menu option <em>File/Save as</em>. <strong>Important</strong>: Code needs to be saved with the ending <strong>“.R”</strong>.</li>
+<li>Chose the <em>Save</em>-button in the <em>source</em> window and save your code in the correct format, for instance as “MyCode.R”.</li>
+</ul>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Saving code</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_save.JPG" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="saving-your-results" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Saving your results</h3>
+<p>You have successfully executed all commands and now want R to save your results/working environment? Saving your results is especially useful if it takes some time to have R run through the code and reproduce results - in this case, you only need to save results once and can then load them for the next session.</p>
+<p>Again, there are several options for saving your results:</p>
+<ul>
+<li>Use the <em>save.image()</em>-command:</li>
+</ul>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="tutorial-workflow-in-r.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">&quot;MyData.RDATA&quot;</span>)</span></code></pre></div>
+<ul>
+<li>Use the <em>save</em>-button in the <em>environment</em> window and save your results in the correct format, for instance as MyData.RDATA”.</li>
+</ul>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Image: Saving results</em></td>
+</tr>
+<tr class="even">
+<td align="left"><img src="C:/Users/LaraK/Desktop/To-Do/Verwendung%20von%20Conditional%20Process%20Analysis%20zur%20Bewertung%20von%20Kommunikationstheorien/Lara%20Kobilke/images/Tut2_save2.JPG" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="loading-working-spaces" class="section level3" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Loading working spaces</h3>
+<p>Having saved results in a previous session, you can now easily import them in a new session. Using the <em>load()</em>-command, you can import working spaces into a new R session. Here, we first define the working directory in which R may find our results to then import results:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="tutorial-workflow-in-r.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;C:/Users/LaraK/Documents/CPA-Seminar&quot;</span>)</span>
+<span id="cb36-2"><a href="tutorial-workflow-in-r.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;MyData.RDATA&quot;</span>)</span></code></pre></div>
+</div>
+<div id="clean-your-working-space" class="section level3" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Clean your working space</h3>
+<p>After some time, your environment may be a bit messy: You may have defined objects you no longer need, which may lead to loosing sight of the things that are important. In this case, you can easily sort through relevant data and clean your working space. For instance, the <em>rm()</em>-command deletes specific objects in your environment. Say we want to save the object <em>age</em> since we no longer need it:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="tutorial-workflow-in-r.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(age)</span></code></pre></div>
+<p>If you want a fresh start, you can also delete all objects in your environment. By specifying an empty lists of objects, <em>ls()</em>, as the element to be deleted via <em>rm()</em>, all objects get deleted:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="tutorial-workflow-in-r.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code></pre></div>
+</div>
+<div id="take-aways-1" class="section level3" number="2.4.5">
+<h3><span class="header-section-number">2.4.5</span> Take Aways</h3>
+<ul>
+<li><strong>Working Directory</strong>: The folder from which data can be imported into R or to which you can export and save data created with R. Should be defined at the beginning of each session. Commands: <em>setwd()</em>, <em>getwd()</em></li>
+<li><strong>Packages</strong>: Collections of topic-specific functions that extend the functions implemented in base R. You only need to install them once on your computer - but you have to activate packages at the beginning of each session. Otherwise, R will not be able to find related functions. Commands: <em>install.packages()</em>, <em>library()</em></li>
+<li><strong>Help</strong>: The thing everyone working with R needs. It’s normal to run into errors when working with R - don’t get frustrated too easily. Commands: <em>?</em>, <em>help()</em></li>
+<li><strong>Saving, loading, and cleaning code/results</strong>: You should save your code/results from time to time to be able to replicate analyses. Commands: <em>save.image</em>, <em>load()</em>, <em>rm()</em></li>
+</ul>
+</div>
+</div>
+<div id="more-tutorials-on-this-1" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> More tutorials on this</h2>
+<p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
+<ul>
+<li><a href="https://bookdown.org/joone/ComputationalMethods/packages.html">Computational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 5 &amp; 6</a></li>
+<li><a href="https://rc2e.com/gettingstarted">R Cookbook by Long et al., Tutorial 2</a></li>
+<li><a href="https://bookdown.org/ndphillips/YaRrr/importingdata.html">YaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2 &amp; 9</a></li>
+<li><a href="https://rstudio.com/resources/cheatsheets/">Cheat sheet: Base R</a></li>
+<li><a href="https://style.tidyverse.org/">The tidyverse style guide</a></li>
+</ul>
+<p>Let’s keep going: <a href="tutorial-using-r-as-a-calculator.html#tutorial-using-r-as-a-calculator">Tutorial: Using R as a calculator</a></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tutorial-installing-understanding-rr-studio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tutorial-using-r-as-a-calculator.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
