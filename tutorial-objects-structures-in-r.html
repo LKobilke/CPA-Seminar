@@ -312,27 +312,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We’ll read in the file with <em>read.csv()</em>. Here, we specify where to find the data file with the argument <em>x</em> as well as that the first row contains variable names with the argument <em>header = TRUE</em><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
 <div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="tutorial-objects-structures-in-r.html#cb58-1" aria-hidden="true" tabindex="-1"></a>survey <span class="ot">&lt;-</span> <span class="fu">read.csv2</span>(<span class="st">&quot;data_tutorial3.csv&quot;</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="tutorial-objects-structures-in-r.html#cb59-1" aria-hidden="true" tabindex="-1"></a>survey</span></code></pre></div>
-<pre><code>##          name age       date  outlet outlet_use outlet_trust
-## 1   Alexandra  20 2021-09-09      TV          2            5
-## 2        Alex  25 2021-09-08 Online           3            5
-## 3  Maximilian  29 2021-09-09 Zeitung          4            1
-## 4      Moritz  22 2021-09-06      TV          2            2
-## 5     Vanessa  25 2021-09-07 Online           1            3
-## 6      Andrea  26 2021-09-09 Online           3            4
-## 7    Fabienne  26 2021-09-09      TV          3            2
-## 8       Fabio  27 2021-09-09 Online           0            1
-## 9   Magdalena   8 2021-09-08 Online           1            4
-## 10        Tim  26 2021-09-07      TV         NA            2
-## 11       Alex  27 2021-09-09 Online          NA            2
-## 12     Tobias  26 2021-09-07 Online           2            2
-## 13    Michael  25 2021-09-09 Online           3            2
-## 14    Sabrina  27 2021-09-08 Online           1            2
-## 15   Valentin  29 2021-09-09      TV          1            5
-## 16    Tristan  26 2021-09-09      TV          2            5
-## 17     Martin  21 2021-09-09 Online           1            2
-## 18       Anna  23 2021-09-08      TV          3            3
-## 19    Andreas  24 2021-09-09      TV          2            5
-## 20    Florian  26 2021-09-09 Online           1            5</code></pre>
+<pre><code>##    X.2 X.1  X       name age       date  outlet outlet_use outlet_trust
+## 1    1   1  1  Alexandra  20 2021-09-09      TV          2            5
+## 2    2   2  2       Alex  25 2021-09-08 Online           3            5
+## 3    3   3  3 Maximilian  29 2021-09-09 Zeitung          4            1
+## 4    4   4  4     Moritz  22 2021-09-06      TV          2            2
+## 5    5   5  5    Vanessa  25 2021-09-07 Online           1            3
+## 6    6   6  6     Andrea  26 2021-09-09 Online           3            4
+## 7    7   7  7   Fabienne  26 2021-09-09      TV          3            2
+## 8    8   8  8      Fabio  27 2021-09-09 Online           0            1
+## 9    9   9  9  Magdalena   8 2021-09-08 Online           1            4
+## 10  10  10 10        Tim  26 2021-09-07      TV         NA            2
+## 11  11  11 11       Alex  27 2021-09-09 Online          NA            2
+## 12  12  12 12     Tobias  26 2021-09-07 Online           2            2
+## 13  13  13 13    Michael  25 2021-09-09 Online           3            2
+## 14  14  14 14    Sabrina  27 2021-09-08 Online           1            2
+## 15  15  15 15   Valentin  29 2021-09-09      TV          1            5
+## 16  16  16 16    Tristan  26 2021-09-09      TV          2            5
+## 17  17  17 17     Martin  21 2021-09-09 Online           1            2
+## 18  18  18 18       Anna  23 2021-09-08      TV          3            3
+## 19  19  19 19    Andreas  24 2021-09-09      TV          2            5
+## 20  20  20 20    Florian  26 2021-09-09 Online           1            5</code></pre>
 <div id="accessing-variables-in-data-sets" class="section level3" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Accessing variables in data sets</h3>
 <p>Variables that are part of a data set – also called: data frame (we’ll come back to data frames a bit later in <a href="tutorial-objects-structures-in-r.html#data-frames-matrices">Data frames &amp; matrices</a>) – can be accessed by their name, but we need to specify the data set and the variable name and combine them with the access operator: <em>$</em>. This takes the form of:</p>
@@ -391,27 +391,27 @@ For instance, if you save the number <em>1</em> with quotation marks, R will use
 ## [19] &quot;Vanessa&quot;</code></pre>
 <p>You may have noted that the data set <em>survey</em> contains 20 observations but that the variable <em>age</em> only included 19 levels. Why? If you inspect the data set, you can see that two students have the same name (here, Alex in row 2 and 11) - which is why we have 20 observations, but only 19 unique levels for the variable <em>name</em>:</p>
 <div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="tutorial-objects-structures-in-r.html#cb82-1" aria-hidden="true" tabindex="-1"></a>survey</span></code></pre></div>
-<pre><code>##          name age       date  outlet outlet_use outlet_trust
-## 1   Alexandra  20 2021-09-09      TV          2            5
-## 2        Alex  25 2021-09-08 Online           3            5
-## 3  Maximilian  29 2021-09-09 Zeitung          4            1
-## 4      Moritz  22 2021-09-06      TV          2            2
-## 5     Vanessa  25 2021-09-07 Online           1            3
-## 6      Andrea  26 2021-09-09 Online           3            4
-## 7    Fabienne  26 2021-09-09      TV          3            2
-## 8       Fabio  27 2021-09-09 Online           0            1
-## 9   Magdalena   8 2021-09-08 Online           1            4
-## 10        Tim  26 2021-09-07      TV         NA            2
-## 11       Alex  27 2021-09-09 Online          NA            2
-## 12     Tobias  26 2021-09-07 Online           2            2
-## 13    Michael  25 2021-09-09 Online           3            2
-## 14    Sabrina  27 2021-09-08 Online           1            2
-## 15   Valentin  29 2021-09-09      TV          1            5
-## 16    Tristan  26 2021-09-09      TV          2            5
-## 17     Martin  21 2021-09-09 Online           1            2
-## 18       Anna  23 2021-09-08      TV          3            3
-## 19    Andreas  24 2021-09-09      TV          2            5
-## 20    Florian  26 2021-09-09 Online           1            5</code></pre>
+<pre><code>##    X.2 X.1  X       name age       date  outlet outlet_use outlet_trust
+## 1    1   1  1  Alexandra  20 2021-09-09      TV          2            5
+## 2    2   2  2       Alex  25 2021-09-08 Online           3            5
+## 3    3   3  3 Maximilian  29 2021-09-09 Zeitung          4            1
+## 4    4   4  4     Moritz  22 2021-09-06      TV          2            2
+## 5    5   5  5    Vanessa  25 2021-09-07 Online           1            3
+## 6    6   6  6     Andrea  26 2021-09-09 Online           3            4
+## 7    7   7  7   Fabienne  26 2021-09-09      TV          3            2
+## 8    8   8  8      Fabio  27 2021-09-09 Online           0            1
+## 9    9   9  9  Magdalena   8 2021-09-08 Online           1            4
+## 10  10  10 10        Tim  26 2021-09-07      TV         NA            2
+## 11  11  11 11       Alex  27 2021-09-09 Online          NA            2
+## 12  12  12 12     Tobias  26 2021-09-07 Online           2            2
+## 13  13  13 13    Michael  25 2021-09-09 Online           3            2
+## 14  14  14 14    Sabrina  27 2021-09-08 Online           1            2
+## 15  15  15 15   Valentin  29 2021-09-09      TV          1            5
+## 16  16  16 16    Tristan  26 2021-09-09      TV          2            5
+## 17  17  17 17     Martin  21 2021-09-09 Online           1            2
+## 18  18  18 18       Anna  23 2021-09-08      TV          3            3
+## 19  19  19 19    Andreas  24 2021-09-09      TV          2            5
+## 20  20  20 20    Florian  26 2021-09-09 Online           1            5</code></pre>
 </div>
 <div id="dates" class="section level3" number="4.1.5">
 <h3><span class="header-section-number">4.1.5</span> Dates</h3>
@@ -505,7 +505,10 @@ For instance, if you save the number <em>1</em> with quotation marks, R will use
 <p>For instance, you could use a logical operator to only keep those students in the data set that are older than 21 (17 out of 20 students). We filter the data set using the <em>&gt;</em> operator. We can get basic information about this data set using the <em>str()</em> command:</p>
 <div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="tutorial-objects-structures-in-r.html#cb97-1" aria-hidden="true" tabindex="-1"></a>survey_subset <span class="ot">&lt;-</span> survey[survey<span class="sc">$</span>age<span class="sc">&gt;</span><span class="dv">21</span>,]</span>
 <span id="cb97-2"><a href="tutorial-objects-structures-in-r.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(survey_subset)</span></code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    17 obs. of  6 variables:
+<pre><code>## &#39;data.frame&#39;:    17 obs. of  9 variables:
+##  $ X.2         : int  2 3 4 5 6 7 8 10 11 12 ...
+##  $ X.1         : int  2 3 4 5 6 7 8 10 11 12 ...
+##  $ X           : int  2 3 4 5 6 7 8 10 11 12 ...
 ##  $ name        : Factor w/ 19 levels &quot;Alex&quot;,&quot;Alexandra&quot;,..: 1 11 13 19 3 6 7 15 1 16 ...
 ##  $ age         : int  25 29 22 25 26 26 27 26 27 26 ...
 ##  $ date        : Date, format: &quot;2021-09-08&quot; &quot;2021-09-09&quot; &quot;2021-09-06&quot; &quot;2021-09-07&quot; ...
@@ -591,31 +594,32 @@ They contain values for all observations in your data set (with all of these val
 </div>
 <div id="data-frames-matrices" class="section level3" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> Data frames &amp; matrices</h3>
-<p>An even “bigger” type of data, in this sense, are data frames and matrices:</p>
+<p>An even “bigger” type of data, in this sense, are data frames and matrices.</p>
+<p><img src="https://youtu.be/OUsba-VPBS4" /></p>
 <p><strong>Data frames &amp; matrices consist of several vectors of the same length</strong>.</p>
 <p>Matrices and data frames come closest to how you may understand data sets (for instance, in SPSS). Our <em>survey</em> data set is one example for a data frame:</p>
 <div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="tutorial-objects-structures-in-r.html#cb125-1" aria-hidden="true" tabindex="-1"></a>survey</span></code></pre></div>
-<pre><code>##          name age       date  outlet outlet_use outlet_trust
-## 1   Alexandra  20 2021-09-09      TV          2            5
-## 2        Alex  25 2021-09-08 Online           3            5
-## 3  Maximilian  29 2021-09-09 Zeitung          4            1
-## 4      Moritz  22 2021-09-06      TV          2            2
-## 5     Vanessa  25 2021-09-07 Online           1            3
-## 6      Andrea  26 2021-09-09 Online           3            4
-## 7    Fabienne  26 2021-09-09      TV          3            2
-## 8       Fabio  27 2021-09-09 Online           0            1
-## 9   Magdalena   8 2021-09-08 Online           1            4
-## 10        Tim  26 2021-09-07      TV         NA            2
-## 11       Alex  27 2021-09-09 Online          NA            2
-## 12     Tobias  26 2021-09-07 Online           2            2
-## 13    Michael  25 2021-09-09 Online           3            2
-## 14    Sabrina  27 2021-09-08 Online           1            2
-## 15   Valentin  29 2021-09-09      TV          1            5
-## 16    Tristan  26 2021-09-09      TV          2            5
-## 17     Martin  21 2021-09-09 Online           1            2
-## 18       Anna  23 2021-09-08      TV          3            3
-## 19    Andreas  24 2021-09-09      TV          2            5
-## 20    Florian  26 2021-09-09 Online           1            5</code></pre>
+<pre><code>##    X.2 X.1  X       name age       date  outlet outlet_use outlet_trust
+## 1    1   1  1  Alexandra  20 2021-09-09      TV          2            5
+## 2    2   2  2       Alex  25 2021-09-08 Online           3            5
+## 3    3   3  3 Maximilian  29 2021-09-09 Zeitung          4            1
+## 4    4   4  4     Moritz  22 2021-09-06      TV          2            2
+## 5    5   5  5    Vanessa  25 2021-09-07 Online           1            3
+## 6    6   6  6     Andrea  26 2021-09-09 Online           3            4
+## 7    7   7  7   Fabienne  26 2021-09-09      TV          3            2
+## 8    8   8  8      Fabio  27 2021-09-09 Online           0            1
+## 9    9   9  9  Magdalena   8 2021-09-08 Online           1            4
+## 10  10  10 10        Tim  26 2021-09-07      TV         NA            2
+## 11  11  11 11       Alex  27 2021-09-09 Online          NA            2
+## 12  12  12 12     Tobias  26 2021-09-07 Online           2            2
+## 13  13  13 13    Michael  25 2021-09-09 Online           3            2
+## 14  14  14 14    Sabrina  27 2021-09-08 Online           1            2
+## 15  15  15 15   Valentin  29 2021-09-09      TV          1            5
+## 16  16  16 16    Tristan  26 2021-09-09      TV          2            5
+## 17  17  17 17     Martin  21 2021-09-09 Online           1            2
+## 18  18  18 18       Anna  23 2021-09-08      TV          3            3
+## 19  19  19 19    Andreas  24 2021-09-09      TV          2            5
+## 20  20  20 20    Florian  26 2021-09-09 Online           1            5</code></pre>
 <p>Let’s say we don’t have a data set yet but want to create one ourselves. For instance, we have three vectors of the same length that contain the following data:</p>
 <ul>
 <li>a vector called <em>fruits</em> consisting of the names of four different fruits (character)</li>
@@ -662,7 +666,7 @@ They contain values for all observations in your data set (with all of these val
 <td align="left"><em>Image: List</em></td>
 </tr>
 <tr class="even">
-<td align="left"><img src="_book/images/Tut3_list.JPG" /></td>
+<td align="left"><img src="images/Tut3_list.JPG" /></td>
 </tr>
 </tbody>
 </table>
