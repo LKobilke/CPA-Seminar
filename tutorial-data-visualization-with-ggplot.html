@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 3 Tutorial: Using R as a calculator | R for Conditional Process Analysis</title>
+  <title> 9 Tutorial: Data visualization with ggplot | R for Conditional Process Analysis</title>
   <meta name="description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 3 Tutorial: Using R as a calculator | R for Conditional Process Analysis" />
+  <meta property="og:title" content=" 9 Tutorial: Data visualization with ggplot | R for Conditional Process Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 3 Tutorial: Using R as a calculator | R for Conditional Process Analysis" />
+  <meta name="twitter:title" content=" 9 Tutorial: Data visualization with ggplot | R for Conditional Process Analysis" />
   
   <meta name="twitter:description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="tutorial-workflow-in-r.html"/>
-<link rel="next" href="tutorial-objects-structures-in-r.html"/>
+<link rel="prev" href="exercise-2-test-your-knowledge.html"/>
+<link rel="next" href="solutions.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -294,87 +294,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tutorial-using-r-as-a-calculator" class="section level1" number="3">
-<h1><span class="header-section-number"> 3</span> Tutorial: Using R as a calculator</h1>
-<p><strong>After working through Tutorial 3, you’ll…</strong></p>
-<ul>
-<li>be able to work with mathematical operators in R</li>
-<li>be able to use mathematical operators on variables and vectors</li>
-</ul>
-<iframe src="https://www.youtube.com/embed/Xr_CmUYNvCI" width="672" height="400px" data-external="1">
-</iframe>
-<p>One of the first things everyone learns in R is to use R as a calculator. You have access to many mathematical operators in R (e.g. +, -, *, /, ^). Let’s try some of them.</p>
-<ol style="list-style-type: decimal">
-<li>Addition:</li>
-</ol>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="tutorial-using-r-as-a-calculator.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">+</span><span class="dv">7</span></span></code></pre></div>
-<pre><code>## [1] 12</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Subtraction:</li>
-</ol>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="tutorial-using-r-as-a-calculator.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="dv">12-7</span></span></code></pre></div>
-<pre><code>## [1] 5</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Exponentiation:</li>
-</ol>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="tutorial-using-r-as-a-calculator.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="sc">^</span><span class="dv">3</span></span></code></pre></div>
-<pre><code>## [1] 27</code></pre>
-<div id="using-variables-for-calculation" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Using variables for calculation</h2>
-<p>You can also assign numbers to variables with the assign operator “&lt;-”. We have already talked about assigning word or numbers to variables in the chapter <a href="tutorial-installing-understanding-rr-studio.html#writing-code">Writing Code</a>. Please remember that a variable name in R can include numeric and alphabets along with special characters like dot (.) and underline (_).’</p>
-<p>Therefore, these are good options to name your variables:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="tutorial-using-r-as-a-calculator.html#cb45-1" aria-hidden="true" tabindex="-1"></a>my_1st_number <span class="ot">&lt;-</span> <span class="dv">3</span></span>
-<span id="cb45-2"><a href="tutorial-using-r-as-a-calculator.html#cb45-2" aria-hidden="true" tabindex="-1"></a>my<span class="fl">.1</span>st.numer <span class="ot">&lt;-</span> <span class="dv">3</span></span></code></pre></div>
-<p>Do <strong>!not!</strong> use these variable names because they will cause errors and throw warning messages. I have therefore put the code as annotation to avoid the warning messages (with #):</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="tutorial-using-r-as-a-calculator.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  _number &lt;- 3</span></span>
-<span id="cb46-2"><a href="tutorial-using-r-as-a-calculator.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  .number &lt;- 3</span></span>
-<span id="cb46-3"><a href="tutorial-using-r-as-a-calculator.html#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  my-1st-number &lt;- 3</span></span></code></pre></div>
-<p>You can use variables in your calculations by assigning the numbers to variables (i.e. store the numerical value in the variable).’</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="tutorial-using-r-as-a-calculator.html#cb47-1" aria-hidden="true" tabindex="-1"></a>five <span class="ot">&lt;-</span> <span class="dv">5</span> </span>
-<span id="cb47-2"><a href="tutorial-using-r-as-a-calculator.html#cb47-2" aria-hidden="true" tabindex="-1"></a>seven <span class="ot">&lt;-</span> <span class="dv">7</span></span>
-<span id="cb47-3"><a href="tutorial-using-r-as-a-calculator.html#cb47-3" aria-hidden="true" tabindex="-1"></a>twelve <span class="ot">&lt;-</span> five <span class="sc">+</span> seven <span class="co"># here you add the two variables in which the numbers are stored. The result of the addition is stored in the variable &quot;twelve&quot;</span></span>
-<span id="cb47-4"><a href="tutorial-using-r-as-a-calculator.html#cb47-4" aria-hidden="true" tabindex="-1"></a>twelve                 <span class="co"># now you have to retrieve the content of the variable, so that the result is printed to the console</span></span></code></pre></div>
-<pre><code>## [1] 12</code></pre>
-<p>The names of the variables are freely selectable. For example, you can also proceed like this:</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="tutorial-using-r-as-a-calculator.html#cb49-1" aria-hidden="true" tabindex="-1"></a>three <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb49-2"><a href="tutorial-using-r-as-a-calculator.html#cb49-2" aria-hidden="true" tabindex="-1"></a>three  <span class="co"># print the content of the variable to the console</span></span></code></pre></div>
-<pre><code>## [1] 5</code></pre>
-</div>
-<div id="using-vectors-for-calculation" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Using vectors for calculation</h2>
-<p>You can also store more than one number in a variable. We call this process “creating vectors” because variables that contain more than one number are called “vectors” in R (we’ll get to vectors in <a href="tutorial-objects-structures-in-r.html#tutorial-objects-structures-in-r">Tutorial: Objects &amp; structures in R</a>). Vectors are created using the combine function c() in R.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="tutorial-using-r-as-a-calculator.html#cb51-1" aria-hidden="true" tabindex="-1"></a>twelve <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>,<span class="dv">11</span>,<span class="dv">12</span>) </span>
-<span id="cb51-2"><a href="tutorial-using-r-as-a-calculator.html#cb51-2" aria-hidden="true" tabindex="-1"></a>twelve <span class="co"># print the content of the variable to the console</span></span></code></pre></div>
-<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12</code></pre>
-<p>Again, the variable name is chosen arbitrarily. You can also do this:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tutorial-using-r-as-a-calculator.html#cb53-1" aria-hidden="true" tabindex="-1"></a>twelve <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">21</span>,<span class="dv">33</span>)</span>
-<span id="cb53-2"><a href="tutorial-using-r-as-a-calculator.html#cb53-2" aria-hidden="true" tabindex="-1"></a>twelve<span class="co"># print the content of the variable to the console</span></span></code></pre></div>
-<pre><code>## [1]  4 10 15 21 33</code></pre>
-<p>You can use mathematical operations on vectors (e.g., +, -, * and /). Let’s create two vectors “weight” and “height” that contain the weight and height measures of 6 individuals. For example, the first individual weighs 60 kg and is 1.75 m tall:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="tutorial-using-r-as-a-calculator.html#cb55-1" aria-hidden="true" tabindex="-1"></a>weight <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">60</span>, <span class="dv">72</span>, <span class="dv">57</span>, <span class="dv">90</span>, <span class="dv">95</span>, <span class="dv">72</span>)</span>
-<span id="cb55-2"><a href="tutorial-using-r-as-a-calculator.html#cb55-2" aria-hidden="true" tabindex="-1"></a>height <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.75</span>, <span class="fl">1.80</span>, <span class="fl">1.65</span>, <span class="fl">1.90</span>, <span class="fl">1.74</span>, <span class="fl">1.91</span>)</span></code></pre></div>
-<p>Now we can calculate the Body Mass Index (BMI) using the BMI formula:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="tutorial-using-r-as-a-calculator.html#cb56-1" aria-hidden="true" tabindex="-1"></a>BMI <span class="ot">&lt;-</span> weight<span class="sc">/</span>height<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb56-2"><a href="tutorial-using-r-as-a-calculator.html#cb56-2" aria-hidden="true" tabindex="-1"></a>BMI <span class="co"># print the content of the BMI variable to the console</span></span></code></pre></div>
-<pre><code>## [1] 19.59184 22.22222 20.93664 24.93075 31.37799 19.73630</code></pre>
-<p>Now we know that the first person has a BMI of 19.59, which is within the range of normality (18.5 and 24.9).</p>
-</div>
-<div id="take-aways-2" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Take-Aways</h2>
-<ul>
-<li><strong>Mathematical operators</strong>: use +, -, *, /, ^</li>
-<li><strong>Use case</strong>: use these operators on numbers, variables, and vectors</li>
-</ul>
-<p>Now that we can use R as a calculator and have been introduced to the concept of variables and vectors, let’s delve into the concept of objects an structures in R: <a href="tutorial-objects-structures-in-r.html#tutorial-objects-structures-in-r">Tutorial: Objects &amp; structures in R</a></p>
-</div>
+<div id="tutorial-data-visualization-with-ggplot" class="section level1" number="9">
+<h1><span class="header-section-number"> 9</span> Tutorial: Data visualization with ggplot</h1>
+<p>The <code>ggplot2</code> package, i.e. the data visualization package of <code>tidyverse</code>, has become <strong>the</strong> R package for data visualization. The <code>gg</code> in <code>ggplot2</code> stands for <code>grammar of graphics</code>, which means that we can describe each component of a graph in a standardized and concise way. Just as <code>dplyr</code> simplifies data manipulation, <code>ggplot2</code> simplifies data visualization. In addition, <code>ggplot2</code> and <code>dplyr</code> work hand in hand: You can prepare your data selection and manipulation with<code>dplyr</code> and pipe it directly into <code>ggplot</code> to turn your transformed data into a beautiful graph.</p>
+<p>With only a few lines of code, you can produce graphs like this one:</p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="tutorial-workflow-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tutorial-objects-structures-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-2-test-your-knowledge.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="solutions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

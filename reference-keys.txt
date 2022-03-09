@@ -64,7 +64,7 @@ getting-data-out-of-r
 other-packages-for-getting-data-intoout-of-r
 take-aways-4
 more-tutorials-on-this-3
-tutorial-test-your-knowledge
+exercise-1-test-your-knowledge
 task-1
 task-2
 task-3
@@ -76,5 +76,15 @@ tidyverse-packages
 tidy-data
 the-pipe-operator
 data-transformation-with-dplyr
+select
+filter
+arrange
+mutate
+simmarize-group_by
+chaining-functions-in-a-pipe
 take-aways-5
 more-tutorials-on-this-4
+exercise-2-test-your-knowledge
+task-1-1
+task-2-1
+tutorial-data-visualization-with-ggplot
