@@ -362,20 +362,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">10.1</span> Task 1</h2>
 <p>The data set <em>glbwarm</em> comes pre-installed with the <code>processR</code> package that we will be working with soon. The data comprises 815 US individuals (417 females, 398 males) who agreed to engage in online questionnaires. They roughly represent the population of the United States.</p>
 <p>Let’s install / activate the <code>processR</code> package first and assign the glbwarm data to a source object.</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="exercise-3-test-your-knowledge.html#cb234-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
-<span id="cb234-2"><a href="exercise-3-test-your-knowledge.html#cb234-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
-<span id="cb234-3"><a href="exercise-3-test-your-knowledge.html#cb234-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
-<span id="cb234-4"><a href="exercise-3-test-your-knowledge.html#cb234-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
-<span id="cb234-5"><a href="exercise-3-test-your-knowledge.html#cb234-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
-<span id="cb234-6"><a href="exercise-3-test-your-knowledge.html#cb234-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb234-7"><a href="exercise-3-test-your-knowledge.html#cb234-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="exercise-3-test-your-knowledge.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb235-2"><a href="exercise-3-test-your-knowledge.html#cb235-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb235-3"><a href="exercise-3-test-your-knowledge.html#cb235-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb235-4"><a href="exercise-3-test-your-knowledge.html#cb235-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb235-5"><a href="exercise-3-test-your-knowledge.html#cb235-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb235-6"><a href="exercise-3-test-your-knowledge.html#cb235-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb235-7"><a href="exercise-3-test-your-knowledge.html#cb235-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
 <p>Familiarize yourself with the data set (<strong>Hint:</strong> use the <code>help()</code> / <code>?</code> function) and then try to reproduce this plot with <code>dplyr</code> and <code>ggplot2</code>. (<strong>Hint:</strong> You can hide the legend by adding <code>theme(legend.position = "none")</code> to your plot.)</p>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-81-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-82-1.png" width="60%" /></p>
 </div>
 <div id="task-2-2" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Task 2</h2>
 <p>Now, try to reproduce this graph. (<strong>Hint:</strong> You will need to recode the <em>ideology</em> variable in a way that higher values represent stronger attitudes, <em>independent of partisanship</em>.)</p>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-83-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-84-1.png" width="60%" /></p>
 </div>
 <div id="task-3-2" class="section level2" number="10.3">
 <h2><span class="header-section-number">10.3</span> Task 3</h2>
