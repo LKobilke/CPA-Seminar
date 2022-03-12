@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>R for Conditional Process Analysis</title>
+  <title> 10 Exercise 3: Test your knowledge | R for Conditional Process Analysis</title>
   <meta name="description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="R for Conditional Process Analysis" />
+  <meta property="og:title" content=" 10 Exercise 3: Test your knowledge | R for Conditional Process Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="R for Conditional Process Analysis" />
+  <meta name="twitter:title" content=" 10 Exercise 3: Test your knowledge | R for Conditional Process Analysis" />
   
   <meta name="twitter:description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="tutorial-installing-understanding-rr-studio.html"/>
+<link rel="prev" href="tutorial-data-visualization-with-ggplot.html"/>
+<link rel="next" href="tutorial-linear-regression.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -351,88 +351,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R for Conditional Process Analysis</h1>
-<p class="author"><em>Lara Kobilke, IKMZ, University of Zurich</em></p>
-<p class="date"><em>2022-03-12</em></p>
-</div>
-<div id="general-information-on-the-course" class="section level1 unnumbered">
-<h1>General information on the course</h1>
-<iframe src="https://www.youtube.com/embed/dOtPZBCT0Ak" width="672" height="400px" data-external="1">
-</iframe>
-<p>This online tutorial will accompany the seminar <strong>“Using Conditional Process Analysis to evaluate communication theories”</strong>, a B.A. Seminar at the IKMZ (University of Zurich, FS2022).</p>
-<p>The course takes place via <a href="https://uzh.zoom.us/j/64580072506?pwd=N3I4TzNIMEx2T0JMeDJtVGR6YVRpQT09">Zoom</a> (<strong>Wednesday 10:15-11.45 am</strong>, ID: 645 8007 2506,
-password: lavaan). If you don’t want or can’t participate in this course from your home office, you can always visit the room <strong>AND-2-02</strong> (Andreasstrasse 15, 8050 Zurich) during lecture hours. This is also a great opportunity to meet fellow students in person!</p>
-<p>You can access all necessary information on the seminar’s syllabus, important dates and assessments/evaluations via <a href="https://lms.uzh.ch/url/RepositoryEntry/17174430715/CourseNode/85421310414617">OLAT</a>. There, additional resources (e.g. Powerpoint slides, helpful book resources) are uploaded to the <a href="https://lms.uzh.ch/url/RepositoryEntry/17174430715/CourseNode/85421310449426">materials folder</a>.</p>
-<p><strong>Special thanks</strong><br />
-Very special thanks goes to <a href="https://www.ikmz.uzh.ch/de/department/people/research-assistants/valerie-hase.html">Valerie Hase</a>, as the first part of this tutorial is a very slightly adapted version of her highly recommendable <a href="https://bookdown.org/valerie_hase/TextasData_HS2021/">Text as Data tutorial</a>. You should definitely check out her work, too!</p>
-<div id="how-to-use-this-tutorial" class="section level2 unnumbered">
-<h2>How to use this tutorial</h2>
-<p><strong>After completing this tutorial, you will have acquired two important skills:</strong></p>
-<ol style="list-style-type: decimal">
-<li><em>Know how to use R and R studio to complete your data management.</em></li>
-<li><em>Know how to use R and R studio to do Conditional Process Analysis.</em></li>
-</ol>
-<p>In the seminar, each session will consist of two parts. In the first part, we will look at communication theories and discuss relationships between communication variables. In the second part, you will work through this tutorial, the accompanying videos, and solve exercises together with fellow students. The tutorial is designed to provide the R skills that you need to put the seminar’s theoretical discussions into real-world practice. Beginners in R will work through the entire tutorial, while advanced users can skip individual chapters. The goal is to make the individual seminar sessions diverse and to advance your programming skills with as much ease and fun as possible.</p>
-<p><strong>Each tutorial includes </strong></p>
+<div id="exercise-3-test-your-knowledge" class="section level1" number="10">
+<h1><span class="header-section-number"> 10</span> Exercise 3: Test your knowledge</h1>
+<p><strong>After working through Exercise 3, you’ll…</strong></p>
 <ul>
-<li>introduction to new functions/analysis methods in R, including corresponding R code</li>
-<li>information on other tutorials/sources on how to learn these methods</li>
-<li>exercises which will help you understand and apply your new knowledge (you’ll work through these with your peers)</li>
+<li>be able to see a graph and recreate it with <code>ggplot2</code></li>
+<li>be able to see a problem and customize a plot with <code>ggplot2</code> to solve it</li>
 </ul>
+<div id="task-1-2" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Task 1</h2>
+<p>The data set <em>glbwarm</em> comes pre-installed with the <code>processR</code> package that we will be working with soon. The data comprises 815 US individuals (417 females, 398 males) who agreed to engage in online questionnaires. They roughly represent the population of the United States.</p>
+<p>Let’s install / activate the <code>processR</code> package first and assign the glbwarm data to a source object.</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="exercise-3-test-your-knowledge.html#cb234-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb234-2"><a href="exercise-3-test-your-knowledge.html#cb234-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb234-3"><a href="exercise-3-test-your-knowledge.html#cb234-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb234-4"><a href="exercise-3-test-your-knowledge.html#cb234-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb234-5"><a href="exercise-3-test-your-knowledge.html#cb234-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb234-6"><a href="exercise-3-test-your-knowledge.html#cb234-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb234-7"><a href="exercise-3-test-your-knowledge.html#cb234-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
+<p>Familiarize yourself with the data set (<strong>Hint:</strong> use the <code>help()</code> / <code>?</code> function) and then try to reproduce this plot with <code>dplyr</code> and <code>ggplot2</code>. (<strong>Hint:</strong> You can hide the legend by adding <code>theme(legend.position = "none")</code> to your plot.)</p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-81-1.png" width="60%" /></p>
 </div>
-<div id="what-can-i-do-if-questions-arise" class="section level2 unnumbered">
-<h2>What can I do if questions arise?</h2>
-<p><strong>Questions are always welcome!</strong><br />
-Since you’ll be learning a lot of new things, it’s perfectly normal to have a lot of questions.
-If you do not understand something in this tutorial, have questions about exercises, or just want some repetition during the Zoom seminar: Please <em>do</em> ask! The most important thing when learning R is to understand that it is <strong>completely normal to feel lost sometimes</strong>. Don’t worry - it’s highly likely that everyone else feels the same.</p>
-<p>Therefore, it’s key that you ask questions. There are three channels through which you may pose question you have (preferably in this order):</p>
-<ol style="list-style-type: decimal">
-<li><strong>Our Zoom sessions</strong>: Wednesday, 10:15-11:45.</li>
-<li><strong>The OLAT forum</strong>: Outside of those sessions, please use the <a href="https://lms.uzh.ch/url/RepositoryEntry/17174430715/CourseNode/85421310450657">OLAT forum</a> to ask any questions. This way, every participant will be able to see your questions, provide answers and see my answers. Thus, everybody will be provided with the same information. I recommend you <strong>turn on</strong> notifications about new entries in the forum to be informed about ongoing discussions.</li>
-</ol>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><em>Image: How to turn on notifications:</em></td>
-</tr>
-<tr class="even">
-<td align="left"><img src="images/Tut0_Forum.JPG" /></td>
-</tr>
-</tbody>
-</table>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Email</strong>: If you have very specific questions about your own project etc. (or things you may not want to discuss with everyone in class), write me an email: <em><a href="mailto:l.kobilke@ikmz.uzh.ch" class="email">l.kobilke@ikmz.uzh.ch</a></em>.</li>
-</ol>
+<div id="task-2-2" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Task 2</h2>
+<p>Now, try to reproduce this graph. (<strong>Hint:</strong> You will need to recode the <em>ideology</em> variable in a way that higher values represent stronger attitudes, <em>independent of partisanship</em>.)</p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-83-1.png" width="60%" /></p>
 </div>
-<div id="what-can-i-do-if-i-have-problems-with-my-r-code" class="section level2 unnumbered">
-<h2>What can I do if I have problems with my R code?</h2>
-<p>Besides asking a question during the seminar (see <a href="index.html#what-can-i-do-if-questions-arise">What can I do if questions arise?</a>), there are some great places to have a look at when you encounter problems. I’ll cover them in the section <a href="tutorial-workflow-in-r.html#help">Help?!</a> in greater detail. To give you a head start, here’s a quick rundown of the three best places to look if you have a problem with your code:</p>
-<ol style="list-style-type: decimal">
-<li><strong>R’s integrated help function:</strong> Use the ?-function whenever possible. Let’s assume you struggle with creating a histogram for your data (<code>hist</code> function in R). You can open the R documentation of the <code>hist</code> function in R by writing:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a>?hist</span></code></pre></div>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><em>Preview of ?hist in R:</em></td>
-</tr>
-<tr class="even">
-<td align="left"><img src="images/Tut0_Documentation.JPG" /></td>
-</tr>
-</tbody>
-</table>
-<ol start="2" style="list-style-type: decimal">
-<li><p><strong>Search engines:</strong> Like Bing or Google. Yup, programmers and data scientists google all the time! Nobody knows all the code and errors by heart. Often you can find perfect answers to your questions on <a href="https://stackoverflow.com/">Stackoverflow</a>, <a href="https://stats.stackexchange.com/?tags=r">StatsExchange</a>, or <a href="https://rseek.org/">Rseek</a> because other people had exactly the same problems. And more importantly, the communities on these websites are very friendly and helpful.</p></li>
-<li><p><strong>Packages’ reference manuals:</strong> Finally, problems with R packages (we’ll get to packages later, see: <a href="tutorial-workflow-in-r.html#packages">Packages</a>) can often be solved by looking at their reference manuals (an overview document containing all of a package’s functions). For example, you can learn more about <code>dplyr</code> (a data management package that we are going to use later in this tutorial) by visiting its reference manual on a website called “CRAN”: <a href="https://cran.r-project.org/web/packages/dplyr/dplyr.pdf" class="uri">https://cran.r-project.org/web/packages/dplyr/dplyr.pdf</a>.</p></li>
-</ol>
-<p>That’s it. Let’s start with our first tutorial: <a href="tutorial-installing-understanding-rr-studio.html#tutorial-installing-understanding-rr-studio">Tutorial: Installing &amp; Understanding R/R Studio</a></p>
+<div id="task-3-2" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Task 3</h2>
+<p>Can you make a chart that breaks down the relationship between <em>age</em>, <em>negative emotions about climate change</em>, and <em>ideological extremity</em> for the different <em>sexes</em> AND <em>parties</em>?</p>
+<p>When you’re ready to look at the solutions, you can find them here: <a href="solutions.html#solutions-for-exercise-3">Solutions for Exercise 3</a>.</p>
+<p>We have officially finished our chapters on data management and visualization! We can move on to data analysis and a new <a href="tutorial-linear-regression.html#tutorial-linear-regression">Tutorial: Linear regression</a>.</p>
 </div>
 </div>
             </section>
@@ -440,8 +389,8 @@ If you do not understand something in this tutorial, have questions about exerci
           </div>
         </div>
       </div>
-
-<a href="tutorial-installing-understanding-rr-studio.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tutorial-data-visualization-with-ggplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tutorial-linear-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

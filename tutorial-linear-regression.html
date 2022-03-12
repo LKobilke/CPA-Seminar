@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>R for Conditional Process Analysis</title>
+  <title> 11 Tutorial: Linear regression | R for Conditional Process Analysis</title>
   <meta name="description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="R for Conditional Process Analysis" />
+  <meta property="og:title" content=" 11 Tutorial: Linear regression | R for Conditional Process Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="R for Conditional Process Analysis" />
+  <meta name="twitter:title" content=" 11 Tutorial: Linear regression | R for Conditional Process Analysis" />
   
   <meta name="twitter:description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="tutorial-installing-understanding-rr-studio.html"/>
+<link rel="prev" href="exercise-3-test-your-knowledge.html"/>
+<link rel="next" href="solutions.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -351,88 +351,257 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R for Conditional Process Analysis</h1>
-<p class="author"><em>Lara Kobilke, IKMZ, University of Zurich</em></p>
-<p class="date"><em>2022-03-12</em></p>
-</div>
-<div id="general-information-on-the-course" class="section level1 unnumbered">
-<h1>General information on the course</h1>
-<iframe src="https://www.youtube.com/embed/dOtPZBCT0Ak" width="672" height="400px" data-external="1">
-</iframe>
-<p>This online tutorial will accompany the seminar <strong>“Using Conditional Process Analysis to evaluate communication theories”</strong>, a B.A. Seminar at the IKMZ (University of Zurich, FS2022).</p>
-<p>The course takes place via <a href="https://uzh.zoom.us/j/64580072506?pwd=N3I4TzNIMEx2T0JMeDJtVGR6YVRpQT09">Zoom</a> (<strong>Wednesday 10:15-11.45 am</strong>, ID: 645 8007 2506,
-password: lavaan). If you don’t want or can’t participate in this course from your home office, you can always visit the room <strong>AND-2-02</strong> (Andreasstrasse 15, 8050 Zurich) during lecture hours. This is also a great opportunity to meet fellow students in person!</p>
-<p>You can access all necessary information on the seminar’s syllabus, important dates and assessments/evaluations via <a href="https://lms.uzh.ch/url/RepositoryEntry/17174430715/CourseNode/85421310414617">OLAT</a>. There, additional resources (e.g. Powerpoint slides, helpful book resources) are uploaded to the <a href="https://lms.uzh.ch/url/RepositoryEntry/17174430715/CourseNode/85421310449426">materials folder</a>.</p>
-<p><strong>Special thanks</strong><br />
-Very special thanks goes to <a href="https://www.ikmz.uzh.ch/de/department/people/research-assistants/valerie-hase.html">Valerie Hase</a>, as the first part of this tutorial is a very slightly adapted version of her highly recommendable <a href="https://bookdown.org/valerie_hase/TextasData_HS2021/">Text as Data tutorial</a>. You should definitely check out her work, too!</p>
-<div id="how-to-use-this-tutorial" class="section level2 unnumbered">
-<h2>How to use this tutorial</h2>
-<p><strong>After completing this tutorial, you will have acquired two important skills:</strong></p>
-<ol style="list-style-type: decimal">
-<li><em>Know how to use R and R studio to complete your data management.</em></li>
-<li><em>Know how to use R and R studio to do Conditional Process Analysis.</em></li>
-</ol>
-<p>In the seminar, each session will consist of two parts. In the first part, we will look at communication theories and discuss relationships between communication variables. In the second part, you will work through this tutorial, the accompanying videos, and solve exercises together with fellow students. The tutorial is designed to provide the R skills that you need to put the seminar’s theoretical discussions into real-world practice. Beginners in R will work through the entire tutorial, while advanced users can skip individual chapters. The goal is to make the individual seminar sessions diverse and to advance your programming skills with as much ease and fun as possible.</p>
-<p><strong>Each tutorial includes </strong></p>
+<div id="tutorial-linear-regression" class="section level1" number="11">
+<h1><span class="header-section-number"> 11</span> Tutorial: Linear regression</h1>
+<p><strong>After working through Tutorial 10, you’ll…</strong></p>
 <ul>
-<li>introduction to new functions/analysis methods in R, including corresponding R code</li>
-<li>information on other tutorials/sources on how to learn these methods</li>
-<li>exercises which will help you understand and apply your new knowledge (you’ll work through these with your peers)</li>
+<li>know what a linear trend and a linear regression is</li>
+<li>know how to visualize linear relationships</li>
+<li>know how to run linear models</li>
+</ul>
+<div id="knowing-your-data" class="section level2" number="11.1">
+<h2><span class="header-section-number">11.1</span> Knowing your data</h2>
+<p>Starting in this chapter, we turn away from data management and data visualization and toward data analysis. Although you are all certainly already well acquainted with linear regression, it is worth repeating a few of the basic concepts: you will need them to understand moderation and mediation analysis.</p>
+<p>In this chapter, we will use the <em>glbwarm</em> data set, which you have just tackled in <a href="exercise-3-test-your-knowledge.html#exercise-3-test-your-knowledge">Exercise 3: Test your knowledge</a>. The data set comprises 815 US individuals who roughly represent the population of the United States. All of the following analyses can be found in <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">Hayes, 2022</a>, who inspired this seminar. If any of my explanations seem incomprehensible to you, or if you want to know more details and mathematical formulas, the book is more than worth the buy!</p>
+<p>Let’s load Andrew F. Hayes’ package and data and assign them to a source object.</p>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="tutorial-linear-regression.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb235-2"><a href="tutorial-linear-regression.html#cb235-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb235-3"><a href="tutorial-linear-regression.html#cb235-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb235-4"><a href="tutorial-linear-regression.html#cb235-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb235-5"><a href="tutorial-linear-regression.html#cb235-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb235-6"><a href="tutorial-linear-regression.html#cb235-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb235-7"><a href="tutorial-linear-regression.html#cb235-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
+<p>You´ll find <strong>two variables</strong> in this data set that will be of great interest to us because they are great to learn linear regression with:</p>
+<ol style="list-style-type: decimal">
+<li><strong>govact</strong> (= support for government action):
+The variable is an index of how each participant answered five questions regarding how supportive he or she is of different policies or activities taken by the US government to address the threat of global climate change (e.g. “How much do you support or oppose increasing government investment for developing alternative energy like biofuels, wind, or solar by 25%?”).<br />
+Response options were scaled from “Strongly opposed” (coded 1) or ”Strongly support” (7).</li>
+<li><strong>negemot</strong> (= negative emotions about climate change):
+This index measures participants´ negative emotional reactions to the potential of climate change. Participants´ responses to a question asking how often they experience each of three emotions while thinking about global warming: “worried,” “alarmed,” and “concerned”.<br />
+“Not at all,” “somewhat,” “a little bit,” “some,” “a fair lot,” and “a great deal” were among the response alternatives. These replies were numerically coded from 1 to 6, and the average of each participant´s responses across all three emotions was calculated. Higher scores reﬂect feeling stronger negative emotions.</li>
+</ol>
+<p>Throughout this chapter, the following research question will guide us on our way to master linear regression:</p>
+<p><strong>Research Question:</strong> Do people who feel stronger negative emotions about the prospect of climate change report greater support for government action than those
+who feel such negative emotions to a lesser extent?</p>
+</div>
+<div id="visual-inspection-of-linear-trends" class="section level2" number="11.2">
+<h2><span class="header-section-number">11.2</span> Visual inspection of linear trends</h2>
+<p>Before doing any data analysis, it’s always an excellent idea to first visually inspect the variables you want to use for analysis. Thus, to answer our research question, we should first visually examine the relationship between these two variables. To this end, we’ll use a bubble plot:</p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="tutorial-linear-regression.html#cb236-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>negemot, <span class="at">y=</span>govact)) <span class="sc">+</span>                                         </span>
+<span id="cb236-2"><a href="tutorial-linear-regression.html#cb236-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
+<span id="cb236-3"><a href="tutorial-linear-regression.html#cb236-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
+<span id="cb236-4"><a href="tutorial-linear-regression.html#cb236-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<p><strong>Evaluation:</strong> It seems that people who express larger negative sentiments about climate change are also more supportive of government action. This correlation is far from perfect, but the pattern is evident.</p>
+</div>
+<div id="pearsons-r" class="section level2" number="11.3">
+<h2><span class="header-section-number">11.3</span> Pearson´s r</h2>
+<p>Since visual inspections can take us only this far, we should quantify the association. We´ll use Pearson´s r for that since we look at two quasi-metric variables.</p>
+<blockquote>
+<p>If you need a more extensive recap / explanation of the Pearson’s r test, check out <a href="https://www.youtube.com/watch?v=e4ApDqG6MGE">this video by TipTopBio, 2020 (first 9+1/2 min)</a>.</p>
+</blockquote>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="tutorial-linear-regression.html#cb237-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(glbwarm<span class="sc">$</span>govact,glbwarm<span class="sc">$</span>negemot, <span class="at">method=</span><span class="st">&quot;pearson&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  glbwarm$govact and glbwarm$negemot
+## t = 20.183, df = 813, p-value &lt; 2.2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.5301050 0.6217505
+## sample estimates:
+##       cor 
+## 0.5777458</code></pre>
+<p><strong>Evaluation:</strong> The association between negative emotions about climate change and the support for government action is medium and positive (<em>r</em> = 0.57, <em>p</em> &lt; 0.001). We can conclude that U.S. Americans who have more negative feelings about climate change are also more likely to support government action against climate change.</p>
+</div>
+<div id="ols-regression" class="section level2" number="11.4">
+<h2><span class="header-section-number">11.4</span> OLS regression</h2>
+<p>A linear regression model is an equation that uses information contained in the relationship between an explanatory variable X (also called predictor or independent variable) and an outcome variable Y (also called dependent variable) to make predictions.</p>
+<p>When doing a linear regression analysis, we try to fit a regression line through all data points (X<sub>[i]</sub> , Y<sub>[i]</sub>) of the scatter or bubble plot. We could use many different lines, but we´ll always use that one that minimizes the distance between each point of (X<sub>[i]</sub> , Y<sub>[i]</sub>) and the line. Speaking in Math, the aim is to estimate the regression model parameters such that the resulting equation produces estimates of the dependent variable that have the lowest residuals (as measured by the ordinary least squares criterion).</p>
+<blockquote>
+<p>If you need a more extensive recap / explanation of linear regressions and the ordinary least squares criterion, check out <a href="https://www.youtube.com/watch?v=yMgFHbjbAW8">this video by Khan Academy, 2017 (8 min)</a>.</p>
+</blockquote>
+<p><font size="4">
+<strong>1) Fit a regression line</strong><br />
+</font>
+We’ll now fit a regression line to our data. To print beautiful labels to this line, install the <code>ggpubr</code> package, which is a <code>ggplot2</code> based package that creates publication ready plots that follow scientific conventions.</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="tutorial-linear-regression.html#cb239-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb239-2"><a href="tutorial-linear-regression.html#cb239-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(ggpubr)) {</span>
+<span id="cb239-3"><a href="tutorial-linear-regression.html#cb239-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;ggpubr&quot;</span>); </span>
+<span id="cb239-4"><a href="tutorial-linear-regression.html#cb239-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(ggpubr)</span>
+<span id="cb239-5"><a href="tutorial-linear-regression.html#cb239-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load ggpubr</span></span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="tutorial-linear-regression.html#cb240-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb240-2"><a href="tutorial-linear-regression.html#cb240-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>negemot, <span class="at">y=</span>govact)) <span class="sc">+</span>                                         </span>
+<span id="cb240-3"><a href="tutorial-linear-regression.html#cb240-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                    </span>
+<span id="cb240-4"><a href="tutorial-linear-regression.html#cb240-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb240-5"><a href="tutorial-linear-regression.html#cb240-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">7</span>) <span class="sc">+</span> <span class="co"># This command is a shortcut for scale_x_continuous(limits=c(0,7))</span></span>
+<span id="cb240-6"><a href="tutorial-linear-regression.html#cb240-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="fl">7.5</span>) <span class="sc">+</span></span>
+<span id="cb240-7"><a href="tutorial-linear-regression.html#cb240-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb240-8"><a href="tutorial-linear-regression.html#cb240-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span> <span class="co"># This command adds the regression line to the bubble plot</span></span>
+<span id="cb240-9"><a href="tutorial-linear-regression.html#cb240-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="fu">aes</span>(<span class="at">label =</span>  ..rr.label..)) <span class="sc">+</span>  <span class="co"># This command adds the r-squared to the graph</span></span>
+<span id="cb240-10"><a href="tutorial-linear-regression.html#cb240-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">6.6</span>) <span class="co"># Controls the placement of the regression equation</span></span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
+<p><strong>Evaluation:</strong> As you can see, the equation is Y = 2.8 + 0.51*X. For a person with a negative emotions score of X = 2, the model predicts Y = 2.8 + 0.51*2 = 2.8 + 1.02 = 3.82.</p>
+<p>Let´s suppose this person’s actual support for government action, Y, is 4.0. If so, then this person’s residual would be e = 4.0 - 3.82 = 0.18. Thus, the model very slightly overestimates this person’s support for government action by 0.18 units.</p>
+<p>Finally, R<sup>2</sup> provides an estimation of how much of the variance in Y can be explained by X. In this case, 33% of the variance in the support for government action can be explained by negative emotions about climate change.</p>
+<p><font size="4">
+<strong>2) Fit a model</strong><br />
+</font>
+You can also directly run the linear model in R:</p>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="tutorial-linear-regression.html#cb241-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact <span class="sc">~</span> negemot,<span class="at">data=</span>data))</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = govact ~ negemot, data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.3285 -0.6731  0.1018  0.7554  3.2142 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  2.75732    0.09866   27.95   &lt;2e-16 ***
+## negemot      0.51424    0.02548   20.18   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.111 on 813 degrees of freedom
+## Multiple R-squared:  0.3338, Adjusted R-squared:  0.333 
+## F-statistic: 407.3 on 1 and 813 DF,  p-value: &lt; 2.2e-16</code></pre>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="tutorial-linear-regression.html#cb243-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lm -&gt; stands for linear model and tells R to fit an OLS regression</span></span>
+<span id="cb243-2"><a href="tutorial-linear-regression.html#cb243-2" aria-hidden="true" tabindex="-1"></a><span class="co"># govact ~ negemot -&gt; tells are to predict govact by using the values of negemot</span></span>
+<span id="cb243-3"><a href="tutorial-linear-regression.html#cb243-3" aria-hidden="true" tabindex="-1"></a><span class="co"># summary(model) -&gt; tells are to print a summary of the OLS regression results to the console</span></span></code></pre></div>
+<p><strong>Evaluation:</strong> Again, we can extract the parameters for the intercept (b<sub>[0]</sub> = 2.8), the regression coefficient (b<sub>[1]</sub> = 0.51), and R<sup>2</sup>: 0.33.</p>
+</div>
+<div id="standardizing-coefficients" class="section level2" number="11.5">
+<h2><span class="header-section-number">11.5</span> Standardizing coefficients</h2>
+<p>The process of putting differently scaled variables on the same scale is called <strong>standardization</strong>. Thus, standardization allows you to compare results from differently scaled variables. For example, suppose you want to compare the effects of annual income (in $) and negative emotions about climate change (6-point scale)
+on support for government action (7-point scale). It is difficult to compare the effect sizes of these variables when they are scaled differently.</p>
+<p>For standadization, you <strong>remove the mean from each observed value of the variable and divide by its standard deviation</strong>. The resulting variable will have a mean of 0 and a standard deviation of 1. When all variables of a regression model are first standardized before the model is estimated, we speak of a standardized regression model.</p>
+<p>In a standardized regression model, all measurements are expressed in units of standard deviations from the sample mean and the intercept is
+always 0, i.e. the regression lines goes through the center of the coordinate system.</p>
+<blockquote>
+<p>If you need a more extensive recap / explanation of variable standardization, check out <a href="https://www.youtube.com/watch?v=2_TxnvZGtV0">this video by D. Caughlin, 2020 (start at 4 min)</a>.</p>
+</blockquote>
+<p>Let’s standardize our variables before calculating the linear model:</p>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="tutorial-linear-regression.html#cb244-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>negemot_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>negemot) <span class="co"># adds a new variable to the dataset that is the standardized version of negemot</span></span>
+<span id="cb244-2"><a href="tutorial-linear-regression.html#cb244-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>govact_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>govact)   <span class="co"># same for govact</span></span>
+<span id="cb244-3"><a href="tutorial-linear-regression.html#cb244-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb244-4"><a href="tutorial-linear-regression.html#cb244-4" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>negemot_st, <span class="at">y=</span>govact_st)) <span class="sc">+</span></span>
+<span id="cb244-5"><a href="tutorial-linear-regression.html#cb244-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                    </span>
+<span id="cb244-6"><a href="tutorial-linear-regression.html#cb244-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb244-7"><a href="tutorial-linear-regression.html#cb244-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="fl">2.0</span>) <span class="sc">+</span></span>
+<span id="cb244-8"><a href="tutorial-linear-regression.html#cb244-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="fl">2.0</span>) <span class="sc">+</span></span>
+<span id="cb244-9"><a href="tutorial-linear-regression.html#cb244-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Standardized negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Standardized support for government action against climate change&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb244-10"><a href="tutorial-linear-regression.html#cb244-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>)                                </span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="tutorial-linear-regression.html#cb245-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact_st <span class="sc">~</span> negemot_st,<span class="at">data=</span>data)) <span class="co"># Finally, we run the actual model.</span></span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = govact_st ~ negemot_st, data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.1817 -0.4948  0.0748  0.5553  2.3626 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 5.405e-15  2.861e-02    0.00        1    
+## negemot_st  5.777e-01  2.863e-02   20.18   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.8167 on 813 degrees of freedom
+## Multiple R-squared:  0.3338, Adjusted R-squared:  0.333 
+## F-statistic: 407.3 on 1 and 813 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p><strong>Evaluation:</strong> Now, the intercept goes through the center of the coordinate system (<em>b<sub>[0]</sub></em> = 0.0). Two persons with one standard deviation difference in their negative sentiments about climate change (X) are expected to have <em>b<sub>[1]</sub></em> = 0.57 standard deviations difference in their support for government action. The R<sup>2</sup> remains untouched, of course: 0.33.</p>
+</div>
+<div id="multiple-regression" class="section level2" number="11.6">
+<h2><span class="header-section-number">11.6</span> Multiple regression</h2>
+<p>Multiple regression is a statistical extension of simple linear regression that allows to examine the association between <strong>multiple independent variables</strong> and a <strong>single dependent variable</strong>.</p>
+<p><strong>Why not just run multiple simple regressions?</strong> Often the relationships between two variables X and Y are not absolutely clear. This is due to the fact that persons who vary in X are more likely to differ in Z, too. As a result, the changes in Y might also be caused by Z instead of X, or they might be caused by a combination of X AND Z. Multiple regression allows to extract the effect of X on Y while <strong>controlling for the effect of Z</strong> (i.e. <em>partial effect</em>), which is what makes multiple regression models more powerful than simple regression models. In the given example, Z is called a <strong>covariate</strong> because it is the variable that is controlled for. But X can also be called a covariate of Z, provided Z is the variable of main interest. All in all, multiple regression allows to rule out alternative explanations for an observed relationship between two variables by controlling for other variables that might also impact the dependent variable.</p>
+<p>To run our own multiple regression model, we will predict support for government action against climate change by negative emotions about climate change, while controlling for age and political ideology (scale from 1 “Very Liberal” to 7 “Very Conservative”).</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="tutorial-linear-regression.html#cb247-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact <span class="sc">~</span> negemot <span class="sc">+</span> age <span class="sc">+</span> ideology ,<span class="at">data=</span>data))</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = govact ~ negemot + age + ideology, data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.8789 -0.6843  0.0749  0.6967  3.4815 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  3.994172   0.192375  20.762  &lt; 2e-16 ***
+## negemot      0.437918   0.026103  16.777  &lt; 2e-16 ***
+## age         -0.001461   0.002343  -0.623    0.533    
+## ideology    -0.218672   0.026963  -8.110 1.86e-15 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.067 on 811 degrees of freedom
+## Multiple R-squared:  0.3876, Adjusted R-squared:  0.3853 
+## F-statistic: 171.1 on 3 and 811 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p><strong>Evaluation:</strong> Compared to our simple model, the R<sup>2</sup> has increased, namely from 0.33 to 0.38. This is great news because it means that we can explain more of the variance of Y with the newly introduced covariates. The equation for this model is Y = 3.99 + 0.43*X - 0.00*Z<sub>1</sub> - 0.21*Z<sub>2</sub>. Accordingly, the intercept is at 3.99 (<em>b<sub>[0]</sub></em> = 3.99) and the regression parameters are <em>b<sub>[1]</sub></em> = 0.43, <em>p</em> &lt; 0.001, <em>b<sub>[2]</sub></em> = -0.00, <em>p</em> = 0.533 and <em>b<sub>[3]</sub></em> = -0.21, <em>p</em> &lt; 0.001. Obviously, all variables have a significant effect on Y when controlling for the other variables, except age.</p>
+<p>The intercept can be interpreted as the value of Y when all other variables in the equation are equal to 0. That is, we would assume that the support for government action is 3.99 when a respondent has a negative emotion about climate change that equals 0 (which is not possible, since the lowest value on the scale is 1), is 0 years old (not possible for obvious reasons) and has an ideology of 0 (also not possible on a scale from 1 to 7). Because the interpretation of the intercept in multiple regression models is often nonsensical, researchers focus primarily on the interpretation of the regression coefficients.</p>
+<p>The regression coefficients are interpreted as the difference between two people who are equal with regard to all variables, but differ in one unit on the variable of interest. For example, two persons of the same age and ideology who disagree regarding their negative emotions about climate change by one point differ by an estimated 0.43 point in their support for government action. You can enter these numbers into the regression equation. Let’s do that and compare two 20 year-olds who are both political moderates, but differ in their emotions by one point:</p>
+<ol style="list-style-type: decimal">
+<li>Y = 3.99 + 0.43*<strong>2</strong> - 0.00*20 - 0.21*4 = 3.99 + 0.86 - 0 - 0.84 = 4.01</li>
+<li>Y = 3.99 + 0.43*<strong>3</strong> - 0.00*20 - 0.21*4 = 3.99 + 1.29 - 0 - 0.84 = 4.44</li>
+</ol>
+<p>As you can see, both differ by 0.43 points!</p>
+</div>
+<div id="standardized-multiple-regression" class="section level2" number="11.7">
+<h2><span class="header-section-number">11.7</span> Standardized multiple regression</h2>
+<p>If you standardize the variables <strong>before</strong> including them in the model, you make the effect sizes of the variables comparable to each other. However, this also changes the interpretation of the model, i.e. how the change of the variable of interest by one unit is interpreted. After standardization, the regression coefficients are interpreted as the difference between two people who are equal with regard to all variables, but differ in one standard deviation on the variable of interest. If X and Y are both standardized and X changes by one standard deviation while all other variables remain constant, then Y also changes by one standard deviation (even if other variables in the model were not standardized).</p>
+<p>Let’s run the standardized model and try to interpet it.</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="tutorial-linear-regression.html#cb249-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>negemot_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>negemot)</span>
+<span id="cb249-2"><a href="tutorial-linear-regression.html#cb249-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>age_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>age)</span>
+<span id="cb249-3"><a href="tutorial-linear-regression.html#cb249-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ideology_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>ideology)</span>
+<span id="cb249-4"><a href="tutorial-linear-regression.html#cb249-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>govact_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>govact)</span>
+<span id="cb249-5"><a href="tutorial-linear-regression.html#cb249-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb249-6"><a href="tutorial-linear-regression.html#cb249-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact_st <span class="sc">~</span> negemot_st <span class="sc">+</span> age_st <span class="sc">+</span> ideology_st,<span class="at">data=</span>data)) <span class="co"># Finally, we run the actual model.</span></span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = govact_st ~ negemot_st + age_st + ideology_st, data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.5863 -0.5030  0.0550  0.5121  2.5591 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  4.232e-15  2.746e-02   0.000    1.000    
+## negemot_st   4.920e-01  2.933e-02  16.777  &lt; 2e-16 ***
+## age_st      -1.753e-02  2.813e-02  -0.623    0.533    
+## ideology_st -2.430e-01  2.996e-02  -8.110 1.86e-15 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.784 on 811 degrees of freedom
+## Multiple R-squared:  0.3876, Adjusted R-squared:  0.3853 
+## F-statistic: 171.1 on 3 and 811 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p><strong>Evaluation:</strong> As you can see, the intercept goes through the center of the coordinate system (<em>b<sub>[0]</sub></em> = 0.0) again. <em>b<sub>[1]</sub></em> = 0.49 implies that two persons of the same age and ideology who disagree regarding their negative emotions about climate change by one standard deviation are estimated to differ 0.49 standard deviations in their support for government action. Since a one standard deviation change in negative emotions produces the largest standard deviation change in support for government action, we can conclude that negative emotions are the best predictor of support for government action(at least with respect to the variables that we selected for the model).</p>
+<p><strong>Tip for advanced students:</strong> Always be careful not to standardize dichotomous variables. Since calculating standard deviations for dichotomous variables is nonsensical (what is the standard deviation of a variable that can only be 0 or 1, but nothing in between?), interpreting standardized dichotomous variables is illogical and should be avoided. Include the unstandardized version of these variables in your models.</p>
+</div>
+<div id="take-aways-7" class="section level2" number="11.8">
+<h2><span class="header-section-number">11.8</span> Take Aways</h2>
+<ul>
+<li><strong>visualize linear trends</strong>: always visualize the relationship between your variables before data analysis</li>
+<li><strong>quantify associations</strong>: use Pearson’s r to quantify linear associations</li>
+<li><strong>linear regression</strong>: predicts an outcome / dependent variable Y by the values of an independent variable X</li>
+<li><strong>standardization</strong>: allows you to compare results from differently scaled variables by binding all variables to a mean of 0 and a standard deviation of 0</li>
+<li><strong>multiple regression</strong>: predicts an outcome / dependent variable Y by the values of an independent variable X while controlling for other covariates</li>
 </ul>
 </div>
-<div id="what-can-i-do-if-questions-arise" class="section level2 unnumbered">
-<h2>What can I do if questions arise?</h2>
-<p><strong>Questions are always welcome!</strong><br />
-Since you’ll be learning a lot of new things, it’s perfectly normal to have a lot of questions.
-If you do not understand something in this tutorial, have questions about exercises, or just want some repetition during the Zoom seminar: Please <em>do</em> ask! The most important thing when learning R is to understand that it is <strong>completely normal to feel lost sometimes</strong>. Don’t worry - it’s highly likely that everyone else feels the same.</p>
-<p>Therefore, it’s key that you ask questions. There are three channels through which you may pose question you have (preferably in this order):</p>
-<ol style="list-style-type: decimal">
-<li><strong>Our Zoom sessions</strong>: Wednesday, 10:15-11:45.</li>
-<li><strong>The OLAT forum</strong>: Outside of those sessions, please use the <a href="https://lms.uzh.ch/url/RepositoryEntry/17174430715/CourseNode/85421310450657">OLAT forum</a> to ask any questions. This way, every participant will be able to see your questions, provide answers and see my answers. Thus, everybody will be provided with the same information. I recommend you <strong>turn on</strong> notifications about new entries in the forum to be informed about ongoing discussions.</li>
-</ol>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><em>Image: How to turn on notifications:</em></td>
-</tr>
-<tr class="even">
-<td align="left"><img src="images/Tut0_Forum.JPG" /></td>
-</tr>
-</tbody>
-</table>
-<ol start="3" style="list-style-type: decimal">
-<li><strong>Email</strong>: If you have very specific questions about your own project etc. (or things you may not want to discuss with everyone in class), write me an email: <em><a href="mailto:l.kobilke@ikmz.uzh.ch" class="email">l.kobilke@ikmz.uzh.ch</a></em>.</li>
-</ol>
-</div>
-<div id="what-can-i-do-if-i-have-problems-with-my-r-code" class="section level2 unnumbered">
-<h2>What can I do if I have problems with my R code?</h2>
-<p>Besides asking a question during the seminar (see <a href="index.html#what-can-i-do-if-questions-arise">What can I do if questions arise?</a>), there are some great places to have a look at when you encounter problems. I’ll cover them in the section <a href="tutorial-workflow-in-r.html#help">Help?!</a> in greater detail. To give you a head start, here’s a quick rundown of the three best places to look if you have a problem with your code:</p>
-<ol style="list-style-type: decimal">
-<li><strong>R’s integrated help function:</strong> Use the ?-function whenever possible. Let’s assume you struggle with creating a histogram for your data (<code>hist</code> function in R). You can open the R documentation of the <code>hist</code> function in R by writing:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" aria-hidden="true" tabindex="-1"></a>?hist</span></code></pre></div>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><em>Preview of ?hist in R:</em></td>
-</tr>
-<tr class="even">
-<td align="left"><img src="images/Tut0_Documentation.JPG" /></td>
-</tr>
-</tbody>
-</table>
-<ol start="2" style="list-style-type: decimal">
-<li><p><strong>Search engines:</strong> Like Bing or Google. Yup, programmers and data scientists google all the time! Nobody knows all the code and errors by heart. Often you can find perfect answers to your questions on <a href="https://stackoverflow.com/">Stackoverflow</a>, <a href="https://stats.stackexchange.com/?tags=r">StatsExchange</a>, or <a href="https://rseek.org/">Rseek</a> because other people had exactly the same problems. And more importantly, the communities on these websites are very friendly and helpful.</p></li>
-<li><p><strong>Packages’ reference manuals:</strong> Finally, problems with R packages (we’ll get to packages later, see: <a href="tutorial-workflow-in-r.html#packages">Packages</a>) can often be solved by looking at their reference manuals (an overview document containing all of a package’s functions). For example, you can learn more about <code>dplyr</code> (a data management package that we are going to use later in this tutorial) by visiting its reference manual on a website called “CRAN”: <a href="https://cran.r-project.org/web/packages/dplyr/dplyr.pdf" class="uri">https://cran.r-project.org/web/packages/dplyr/dplyr.pdf</a>.</p></li>
-</ol>
-<p>That’s it. Let’s start with our first tutorial: <a href="tutorial-installing-understanding-rr-studio.html#tutorial-installing-understanding-rr-studio">Tutorial: Installing &amp; Understanding R/R Studio</a></p>
+<div id="more-tutorials-on-this-6" class="section level2" number="11.9">
+<h2><span class="header-section-number">11.9</span> More tutorials on this</h2>
+<p>You still have questions? The following tutorials &amp; books can help you with that:</p>
+<ul>
+<li>Hayes, A. F. (2022). <em>Introduction to Mediation, Moderation
+and Conditional Process Analysis</em> (p. 29-76) <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">Link</a></li>
+<li><a href="https://bookdown.org/ekothe/navarro26/regression.html">Learning statistics with R: A tutorial for psychology students and other beginners
+by D.J. Navarro, Tutorial 15</a></li>
+</ul>
 </div>
 </div>
             </section>
@@ -440,8 +609,8 @@ If you do not understand something in this tutorial, have questions about exerci
           </div>
         </div>
       </div>
-
-<a href="tutorial-installing-understanding-rr-studio.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-3-test-your-knowledge.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="solutions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
