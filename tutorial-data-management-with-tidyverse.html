@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-03-12" />
+<meta name="date" content="2022-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -490,6 +490,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>mutate()</code>: calculate new variables or transform existing ones</li>
 <li><code>summarize()</code>: summarize variables (e.g. mean, standard deviation, etc.), best combined with <code>group_by()</code></li>
 </ol>
+<iframe src="https://www.youtube.com/embed/qj7poscNpis" width="672" height="400px" data-external="1">
+</iframe>
 <div id="select" class="section level3" number="7.5.1">
 <h3><span class="header-section-number">7.5.1</span> select()</h3>
 <p>Scientists will frequently provide you with large data sets including hundreds of variables (often even more!). The first problem in this scenario is narrowing down the variables you are truly interested in. <code>select()</code> helps you to easily choose a suitable subset of variables. In this selection process, the name of the data frame is the source object, followed by the pipe <em>%&gt;%</em> operator. The expression that selects the columns that you are interested in comes after that.</p>
@@ -499,20 +501,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb147-3"><a href="tutorial-data-management-with-tidyverse.html#cb147-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb147-4"><a href="tutorial-data-management-with-tidyverse.html#cb147-4" aria-hidden="true" tabindex="-1"></a>starwars_data             <span class="co"># print the content of the data frame to the console</span></span></code></pre></div>
 <pre><code>## # A tibble: 87 x 14
-##    name     height  mass hair_color skin_color eye_color birth_year sex   gender homeworld
-##    &lt;chr&gt;     &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;    
-##  1 Luke Sk~    172    77 blond      fair       blue            19   male  mascu~ Tatooine 
-##  2 C-3PO       167    75 &lt;NA&gt;       gold       yellow         112   none  mascu~ Tatooine 
-##  3 R2-D2        96    32 &lt;NA&gt;       white, bl~ red             33   none  mascu~ Naboo    
-##  4 Darth V~    202   136 none       white      yellow          41.9 male  mascu~ Tatooine 
-##  5 Leia Or~    150    49 brown      light      brown           19   fema~ femin~ Alderaan 
-##  6 Owen La~    178   120 brown, gr~ light      blue            52   male  mascu~ Tatooine 
-##  7 Beru Wh~    165    75 brown      light      blue            47   fema~ femin~ Tatooine 
-##  8 R5-D4        97    32 &lt;NA&gt;       white, red red             NA   none  mascu~ Tatooine 
-##  9 Biggs D~    183    84 black      light      brown           24   male  mascu~ Tatooine 
-## 10 Obi-Wan~    182    77 auburn, w~ fair       blue-gray       57   male  mascu~ Stewjon  
-## # ... with 77 more rows, and 4 more variables: species &lt;chr&gt;, films &lt;list&gt;,
-## #   vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+##    name              height  mass hair_color skin_color eye_color birth_year sex   gender homeworld species films vehicles starships
+##    &lt;chr&gt;              &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;   &lt;lis&gt; &lt;list&gt;   &lt;list&gt;   
+##  1 Luke Skywalker       172    77 blond      fair       blue            19   male  mascu~ Tatooine  Human   &lt;chr&gt; &lt;chr&gt;    &lt;chr [2]&gt;
+##  2 C-3PO                167    75 &lt;NA&gt;       gold       yellow         112   none  mascu~ Tatooine  Droid   &lt;chr&gt; &lt;chr&gt;    &lt;chr [0]&gt;
+##  3 R2-D2                 96    32 &lt;NA&gt;       white, bl~ red             33   none  mascu~ Naboo     Droid   &lt;chr&gt; &lt;chr&gt;    &lt;chr [0]&gt;
+##  4 Darth Vader          202   136 none       white      yellow          41.9 male  mascu~ Tatooine  Human   &lt;chr&gt; &lt;chr&gt;    &lt;chr [1]&gt;
+##  5 Leia Organa          150    49 brown      light      brown           19   fema~ femin~ Alderaan  Human   &lt;chr&gt; &lt;chr&gt;    &lt;chr [0]&gt;
+##  6 Owen Lars            178   120 brown, gr~ light      blue            52   male  mascu~ Tatooine  Human   &lt;chr&gt; &lt;chr&gt;    &lt;chr [0]&gt;
+##  7 Beru Whitesun la~    165    75 brown      light      blue            47   fema~ femin~ Tatooine  Human   &lt;chr&gt; &lt;chr&gt;    &lt;chr [0]&gt;
+##  8 R5-D4                 97    32 &lt;NA&gt;       white, red red             NA   none  mascu~ Tatooine  Droid   &lt;chr&gt; &lt;chr&gt;    &lt;chr [0]&gt;
+##  9 Biggs Darklighter    183    84 black      light      brown           24   male  mascu~ Tatooine  Human   &lt;chr&gt; &lt;chr&gt;    &lt;chr [1]&gt;
+## 10 Obi-Wan Kenobi       182    77 auburn, w~ fair       blue-gray       57   male  mascu~ Stewjon   Human   &lt;chr&gt; &lt;chr&gt;    &lt;chr [5]&gt;
+## # ... with 77 more rows</code></pre>
 <p>For the sake of practice, let’s say we only want to analyze the <em>species</em>, <em>birth_year</em>, <em>mass</em>, and <em>height</em> of these characters. To simplify data handling, we want to keep only the respective columns.</p>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="tutorial-data-management-with-tidyverse.html#cb149-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span>                                 <span class="co"># define the source object</span></span>
 <span id="cb149-2"><a href="tutorial-data-management-with-tidyverse.html#cb149-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, species, birth_year, mass, height) <span class="co"># keep only the name, species, birth_year, mass and height column</span></span></code></pre></div>
@@ -881,36 +882,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb192-5"><a href="tutorial-data-management-with-tidyverse.html#cb192-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb192-6"><a href="tutorial-data-management-with-tidyverse.html#cb192-6" aria-hidden="true" tabindex="-1"></a>starwars_short</span></code></pre></div>
 <pre><code>## # A tibble: 87 x 9
-##    name               species birth_year  mass height m_height   BMI age_cat crazy_species
-##    &lt;chr&gt;              &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;int&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;        
-##  1 Luke Skywalker     Human         19      77    172     1.72  26.0 very y~ Human        
-##  2 C-3PO              Droid        112      75    167     1.67  26.9 very o~ Robot        
-##  3 R2-D2              Droid         33      32     96     0.96  34.7 young   Robot        
-##  4 Darth Vader        Human         41.9   136    202     2.02  33.3 mid-ag~ Human        
-##  5 Leia Organa        Human         19      49    150     1.5   21.8 very y~ Human        
-##  6 Owen Lars          Human         52     120    178     1.78  37.9 mid-ag~ Human        
-##  7 Beru Whitesun lars Human         47      75    165     1.65  27.5 mid-ag~ Human        
-##  8 R5-D4              Droid         NA      32     97     0.97  34.0 &lt;NA&gt;    Robot        
-##  9 Biggs Darklighter  Human         24      84    183     1.83  25.1 young   Human        
-## 10 Obi-Wan Kenobi     Human         57      77    182     1.82  23.2 mid-ag~ Human        
+##    name               species birth_year  mass height m_height   BMI age_cat    crazy_species
+##    &lt;chr&gt;              &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;int&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;        
+##  1 Luke Skywalker     Human         19      77    172     1.72  26.0 very young Human        
+##  2 C-3PO              Droid        112      75    167     1.67  26.9 very old   Robot        
+##  3 R2-D2              Droid         33      32     96     0.96  34.7 young      Robot        
+##  4 Darth Vader        Human         41.9   136    202     2.02  33.3 mid-aged   Human        
+##  5 Leia Organa        Human         19      49    150     1.5   21.8 very young Human        
+##  6 Owen Lars          Human         52     120    178     1.78  37.9 mid-aged   Human        
+##  7 Beru Whitesun lars Human         47      75    165     1.65  27.5 mid-aged   Human        
+##  8 R5-D4              Droid         NA      32     97     0.97  34.0 &lt;NA&gt;       Robot        
+##  9 Biggs Darklighter  Human         24      84    183     1.83  25.1 young      Human        
+## 10 Obi-Wan Kenobi     Human         57      77    182     1.82  23.2 mid-aged   Human        
 ## # ... with 77 more rows</code></pre>
 <p><strong>Tip for advanced users 1:</strong> There is a special case of recoding: Sometimes you will receive data (e.g. through an import from SPSS) in which missings are not marked as NA, but with -9 (or any other number). Unfortunately, you will have to tell R that these are missing values and should be set to NA. In this case, use the <code>na_if()</code> function, which is also part of the <code>mutate()</code> function.</p>
 <p>Luke Skywalker, the first observation in our data frame, is 172cm tall. For the sake of practice, let’s set all heights that are equal to 172cm to NA. This time, we won’t save this transformation for later use (by reassigning the source object back to itself) since this transformation does not make a lot of sense.</p>
 <div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="tutorial-data-management-with-tidyverse.html#cb194-1" aria-hidden="true" tabindex="-1"></a>starwars_short <span class="sc">%&gt;%</span></span>
 <span id="cb194-2"><a href="tutorial-data-management-with-tidyverse.html#cb194-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">height=</span> <span class="fu">na_if</span>(height, <span class="dv">172</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 87 x 9
-##    name               species birth_year  mass height m_height   BMI age_cat crazy_species
-##    &lt;chr&gt;              &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;int&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;        
-##  1 Luke Skywalker     Human         19      77     NA     1.72  26.0 very y~ Human        
-##  2 C-3PO              Droid        112      75    167     1.67  26.9 very o~ Robot        
-##  3 R2-D2              Droid         33      32     96     0.96  34.7 young   Robot        
-##  4 Darth Vader        Human         41.9   136    202     2.02  33.3 mid-ag~ Human        
-##  5 Leia Organa        Human         19      49    150     1.5   21.8 very y~ Human        
-##  6 Owen Lars          Human         52     120    178     1.78  37.9 mid-ag~ Human        
-##  7 Beru Whitesun lars Human         47      75    165     1.65  27.5 mid-ag~ Human        
-##  8 R5-D4              Droid         NA      32     97     0.97  34.0 &lt;NA&gt;    Robot        
-##  9 Biggs Darklighter  Human         24      84    183     1.83  25.1 young   Human        
-## 10 Obi-Wan Kenobi     Human         57      77    182     1.82  23.2 mid-ag~ Human        
+##    name               species birth_year  mass height m_height   BMI age_cat    crazy_species
+##    &lt;chr&gt;              &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;int&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;        
+##  1 Luke Skywalker     Human         19      77     NA     1.72  26.0 very young Human        
+##  2 C-3PO              Droid        112      75    167     1.67  26.9 very old   Robot        
+##  3 R2-D2              Droid         33      32     96     0.96  34.7 young      Robot        
+##  4 Darth Vader        Human         41.9   136    202     2.02  33.3 mid-aged   Human        
+##  5 Leia Organa        Human         19      49    150     1.5   21.8 very young Human        
+##  6 Owen Lars          Human         52     120    178     1.78  37.9 mid-aged   Human        
+##  7 Beru Whitesun lars Human         47      75    165     1.65  27.5 mid-aged   Human        
+##  8 R5-D4              Droid         NA      32     97     0.97  34.0 &lt;NA&gt;       Robot        
+##  9 Biggs Darklighter  Human         24      84    183     1.83  25.1 young      Human        
+## 10 Obi-Wan Kenobi     Human         57      77    182     1.82  23.2 mid-aged   Human        
 ## # ... with 77 more rows</code></pre>
 </div>
 <div id="simmarize-group_by" class="section level3" number="7.5.5">

@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-03-12" />
+<meta name="date" content="2022-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -368,7 +368,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p>Just as <code>dplyr</code> simplifies data manipulation, <code>ggplot2</code> simplifies data visualization. In addition, <code>ggplot2</code> and <code>dplyr</code> work hand in hand: You can prepare your data selection and manipulation with <code>dplyr</code> and pipe it directly into <code>ggplot</code> to turn your transformed data into a beautiful graph.</p>
 <p>With only a few lines of code, you can produce graphs like this one:</p>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-54-1.png" width="120%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-55-1.png" width="120%" /></p>
 <p>This is the code. Right now, it might still look a bit overwhelming to you, but once you’ve understood the grammar of graphics, it really is a just a small jigsaw puzzle. Moreover, you don’t usually start with graphs that are this complicated, but with basic scatter or bar plots.</p>
 <div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="tutorial-data-visualization-with-ggplot.html#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb210-2"><a href="tutorial-data-visualization-with-ggplot.html#cb210-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -446,7 +446,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The function <code>ggplot()</code> can only create a plot if we explicitly tell the function what data to use, so this graphical component is <strong>necessary</strong>. Using our <code>dplyr</code> skills, let’s use the <em>human_droid_data</em> as our source object and apply the <code>ggplot()</code> function to it by using a pipe (i.e. %&gt;%).</p>
 <div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="tutorial-data-visualization-with-ggplot.html#cb215-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span> </span>
 <span id="cb215-2"><a href="tutorial-data-visualization-with-ggplot.html#cb215-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>()</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
 <p>The <code>ggplot()</code> function creates a blank canvas (i.e. first layer). We now have to draw on it.</p>
 </div>
 <div id="aesthetics" class="section level3" number="9.4.2">
@@ -454,7 +454,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To draw on this blank canvas, we must at least tell the <code>ggplot()</code> function which variables to assign to the x- and y-axis by using the <code>aes()</code> function. Thus, the Aesthetics graph component is also <strong>necessary</strong> in every single plot.</p>
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="tutorial-data-visualization-with-ggplot.html#cb216-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span> </span>
 <span id="cb216-2"><a href="tutorial-data-visualization-with-ggplot.html#cb216-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass))</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
 <p>The <code>aes()</code> function allows you to specify the following arguments (and many more, as you will learn over time):</p>
 <ul>
 <li><strong>x</strong>: the variable that should be mapped to the x axis</li>
@@ -479,7 +479,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="tutorial-data-visualization-with-ggplot.html#cb217-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span> </span>
 <span id="cb217-2"><a href="tutorial-data-visualization-with-ggplot.html#cb217-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass)) <span class="sc">+</span></span>
 <span id="cb217-3"><a href="tutorial-data-visualization-with-ggplot.html#cb217-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
 <p>That’s a scatter plot for sure! And you only needed three <strong>necessary</strong> components to create it:</p>
 <ol style="list-style-type: decimal">
 <li>data (i.e. a source object),</li>
@@ -501,7 +501,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb218-3"><a href="tutorial-data-visualization-with-ggplot.html#cb218-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb218-4"><a href="tutorial-data-visualization-with-ggplot.html#cb218-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">140</span>)) <span class="sc">+</span>     <span class="co"># modify the y axis limits</span></span>
 <span id="cb218-5"><a href="tutorial-data-visualization-with-ggplot.html#cb218-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">210</span>))       <span class="co"># modify the x axis limits</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
 <p>Second, we’ll add more ticks to make the graph better readable.</p>
 <div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="tutorial-data-visualization-with-ggplot.html#cb219-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb219-2"><a href="tutorial-data-visualization-with-ggplot.html#cb219-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass)) <span class="sc">+</span></span>
@@ -510,7 +510,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb219-5"><a href="tutorial-data-visualization-with-ggplot.html#cb219-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">210</span>)) <span class="sc">+</span></span>
 <span id="cb219-6"><a href="tutorial-data-visualization-with-ggplot.html#cb219-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">60</span>, <span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>)) <span class="sc">+</span>  <span class="co"># choose where the ticks of the y axis appear</span></span>
 <span id="cb219-7"><a href="tutorial-data-visualization-with-ggplot.html#cb219-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">180</span>, <span class="dv">200</span>))    <span class="co"># choose where the ticks of the x axis appear</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
 <p>Until now, we have used <code>scale_</code> to transform only the axes. But we can also use it to change the mapping of variables to geometric objects. To demonstrate this, we now add another variable to our graph, namely the age (<em>birth_year</em>) of the humanoid and droid Star Wars characters. Let’s map age to our data points (i.e. <code>geom_point()</code>) so that larger bubbles reflect older age.</p>
 <div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="tutorial-data-visualization-with-ggplot.html#cb220-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb220-2"><a href="tutorial-data-visualization-with-ggplot.html#cb220-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass, <span class="at">size=</span>birth_year)) <span class="sc">+</span>    <span class="co"># map birth_year (age) to the size of the following geometric objects</span></span>
@@ -519,7 +519,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb220-5"><a href="tutorial-data-visualization-with-ggplot.html#cb220-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">90</span>, <span class="dv">210</span>)) <span class="sc">+</span></span>
 <span id="cb220-6"><a href="tutorial-data-visualization-with-ggplot.html#cb220-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">60</span>, <span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>)) <span class="sc">+</span>  </span>
 <span id="cb220-7"><a href="tutorial-data-visualization-with-ggplot.html#cb220-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">180</span>, <span class="dv">200</span>))    </span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
 <p>Personally, I feel like these bubbles could use a little bit of rescaling to make age differences stand out more. In addition, you could get a nicer title for the size legend than “birth_year”. Let’s try that.</p>
 <div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="tutorial-data-visualization-with-ggplot.html#cb221-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb221-2"><a href="tutorial-data-visualization-with-ggplot.html#cb221-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass, <span class="at">size=</span>birth_year)) <span class="sc">+</span></span>
@@ -529,7 +529,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb221-6"><a href="tutorial-data-visualization-with-ggplot.html#cb221-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">60</span>, <span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>)) <span class="sc">+</span>  </span>
 <span id="cb221-7"><a href="tutorial-data-visualization-with-ggplot.html#cb221-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">180</span>, <span class="dv">200</span>)) <span class="sc">+</span></span>
 <span id="cb221-8"><a href="tutorial-data-visualization-with-ggplot.html#cb221-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">11</span>), <span class="at">name =</span> <span class="st">&quot;age&quot;</span>)                       <span class="co"># sets the bubbles&#39; size in a range between 1 and 11 and renames the respective legend title to &quot;age&quot;</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
 <p>Perfect! The legend spells “age” and age differences seem a bit more obvious now. Unfortunately, some data points are now overlapping.</p>
 <p>I think this is a good time to introduce you to the differences between using <code>scale_</code> and adding aesthetics to the <code>geom_</code> objects directly. While the former allows you to change the mapping from <strong>variables</strong> to the aesthetics of geometric objects, the latter one allows you to provide a <strong>constant</strong>. This means that the aesthetic mapping does not depend on the values of a variable, but is set to a single default value. To demonstrate this and fix the overlap of our bubbles, we change the transparency value of the bubbles so that they become transparent. Note that all the values given are constants, which means that they do not depend on a third variable like <em>birth_year</em>.</p>
 <div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="tutorial-data-visualization-with-ggplot.html#cb222-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
@@ -540,7 +540,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb222-6"><a href="tutorial-data-visualization-with-ggplot.html#cb222-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">60</span>, <span class="dv">80</span>, <span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>)) <span class="sc">+</span>  </span>
 <span id="cb222-7"><a href="tutorial-data-visualization-with-ggplot.html#cb222-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">180</span>, <span class="dv">200</span>)) <span class="sc">+</span></span>
 <span id="cb222-8"><a href="tutorial-data-visualization-with-ggplot.html#cb222-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">11</span>), <span class="at">name =</span> <span class="st">&quot;age&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <p>This looks way more readable. I think we are ready to move on to <a href="tutorial-data-visualization-with-ggplot.html#themes">Themes</a>.</p>
 </div>
 <div id="themes" class="section level3" number="9.4.5">
@@ -556,7 +556,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb223-7"><a href="tutorial-data-visualization-with-ggplot.html#cb223-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">180</span>, <span class="dv">200</span>)) <span class="sc">+</span></span>
 <span id="cb223-8"><a href="tutorial-data-visualization-with-ggplot.html#cb223-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">11</span>), <span class="at">name =</span> <span class="st">&quot;age&quot;</span>) <span class="sc">+</span></span>
 <span id="cb223-9"><a href="tutorial-data-visualization-with-ggplot.html#cb223-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
 <p>Personally, I really enjoy the <em>theme_bw()</em> (black-and-white theme). So let’s apply it to our graph:</p>
 <div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="tutorial-data-visualization-with-ggplot.html#cb224-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb224-2"><a href="tutorial-data-visualization-with-ggplot.html#cb224-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass, <span class="at">size=</span>birth_year)) <span class="sc">+</span></span>
@@ -567,7 +567,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb224-7"><a href="tutorial-data-visualization-with-ggplot.html#cb224-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">180</span>, <span class="dv">200</span>)) <span class="sc">+</span></span>
 <span id="cb224-8"><a href="tutorial-data-visualization-with-ggplot.html#cb224-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">11</span>), <span class="at">name =</span> <span class="st">&quot;age&quot;</span>) <span class="sc">+</span></span>
 <span id="cb224-9"><a href="tutorial-data-visualization-with-ggplot.html#cb224-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
 </div>
 <div id="labs" class="section level3" number="9.4.6">
 <h3><span class="header-section-number">9.4.6</span> Labs</h3>
@@ -584,7 +584,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb225-9"><a href="tutorial-data-visualization-with-ggplot.html#cb225-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb225-10"><a href="tutorial-data-visualization-with-ggplot.html#cb225-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Mass vs. height of humans and droids in Star Wars&quot;</span>,</span>
 <span id="cb225-11"><a href="tutorial-data-visualization-with-ggplot.html#cb225-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Height (cm)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Weight (kg)&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
 <p>Now that we’ve added a main title, it becomes clear that we can’t really distinguish the data points that represent humans from those that represent droids.</p>
 </div>
 <div id="facets" class="section level3" number="9.4.7">
@@ -625,7 +625,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb226-10"><a href="tutorial-data-visualization-with-ggplot.html#cb226-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Mass vs. height of humans and droids in Star Wars&quot;</span>,</span>
 <span id="cb226-11"><a href="tutorial-data-visualization-with-ggplot.html#cb226-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Height (cm)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Weight (kg)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb226-12"><a href="tutorial-data-visualization-with-ggplot.html#cb226-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species, <span class="at">nrow=</span><span class="dv">2</span>)  <span class="co"># using ~grouping_variable and nrow = 2 shows the two panels on top of each other</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
 <p>Great, finally we can distinguish the data points representing humans from those representing droids! On the left side, however, the panel with the humans looks a bit empty. Maybe we should put them next to each other.</p>
 <div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="tutorial-data-visualization-with-ggplot.html#cb227-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb227-2"><a href="tutorial-data-visualization-with-ggplot.html#cb227-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass, <span class="at">size=</span>birth_year)) <span class="sc">+</span></span>
@@ -639,7 +639,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb227-10"><a href="tutorial-data-visualization-with-ggplot.html#cb227-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Mass vs. height of humans and droids in Star Wars&quot;</span>,</span>
 <span id="cb227-11"><a href="tutorial-data-visualization-with-ggplot.html#cb227-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Height (cm)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Weight (kg)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb227-12"><a href="tutorial-data-visualization-with-ggplot.html#cb227-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)                 <span class="co"># nrow=1 is the default, so you don´t have to call it explicitly</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
 <p>I like that!</p>
 </div>
 <div id="saving-graphs" class="section level3" number="9.4.8">
@@ -657,7 +657,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb228-10"><a href="tutorial-data-visualization-with-ggplot.html#cb228-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Mass vs. height of humans and droids in Star Wars&quot;</span>,</span>
 <span id="cb228-11"><a href="tutorial-data-visualization-with-ggplot.html#cb228-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Height (cm)&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Weight (kg)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb228-12"><a href="tutorial-data-visualization-with-ggplot.html#cb228-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>species)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
 <p>Congratulations! You have just managed to recreate the plot from the beginning of this tutorial! The only thing we haven’t covered yet is the labeling of all data points, because for that you’d need the <code>ggrepel</code> package to not mess up the labels - and that’s not part of <code>ggplot2</code>. So let’s skip that and save our graph.</p>
 <p>To use your graph in another document, e.g. a theses written in Word, you’ll have to export the plot first. Therefore, you must assign your plot to a new object and call the <code>ggsave()</code> function on that object. The plot will be saved to your <strong>working directory</strong> and formatted according to the <strong>file extension</strong> you specified (for example: .jpeg or .png).</p>
 <div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="tutorial-data-visualization-with-ggplot.html#cb229-1" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> human_droid_data <span class="sc">%&gt;%</span></span>
@@ -686,25 +686,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="tutorial-data-visualization-with-ggplot.html#cb230-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb230-2"><a href="tutorial-data-visualization-with-ggplot.html#cb230-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex)) <span class="sc">+</span>     <span class="co"># We only have to specify the variable that we want to get the count for (i.e. number of observations)</span></span>
 <span id="cb230-3"><a href="tutorial-data-visualization-with-ggplot.html#cb230-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-75-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-76-1.png" width="60%" /></p>
 <p>Next, let’s look at the relationship between <em>sex</em> and the <em>height</em> (metric) variable. We will produce a bar plot that displays the mean height of each group:</p>
 <div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="tutorial-data-visualization-with-ggplot.html#cb231-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb231-2"><a href="tutorial-data-visualization-with-ggplot.html#cb231-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y=</span>height)) <span class="sc">+</span>           <span class="co"># Now we need to specify the variable that we want to summarize with mean statistics   </span></span>
 <span id="cb231-3"><a href="tutorial-data-visualization-with-ggplot.html#cb231-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;summary&quot;</span>, <span class="at">fun.y =</span> <span class="st">&quot;mean&quot;</span>) <span class="co"># apply the summary statistic of y (mean) to the geom_bars</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-76-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-77-1.png" width="60%" /></p>
 <p>Maybe we want to sort the bars according to their mean. Let’s reorder the factor levels manually.</p>
 <div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="tutorial-data-visualization-with-ggplot.html#cb232-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb232-2"><a href="tutorial-data-visualization-with-ggplot.html#cb232-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">factor</span>(sex, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;none&quot;</span>))) <span class="sc">%&gt;%</span> </span>
 <span id="cb232-3"><a href="tutorial-data-visualization-with-ggplot.html#cb232-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y=</span>height)) <span class="sc">+</span></span>
 <span id="cb232-4"><a href="tutorial-data-visualization-with-ggplot.html#cb232-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;bar&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-77-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-78-1.png" width="60%" /></p>
 <p>And if we would like to have a horizontal bar plot, we can use the <code>coord_</code> component of <code>ggplot()</code> to flip the coordinates.</p>
 <div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="tutorial-data-visualization-with-ggplot.html#cb233-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb233-2"><a href="tutorial-data-visualization-with-ggplot.html#cb233-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">factor</span>(sex, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;male&quot;</span>, <span class="st">&quot;female&quot;</span>, <span class="st">&quot;none&quot;</span>))) <span class="sc">%&gt;%</span> </span>
 <span id="cb233-3"><a href="tutorial-data-visualization-with-ggplot.html#cb233-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y=</span>height)) <span class="sc">+</span></span>
 <span id="cb233-4"><a href="tutorial-data-visualization-with-ggplot.html#cb233-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;bar&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
 <span id="cb233-5"><a href="tutorial-data-visualization-with-ggplot.html#cb233-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-78-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-79-1.png" width="60%" /></p>
 </div>
 <div id="box-plots" class="section level3" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> box plots</h3>
@@ -720,7 +720,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="tutorial-data-visualization-with-ggplot.html#cb234-1" aria-hidden="true" tabindex="-1"></a>human_droid_data <span class="sc">%&gt;%</span></span>
 <span id="cb234-2"><a href="tutorial-data-visualization-with-ggplot.html#cb234-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> sex, <span class="at">y=</span>height)) <span class="sc">+</span></span>
 <span id="cb234-3"><a href="tutorial-data-visualization-with-ggplot.html#cb234-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-79-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-80-1.png" width="60%" /></p>
 </div>
 </div>
 <div id="take-aways-6" class="section level2" number="9.6">
