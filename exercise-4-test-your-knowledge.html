@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 10 Exercise 3: Test your knowledge | R for Conditional Process Analysis</title>
+  <title> 12 Exercise 4: Test your knowledge | R for Conditional Process Analysis</title>
   <meta name="description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 10 Exercise 3: Test your knowledge | R for Conditional Process Analysis" />
+  <meta property="og:title" content=" 12 Exercise 4: Test your knowledge | R for Conditional Process Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 10 Exercise 3: Test your knowledge | R for Conditional Process Analysis" />
+  <meta name="twitter:title" content=" 12 Exercise 4: Test your knowledge | R for Conditional Process Analysis" />
   
   <meta name="twitter:description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="tutorial-data-visualization-with-ggplot.html"/>
-<link rel="next" href="tutorial-linear-regression.html"/>
+<link rel="prev" href="tutorial-linear-regression.html"/>
+<link rel="next" href="solutions.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -369,37 +369,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-3-test-your-knowledge" class="section level1" number="10">
-<h1><span class="header-section-number"> 10</span> Exercise 3: Test your knowledge</h1>
-<p><strong>After working through Exercise 3, you’ll…</strong></p>
+<div id="exercise-4-test-your-knowledge" class="section level1" number="12">
+<h1><span class="header-section-number"> 12</span> Exercise 4: Test your knowledge</h1>
+<p><strong>After working through Exercise 4, you’ll…</strong></p>
 <ul>
-<li>be able to see a graph and recreate it with <code>ggplot2</code></li>
-<li>be able to see a problem and customize a plot with <code>ggplot2</code> to solve it</li>
+<li>have practiced to run simple and multiple linear regression models in R</li>
+<li>know how to use coefficient standardization to compare effect sizes</li>
+<li>know how to interpret the results of these models</li>
 </ul>
-<div id="task-1-2" class="section level2" number="10.1">
-<h2><span class="header-section-number">10.1</span> Task 1</h2>
-<p>The data set <em>glbwarm</em> comes pre-installed with the <code>processR</code> package that we will be working with soon. The data comprises 815 US individuals (417 females, 398 males) who agreed to engage in online questionnaires. They roughly represent the population of the United States.</p>
-<p>Let’s install / activate the <code>processR</code> package first and assign the glbwarm data to a source object.</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="exercise-3-test-your-knowledge.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
-<span id="cb235-2"><a href="exercise-3-test-your-knowledge.html#cb235-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
-<span id="cb235-3"><a href="exercise-3-test-your-knowledge.html#cb235-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
-<span id="cb235-4"><a href="exercise-3-test-your-knowledge.html#cb235-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
-<span id="cb235-5"><a href="exercise-3-test-your-knowledge.html#cb235-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
-<span id="cb235-6"><a href="exercise-3-test-your-knowledge.html#cb235-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb235-7"><a href="exercise-3-test-your-knowledge.html#cb235-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
-<p>Familiarize yourself with the data set (<strong>Hint:</strong> use the <code>help()</code> / <code>?</code> function) and then try to reproduce this plot with <code>dplyr</code> and <code>ggplot2</code>. (<strong>Hint:</strong> You can hide the legend by adding <code>theme(legend.position = "none")</code> to your plot.)</p>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-83-1.png" width="60%" /></p>
+<div id="task-1-3" class="section level2" number="12.1">
+<h2><span class="header-section-number">12.1</span> Task 1</h2>
+<p>Let’s use the data set <em>glbwarm</em> again, which you should know well by now. Install / activate the <code>processR</code> package and assign the glbwarm data to a source object.</p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="exercise-4-test-your-knowledge.html#cb252-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb252-2"><a href="exercise-4-test-your-knowledge.html#cb252-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb252-3"><a href="exercise-4-test-your-knowledge.html#cb252-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb252-4"><a href="exercise-4-test-your-knowledge.html#cb252-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb252-5"><a href="exercise-4-test-your-knowledge.html#cb252-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb252-6"><a href="exercise-4-test-your-knowledge.html#cb252-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb252-7"><a href="exercise-4-test-your-knowledge.html#cb252-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
+<p>In this task, we want to tackle simple linear regression. More specifically, we want to predict the <em>ideology</em> of our respondents by their <em>age</em> because we assume that older respondents will hold more conservative viewpoints. The higher the values of the <em>ideology</em> variable, the more conservative the respondents are (coded from 1 ‘very liberal’ to 7 ‘very conservative’).</p>
+<p><strong>Research question:</strong> Do older U.S. Americans hold more conservative viewpoints than younger U.S. Americans?</p>
+<p>To answer this question, prepare a visual inspection of this relationship without fitting a regression line. Can you recognize a relationship? What is its nature?</p>
 </div>
-<div id="task-2-2" class="section level2" number="10.2">
-<h2><span class="header-section-number">10.2</span> Task 2</h2>
-<p>Now, try to reproduce this graph. (<strong>Hint:</strong> You will need to recode the <em>ideology</em> variable in a way that higher values represent stronger attitudes, <em>independent of partisanship</em>.)</p>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-85-1.png" width="60%" /></p>
+<div id="task-2-3" class="section level2" number="12.2">
+<h2><span class="header-section-number">12.2</span> Task 2</h2>
+<p>Next, try to quantify the association using Pearson’s r. Interpret the result.</p>
 </div>
-<div id="task-3-2" class="section level2" number="10.3">
-<h2><span class="header-section-number">10.3</span> Task 3</h2>
-<p>Can you make a chart that breaks down the relationship between <em>age</em>, <em>negative emotions about climate change</em>, and <em>ideological extremity</em> for the different <em>sexes</em> AND <em>parties</em>?</p>
-<p>When you’re ready to look at the solutions, you can find them here: <a href="solutions.html#solutions-for-exercise-3">Solutions for Exercise 3</a>.</p>
-<p>We have officially finished our chapters on data management and visualization! We can move on to data analysis and a new <a href="tutorial-linear-regression.html#tutorial-linear-regression">Tutorial: Linear regression</a>.</p>
+<div id="task-3-3" class="section level2" number="12.3">
+<h2><span class="header-section-number">12.3</span> Task 3</h2>
+<p>Using your graph from Task 1, fit a regression line to your data points (<strong>Hint:</strong> You will need to load the <code>ggpubr</code> package). Interpret the parameters of the regression line.</p>
+</div>
+<div id="task-4-2" class="section level2" number="12.4">
+<h2><span class="header-section-number">12.4</span> Task 4</h2>
+<p>Run a linear model in R using the <em>ideology</em> and <em>age</em> variables. Interpret the results.</p>
+</div>
+<div id="task-5-2" class="section level2" number="12.5">
+<h2><span class="header-section-number">12.5</span> Task 5</h2>
+<p>Since age alone does not seem to be a good predictor of conservatism, we want to introduce other predictors into the model and run a Multiple Linear Regression. This means that we will predict the effect of age on conservatism while controlling for the effect of third variables. For example, the respondents’ gender (<em>sex</em>, 0 = female, 1 = male) and their party preference (<em>partyid</em>, 1 = Democrat, 2 = Independent, 3 = Republican) might be great predictors of conservatism.</p>
+<p><strong>Note:</strong> In a linear regression model, we can only include metric variables and variables that are binary coded (0/1). However, <em>partyid</em> is a categorical, i.e. factor variable, since Democrats are coded 1, Independents 2, and Republicans 3. Therefore, you need to mutate <em>partyid</em> and create two new binary variables <em>democrat</em> (0/1) and <em>republican</em> (0/1), where 1 indicates that the respondent identifies with that political party. (You don’t need to create a variable <em>independent</em>, since that information would be redundant: someone who has a value of 0 for both <em>republican</em> AND <em>democrat</em> MUST be an independent, so you can derive party preference with just two variables).</p>
+<p>Then, run a multiple linear model that predicts <em>ideology</em> by <em>sex</em>, <em>democrat</em>, <em>republican</em>, and <em>age</em>. Interpret the results and the meaning of the age coefficient.</p>
+</div>
+<div id="task-6-1" class="section level2" number="12.6">
+<h2><span class="header-section-number">12.6</span> Task 6</h2>
+<p>Standardize all relevant variables and run the model again (note that binary variables shouldn’t be standardized). How does the interpretation of the age coefficient change?</p>
 </div>
 </div>
             </section>
@@ -407,8 +419,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="tutorial-data-visualization-with-ggplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tutorial-linear-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tutorial-linear-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="solutions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
