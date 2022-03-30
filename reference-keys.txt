@@ -1,4 +1,4 @@
-tab:unnamed-chunk-8
+tab:unnamed-chunk-11
 tutorial-installing-understanding-rr-studio
 installing-r
 installing-r-studio

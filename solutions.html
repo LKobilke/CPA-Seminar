@@ -698,7 +698,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb293-6"><a href="solutions.html#cb293-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, </span><span class="sc">\n</span><span class="st"> and ideological extremity&quot;</span>,</span>
 <span id="cb293-7"><a href="solutions.html#cb293-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
 <span id="cb293-8"><a href="solutions.html#cb293-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-113-1.png" width="672" /></p>
 <p><em>Solution 2:</em></p>
 <p>Alternatively, you might enjoy this look that you can create with <code>facet_grid()</code>:</p>
 <div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="solutions.html#cb294-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
@@ -709,7 +709,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb294-6"><a href="solutions.html#cb294-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, and ideological extremity&quot;</span>,</span>
 <span id="cb294-7"><a href="solutions.html#cb294-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
 <span id="cb294-8"><a href="solutions.html#cb294-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="fu">vars</span>(sex), <span class="fu">vars</span>(Party))</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-111-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
 <p><em>Solution 3:</em></p>
 <p>Or even this look, also done with <code>facet_grid()</code>:</p>
 <div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="solutions.html#cb295-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
@@ -720,14 +720,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb295-6"><a href="solutions.html#cb295-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, and ideological extremity&quot;</span>,</span>
 <span id="cb295-7"><a href="solutions.html#cb295-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
 <span id="cb295-8"><a href="solutions.html#cb295-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>sex <span class="sc">+</span> Party)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
 </div>
 </div>
 <div id="solutions-for-exercise-4" class="section level2 unnumbered">
 <h2>Solutions for Exercise 4</h2>
 <div id="task-1-7" class="section level3 unnumbered">
 <h3>Task 1</h3>
-<p>Let’s use the data set <em>glbwarm</em> again, which you should know well by now. Install / activate the <code>processR</code> package and assign the glbwarm data to a source object.</p>
+<p>Let’s use the data set <em>glbwarm</em> again, which you should know well by now. Install / activate the <code>processR</code> package and assign the <em>glbwarm</em> data to a source object.</p>
 <div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="solutions.html#cb296-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
 <span id="cb296-2"><a href="solutions.html#cb296-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
 <span id="cb296-3"><a href="solutions.html#cb296-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
@@ -743,7 +743,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb297-2"><a href="solutions.html#cb297-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb297-3"><a href="solutions.html#cb297-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb297-4"><a href="solutions.html#cb297-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Conservatism&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> We can observe a small, positive relationship between age and conservatism. (This can be inferred from the amount of bigger bubbles clustering on the top right corner of the graph.)</p>
 </div>
 <div id="task-2-7" class="section level3 unnumbered">
@@ -783,7 +783,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb301-8"><a href="solutions.html#cb301-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span></span>
 <span id="cb301-9"><a href="solutions.html#cb301-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="fu">aes</span>(<span class="at">label =</span>  ..rr.label..)) <span class="sc">+</span> </span>
 <span id="cb301-10"><a href="solutions.html#cb301-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">6.2</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> The equation is Y = 3.1 + 0.02*X. This means that a person who becomes one year older is estimated to become 0.02 points more conservative. Similarly, two U.S. Americans with an age difference of 10 years are estimated to differ by 0.2 points on the ideology scale. However, age is not a really good predictor of conservatism as the predictor only explains about 4.5% of the observed variance in conservatism scores (R<sup>2</sup>).</p>
 </div>
 <div id="task-4-5" class="section level3 unnumbered">
