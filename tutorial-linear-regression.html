@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,6 +313,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="exercise-4-test-your-knowledge.html"><a href="exercise-4-test-your-knowledge.html#task-5-2"><i class="fa fa-check"></i><b>12.5</b> Task 5</a></li>
 <li class="chapter" data-level="12.6" data-path="exercise-4-test-your-knowledge.html"><a href="exercise-4-test-your-knowledge.html#task-6-1"><i class="fa fa-check"></i><b>12.6</b> Task 6</a></li>
 </ul></li>
+<li class="chapter" data-level="13" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html"><i class="fa fa-check"></i><b>13</b> Tutorial: Mediation Analysis</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#introduction-to-mediation"><i class="fa fa-check"></i><b>13.1</b> Introduction to mediation</a></li>
+<li class="chapter" data-level="13.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#difference-between-mediation-and-moderation"><i class="fa fa-check"></i><b>13.2</b> Difference between mediation and moderation</a></li>
+<li class="chapter" data-level="13.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#two-step-process-of-mediation"><i class="fa fa-check"></i><b>13.3</b> Two-step process of mediation</a></li>
+<li class="chapter" data-level="13.4" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#statistical-representation-and-equations"><i class="fa fa-check"></i><b>13.4</b> Statistical representation and equations</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#direct-effect-c"><i class="fa fa-check"></i><b>13.4.1</b> Direct effect <em>c′</em></a></li>
+<li class="chapter" data-level="13.4.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#indirect-effect-ab"><i class="fa fa-check"></i><b>13.4.2</b> Indirect effect <em>ab</em></a></li>
+<li class="chapter" data-level="13.4.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#total-effect"><i class="fa fa-check"></i><b>13.4.3</b> Total effect</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#example"><i class="fa fa-check"></i><b>13.5</b> Example</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#knowing-your-data-1"><i class="fa fa-check"></i><b>13.5.1</b> Knowing your data</a></li>
+<li class="chapter" data-level="13.5.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#visual-inspection-of-linear-trends-1"><i class="fa fa-check"></i><b>13.5.2</b> Visual inspection of linear trends</a></li>
+<li class="chapter" data-level="13.5.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#pearsons-r-1"><i class="fa fa-check"></i><b>13.5.3</b> Pearson’s r</a></li>
+<li class="chapter" data-level="13.5.4" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#fit-models"><i class="fa fa-check"></i><b>13.5.4</b> Fit models</a></li>
+<li class="chapter" data-level="13.5.5" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#using-processr"><i class="fa fa-check"></i><b>13.5.5</b> Using processR</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#take-aways-8"><i class="fa fa-check"></i><b>13.6</b> Take Aways</a></li>
+<li class="chapter" data-level="13.7" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#more-tutorials-on-this-7"><i class="fa fa-check"></i><b>13.7</b> More tutorials on this</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
@@ -380,7 +402,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="knowing-your-data" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> Knowing your data</h2>
 <p>Starting in this chapter, we turn away from data management and data visualization and toward data analysis. Although you are all certainly already well acquainted with linear regression, it is worth repeating a few of the basic concepts: you will need them to understand moderation and mediation analysis.</p>
-<p>In this chapter, we will use the <em>glbwarm</em> data set, which you have just tackled in <a href="exercise-3-test-your-knowledge.html#exercise-3-test-your-knowledge">Exercise 3: Test your knowledge</a>. The data set comprises 815 US individuals who roughly represent the population of the United States. All of the following analyses can be found in <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">Hayes, 2022</a>, who inspired this seminar. If any of my explanations seem incomprehensible to you, or if you want to know more details and mathematical formulas, the book is more than worth the buy!</p>
+<p>In this chapter, we will use the <em>glbwarm</em> data set, which you have just tackled in <a href="exercise-3-test-your-knowledge.html#exercise-3-test-your-knowledge">Exercise 3: Test your knowledge</a>. The data set comprises 815 US individuals who roughly represent the population of the United States. All of the following analyses can be found in <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">Hayes, 2022</a>, which inspired this seminar. If any of my explanations seem incomprehensible to you, or if you want to know more details and develop even greater skills, the book is <strong>more than worth the buy</strong>!</p>
 <p>Let’s load Andrew F. Hayes’ package and data and assign them to a source object.</p>
 <div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="tutorial-linear-regression.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
 <span id="cb236-2"><a href="tutorial-linear-regression.html#cb236-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
@@ -409,7 +431,7 @@ who feel such negative emotions to a lesser extent?</p>
 <span id="cb237-2"><a href="tutorial-linear-regression.html#cb237-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb237-3"><a href="tutorial-linear-regression.html#cb237-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb237-4"><a href="tutorial-linear-regression.html#cb237-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> It seems that people who express larger negative sentiments about climate change are also more supportive of government action. This correlation is far from perfect, but the pattern is evident.</p>
 </div>
 <div id="pearsons-r" class="section level2" number="11.3">
@@ -423,7 +445,7 @@ who feel such negative emotions to a lesser extent?</p>
 ##  Pearson&#39;s product-moment correlation
 ## 
 ## data:  data$govact and data$negemot
-## t = 20.183, df = 813, p-value &lt; 2.2e-16
+## t = 20.183, df = 813, p-value &lt; 0.00000000000000022
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
 ##  0.5301050 0.6217505
@@ -436,6 +458,16 @@ who feel such negative emotions to a lesser extent?</p>
 <h2><span class="header-section-number">11.4</span> OLS regression</h2>
 <p>A linear regression model is an equation that uses information contained in the relationship between an explanatory variable X (also called predictor or independent variable) and an outcome variable Y (also called dependent variable) to make predictions.</p>
 <p>When doing a linear regression analysis, we try to fit a regression line through all data points (X<sub>[i]</sub> , Y<sub>[i]</sub>) of the scatter or bubble plot. We could use many different lines, but we´ll always use that one that minimizes the distance between each point of (X<sub>[i]</sub> , Y<sub>[i]</sub>) and the line. Speaking in Math, the aim is to estimate the regression model parameters such that the resulting equation produces estimates of the dependent variable that have the lowest residuals (as measured by the ordinary least squares criterion).</p>
+<p>A generic linear regression equation looks like this:
+1. Y = i<sub>[Y]</sub> + b<sub>[1]</sub> * X,</p>
+<p>where i<sub>[Y]</sub> is the intercept (often called b<sub>[0]</sub>) and b<sub>[1]</sub> is the regression coefficient of X.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><span style="color: darkred;">A generic interpretation of a simple linear regression would be that two individuals who differ by one unit on X are estimated to differ by X’s regression coefficient units on Y. For a dichotomous / binary X variable, the regression coefficient estimates the difference between both group means instead (because a one unit increase means changing groups, X = 1 and X = 0).</span></strong></td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>If you need a more extensive recap / explanation of linear regressions and the ordinary least squares criterion, check out <a href="https://www.youtube.com/watch?v=yMgFHbjbAW8">this video by Khan Academy, 2017 (8 min)</a>.</p>
 </blockquote>
@@ -458,7 +490,7 @@ We’ll now fit a regression line to our data. To print beautiful labels to this
 <span id="cb241-8"><a href="tutorial-linear-regression.html#cb241-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span> <span class="co"># This command adds the regression line to the bubble plot</span></span>
 <span id="cb241-9"><a href="tutorial-linear-regression.html#cb241-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="fu">aes</span>(<span class="at">label =</span>  ..rr.label..)) <span class="sc">+</span>  <span class="co"># This command adds the r-squared to the graph</span></span>
 <span id="cb241-10"><a href="tutorial-linear-regression.html#cb241-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">6.6</span>) <span class="co"># Controls the placement of the regression equation</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> As you can see, the equation is Y = 2.8 + 0.51*X. For a person with a negative emotions score of X = 2, the model predicts Y = 2.8 + 0.51*2 = 2.8 + 1.02 = 3.82.</p>
 <p>Let´s suppose this person’s actual support for government action, Y, is 4.0. If so, then this person’s residual would be e = 4.0 - 3.82 = 0.18. Thus, the model very slightly overestimates this person’s support for government action by 0.18 units.</p>
 <p>Finally, R<sup>2</sup> provides an estimation of how much of the variance in Y can be explained by X. In this case, 33% of the variance in the support for government action can be explained by negative emotions about climate change.</p>
@@ -476,15 +508,15 @@ You can also directly run the linear model in R:</p>
 ## -4.3285 -0.6731  0.1018  0.7554  3.2142 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  2.75732    0.09866   27.95   &lt;2e-16 ***
-## negemot      0.51424    0.02548   20.18   &lt;2e-16 ***
+##             Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept)  2.75732    0.09866   27.95 &lt;0.0000000000000002 ***
+## negemot      0.51424    0.02548   20.18 &lt;0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.111 on 813 degrees of freedom
 ## Multiple R-squared:  0.3338, Adjusted R-squared:  0.333 
-## F-statistic: 407.3 on 1 and 813 DF,  p-value: &lt; 2.2e-16</code></pre>
+## F-statistic: 407.3 on 1 and 813 DF,  p-value: &lt; 0.00000000000000022</code></pre>
 <div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="tutorial-linear-regression.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="co"># lm -&gt; stands for linear model and tells R to fit an OLS regression</span></span>
 <span id="cb244-2"><a href="tutorial-linear-regression.html#cb244-2" aria-hidden="true" tabindex="-1"></a><span class="co"># govact ~ negemot -&gt; tells are to predict govact by using the values of negemot</span></span>
 <span id="cb244-3"><a href="tutorial-linear-regression.html#cb244-3" aria-hidden="true" tabindex="-1"></a><span class="co"># summary(model) -&gt; tells are to print a summary of the OLS regression results to the console</span></span></code></pre></div>
@@ -494,9 +526,15 @@ You can also directly run the linear model in R:</p>
 <h2><span class="header-section-number">11.5</span> Standardizing coefficients</h2>
 <p>The process of putting differently scaled variables on the same scale is called <strong>standardization</strong>. Thus, standardization allows you to compare results from differently scaled variables. For example, suppose you want to compare the effects of annual income (in $) and negative emotions about climate change (6-point scale)
 on support for government action (7-point scale). It is difficult to compare the effect sizes of these variables when they are scaled differently.</p>
-<p>For standadization, you <strong>remove the mean from each observed value of the variable and divide by its standard deviation</strong>. The resulting variable will have a mean of 0 and a standard deviation of 1. When all variables of a regression model are first standardized before the model is estimated, we speak of a standardized regression model.</p>
-<p>In a standardized regression model, all measurements are expressed in units of standard deviations from the sample mean and the intercept is
-always 0, i.e. the regression lines goes through the center of the coordinate system.</p>
+<p>For standardization, you <strong>remove the mean from each observed value of the variable and divide by its standard deviation</strong>. The resulting variable will have a mean of 0 and a standard deviation of 1. When all variables of a regression model are first standardized before the model is estimated, we speak of a standardized regression model.</p>
+<p>In a standardized regression model, all measurements are expressed in units of standard deviations from the sample mean and the intercept is always 0, i.e. the regression lines goes through the center of the coordinate system.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><span style="color: darkred;">A generic interpretation of a standardized simple linear regression would be that two individuals who differ by one standard deviation on X are estimated to differ by X’s regression coefficient’s standard deviations on Y.</span></strong></td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>If you need a more extensive recap / explanation of variable standardization, check out <a href="https://www.youtube.com/watch?v=2_TxnvZGtV0">this video by D. Caughlin, 2020 (start at 4 min)</a>.</p>
 </blockquote>
@@ -511,7 +549,7 @@ always 0, i.e. the regression lines goes through the center of the coordinate s
 <span id="cb245-8"><a href="tutorial-linear-regression.html#cb245-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="fl">2.0</span>) <span class="sc">+</span></span>
 <span id="cb245-9"><a href="tutorial-linear-regression.html#cb245-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Standardized negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Standardized support for government action against climate change&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb245-10"><a href="tutorial-linear-regression.html#cb245-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>)                                </span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
 <div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="tutorial-linear-regression.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact_st <span class="sc">~</span> negemot_st,<span class="at">data=</span>data)) <span class="co"># Finally, we run the actual model.</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -522,23 +560,34 @@ always 0, i.e. the regression lines goes through the center of the coordinate s
 ## -3.1817 -0.4948  0.0748  0.5553  2.3626 
 ## 
 ## Coefficients:
-##              Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept) 5.405e-15  2.861e-02    0.00        1    
-## negemot_st  5.777e-01  2.863e-02   20.18   &lt;2e-16 ***
+##                         Estimate           Std. Error t value            Pr(&gt;|t|)    
+## (Intercept) 0.000000000000005405 0.028608403540518926    0.00                   1    
+## negemot_st  0.577745819891247070 0.028625970876249084   20.18 &lt;0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 0.8167 on 813 degrees of freedom
 ## Multiple R-squared:  0.3338, Adjusted R-squared:  0.333 
-## F-statistic: 407.3 on 1 and 813 DF,  p-value: &lt; 2.2e-16</code></pre>
+## F-statistic: 407.3 on 1 and 813 DF,  p-value: &lt; 0.00000000000000022</code></pre>
 <p><strong>Evaluation:</strong> Now, the intercept goes through the center of the coordinate system (<em>b<sub>[0]</sub></em> = 0.0). Two persons with one standard deviation difference in their negative sentiments about climate change (X) are expected to have <em>b<sub>[1]</sub></em> = 0.57 standard deviations difference in their support for government action. The R<sup>2</sup> remains untouched, of course: 0.33.</p>
 </div>
 <div id="multiple-regression" class="section level2" number="11.6">
 <h2><span class="header-section-number">11.6</span> Multiple regression</h2>
 <p>Multiple regression is a statistical extension of simple linear regression that allows to examine the association between <strong>multiple independent variables</strong> and a <strong>single dependent variable</strong>.</p>
-<p><strong>Why not just run multiple simple regressions?</strong> Often the relationships between two variables X and Y are not absolutely clear. This is due to the fact that persons who vary in X are more likely to differ in Z, too. As a result, the changes in Y might also be caused by Z instead of X, or they might be caused by a combination of X AND Z. Multiple regression allows to extract the effect of X on Y while <strong>controlling for the effect of Z</strong> (i.e. <em>partial effect</em>), which is what makes multiple regression models more powerful than simple regression models. In the given example, Z is called a <strong>covariate</strong> because it is the variable that is controlled for. But X can also be called a covariate of Z, provided Z is the variable of main interest. All in all, multiple regression allows to rule out alternative explanations for an observed relationship between two variables by controlling for other variables that might also impact the dependent variable.</p>
+<p><strong>Why not just run multiple simple regressions?</strong> Often the relationships between two variables X and Y are not absolutely clear. This is due to the fact that persons who vary in X are more likely to differ in Z, too. As a result, the changes in Y might also be caused by Z instead of X, or they might be caused by a combination of X <em>AND</em> Z. Multiple regression allows to extract the effect of X on Y while <strong>controlling for the effect of Z</strong> (i.e. <em>partial effect</em>), which is what makes multiple regression models more powerful than simple regression models.</p>
+<p>A typical multiple linear regression equation looks like this:
+1. Y = i<sub>[Y]</sub> + b<sub>[1]</sub> * X + b<sub>[2]</sub> * Z</p>
+<p>where i<sub>[Y]</sub> is the intercept (often called b<sub>[0]</sub>),b<sub>[1]</sub> is the regression coefficient of X, and b<sub>[2]</sub> is the regression coefficient of Z.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><span style="color: darkred;">A generic interpretation of a multiple linear regression would be that two individuals who differ by one unit on X but are equal on Z are estimated to differ by X’s regression coefficient units on Y. For a dichotomous / binary X variable, this regression coefficient estimates the difference between both group means while holding Z constant (because a one unit increase means changing groups, X = 1 and X = 0).</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>In the given example, Z is called a <strong>covariate</strong> because it is the variable that is controlled for. But X can also be called a covariate of Z, provided Z is the variable of main interest. All in all, multiple regression allows to rule out alternative explanations for an observed relationship between two variables by controlling for other variables that might also impact the dependent variable.</p>
 <p>To run our own multiple regression model, we will predict support for government action against climate change by negative emotions about climate change, while controlling for age and political ideology (scale from 1 “Very Liberal” to 7 “Very Conservative”).</p>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="tutorial-linear-regression.html#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact <span class="sc">~</span> negemot <span class="sc">+</span> age <span class="sc">+</span> ideology ,<span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="tutorial-linear-regression.html#cb248-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(govact <span class="sc">~</span> negemot <span class="sc">+</span> age <span class="sc">+</span> ideology ,<span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = govact ~ negemot + age + ideology, data = data)
@@ -548,17 +597,17 @@ always 0, i.e. the regression lines goes through the center of the coordinate s
 ## -4.8789 -0.6843  0.0749  0.6967  3.4815 
 ## 
 ## Coefficients:
-##              Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  3.994172   0.192375  20.762  &lt; 2e-16 ***
-## negemot      0.437918   0.026103  16.777  &lt; 2e-16 ***
-## age         -0.001461   0.002343  -0.623    0.533    
-## ideology    -0.218672   0.026963  -8.110 1.86e-15 ***
+##              Estimate Std. Error t value             Pr(&gt;|t|)    
+## (Intercept)  3.994172   0.192375  20.762 &lt; 0.0000000000000002 ***
+## negemot      0.437918   0.026103  16.777 &lt; 0.0000000000000002 ***
+## age         -0.001461   0.002343  -0.623                0.533    
+## ideology    -0.218672   0.026963  -8.110  0.00000000000000186 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 1.067 on 811 degrees of freedom
 ## Multiple R-squared:  0.3876, Adjusted R-squared:  0.3853 
-## F-statistic: 171.1 on 3 and 811 DF,  p-value: &lt; 2.2e-16</code></pre>
+## F-statistic: 171.1 on 3 and 811 DF,  p-value: &lt; 0.00000000000000022</code></pre>
 <p><strong>Evaluation:</strong> Compared to our simple model, the R<sup>2</sup> has increased, namely from 0.33 to 0.38. This is great news because it means that we can explain more of the variance of Y with the newly introduced covariates. The equation for this model is Y = 3.99 + 0.43*X - 0.00*Z<sub>1</sub> - 0.21*Z<sub>2</sub>. Accordingly, the intercept is at 3.99 (<em>b<sub>[0]</sub></em> = 3.99) and the regression parameters are <em>b<sub>[1]</sub></em> = 0.43, <em>p</em> &lt; 0.001, <em>b<sub>[2]</sub></em> = -0.00, <em>p</em> = 0.533 and <em>b<sub>[3]</sub></em> = -0.21, <em>p</em> &lt; 0.001. Obviously, all variables have a significant effect on Y when controlling for the other variables, except age.</p>
 <p>The intercept can be interpreted as the value of Y when all other variables in the equation are equal to 0. That is, we would assume that the support for government action is 3.99 when a respondent has a negative emotion about climate change that equals 0 (which is not possible, since the lowest value on the scale is 1), is 0 years old (not possible for obvious reasons) and has an ideology of 0 (also not possible on a scale from 1 to 7). Because the interpretation of the intercept in multiple regression models is often nonsensical, researchers focus primarily on the interpretation of the regression coefficients.</p>
 <p>The regression coefficients are interpreted as the difference between two people who are equal with regard to all variables, but differ in one unit on the variable of interest. For example, two persons of the same age and ideology who disagree regarding their negative emotions about climate change by one point differ by an estimated 0.43 point in their support for government action. You can enter these numbers into the regression equation. Let’s do that and compare two 20 year-olds who are both political moderates, but differ in their emotions by one point:</p>
@@ -571,13 +620,20 @@ always 0, i.e. the regression lines goes through the center of the coordinate s
 <div id="standardized-multiple-regression" class="section level2" number="11.7">
 <h2><span class="header-section-number">11.7</span> Standardized multiple regression</h2>
 <p>If you standardize the variables <strong>before</strong> including them in the model, you make the effect sizes of the variables comparable to each other. However, this also changes the interpretation of the model, i.e. how the change of the variable of interest by one unit is interpreted. After standardization, the regression coefficients are interpreted as the difference between two people who are equal with regard to all variables, but differ in one standard deviation on the variable of interest. If X and Y are both standardized and X changes by one standard deviation while all other variables remain constant, then Y also changes by one standard deviation (even if other variables in the model were not standardized).</p>
-<p>Let’s run the standardized model and try to interpet it.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><span style="color: darkred;">A generic interpretation of a standardized multiple regression would be that two individuals who differ by one standard deviation on X but are equal on Z are estimated to differ by X’s regression coefficient’s standard deviations on Y.</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>Let’s run the standardized model and try to interpret it.</p>
 <div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="tutorial-linear-regression.html#cb250-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>negemot_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>negemot)</span>
 <span id="cb250-2"><a href="tutorial-linear-regression.html#cb250-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>age_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>age)</span>
 <span id="cb250-3"><a href="tutorial-linear-regression.html#cb250-3" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ideology_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>ideology)</span>
 <span id="cb250-4"><a href="tutorial-linear-regression.html#cb250-4" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>govact_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>govact)</span>
 <span id="cb250-5"><a href="tutorial-linear-regression.html#cb250-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb250-6"><a href="tutorial-linear-regression.html#cb250-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact_st <span class="sc">~</span> negemot_st <span class="sc">+</span> age_st <span class="sc">+</span> ideology_st,<span class="at">data=</span>data)) <span class="co"># Finally, we run the actual model.</span></span></code></pre></div>
+<span id="cb250-6"><a href="tutorial-linear-regression.html#cb250-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(govact_st <span class="sc">~</span> negemot_st <span class="sc">+</span> age_st <span class="sc">+</span> ideology_st,<span class="at">data=</span>data)) <span class="co"># Finally, we run the actual model.</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = govact_st ~ negemot_st + age_st + ideology_st, data = data)
@@ -587,17 +643,17 @@ always 0, i.e. the regression lines goes through the center of the coordinate s
 ## -3.5863 -0.5030  0.0550  0.5121  2.5591 
 ## 
 ## Coefficients:
-##               Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)  4.232e-15  2.746e-02   0.000    1.000    
-## negemot_st   4.920e-01  2.933e-02  16.777  &lt; 2e-16 ***
-## age_st      -1.753e-02  2.813e-02  -0.623    0.533    
-## ideology_st -2.430e-01  2.996e-02  -8.110 1.86e-15 ***
+##                          Estimate            Std. Error t value             Pr(&gt;|t|)    
+## (Intercept)  0.000000000000004232  0.027462514788610635   0.000                1.000    
+## negemot_st   0.491995051947269890  0.029325815779064967  16.777 &lt; 0.0000000000000002 ***
+## age_st      -0.017533280621912107  0.028126011198986705  -0.623                0.533    
+## ideology_st -0.242994585930391804  0.029961998428491336  -8.110  0.00000000000000186 ***
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 0.784 on 811 degrees of freedom
 ## Multiple R-squared:  0.3876, Adjusted R-squared:  0.3853 
-## F-statistic: 171.1 on 3 and 811 DF,  p-value: &lt; 2.2e-16</code></pre>
+## F-statistic: 171.1 on 3 and 811 DF,  p-value: &lt; 0.00000000000000022</code></pre>
 <p><strong>Evaluation:</strong> As you can see, the intercept goes through the center of the coordinate system (<em>b<sub>[0]</sub></em> = 0.0) again. <em>b<sub>[1]</sub></em> = 0.49 implies that two persons of the same age and ideology who disagree regarding their negative emotions about climate change by one standard deviation are estimated to differ 0.49 standard deviations in their support for government action. Since a one standard deviation change in negative emotions produces the largest standard deviation change in support for government action, we can conclude that negative emotions are the best predictor of support for government action(at least with respect to the variables that we selected for the model).</p>
 <p><strong>Tip for advanced students:</strong> Always be careful not to standardize dichotomous variables. Since calculating standard deviations for dichotomous variables is nonsensical (what is the standard deviation of a variable that can only be 0 or 1, but nothing in between?), interpreting standardized dichotomous variables is illogical and should be avoided. Include the unstandardized version of these variables in your models.</p>
 </div>

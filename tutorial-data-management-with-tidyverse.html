@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,6 +313,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="exercise-4-test-your-knowledge.html"><a href="exercise-4-test-your-knowledge.html#task-5-2"><i class="fa fa-check"></i><b>12.5</b> Task 5</a></li>
 <li class="chapter" data-level="12.6" data-path="exercise-4-test-your-knowledge.html"><a href="exercise-4-test-your-knowledge.html#task-6-1"><i class="fa fa-check"></i><b>12.6</b> Task 6</a></li>
 </ul></li>
+<li class="chapter" data-level="13" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html"><i class="fa fa-check"></i><b>13</b> Tutorial: Mediation Analysis</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#introduction-to-mediation"><i class="fa fa-check"></i><b>13.1</b> Introduction to mediation</a></li>
+<li class="chapter" data-level="13.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#difference-between-mediation-and-moderation"><i class="fa fa-check"></i><b>13.2</b> Difference between mediation and moderation</a></li>
+<li class="chapter" data-level="13.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#two-step-process-of-mediation"><i class="fa fa-check"></i><b>13.3</b> Two-step process of mediation</a></li>
+<li class="chapter" data-level="13.4" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#statistical-representation-and-equations"><i class="fa fa-check"></i><b>13.4</b> Statistical representation and equations</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#direct-effect-c"><i class="fa fa-check"></i><b>13.4.1</b> Direct effect <em>c′</em></a></li>
+<li class="chapter" data-level="13.4.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#indirect-effect-ab"><i class="fa fa-check"></i><b>13.4.2</b> Indirect effect <em>ab</em></a></li>
+<li class="chapter" data-level="13.4.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#total-effect"><i class="fa fa-check"></i><b>13.4.3</b> Total effect</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#example"><i class="fa fa-check"></i><b>13.5</b> Example</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#knowing-your-data-1"><i class="fa fa-check"></i><b>13.5.1</b> Knowing your data</a></li>
+<li class="chapter" data-level="13.5.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#visual-inspection-of-linear-trends-1"><i class="fa fa-check"></i><b>13.5.2</b> Visual inspection of linear trends</a></li>
+<li class="chapter" data-level="13.5.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#pearsons-r-1"><i class="fa fa-check"></i><b>13.5.3</b> Pearson’s r</a></li>
+<li class="chapter" data-level="13.5.4" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#fit-models"><i class="fa fa-check"></i><b>13.5.4</b> Fit models</a></li>
+<li class="chapter" data-level="13.5.5" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#using-processr"><i class="fa fa-check"></i><b>13.5.5</b> Using processR</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#take-aways-8"><i class="fa fa-check"></i><b>13.6</b> Take Aways</a></li>
+<li class="chapter" data-level="13.7" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#more-tutorials-on-this-7"><i class="fa fa-check"></i><b>13.7</b> More tutorials on this</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
@@ -477,26 +499,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To this end, <code>dplyr</code> relies on the pipe operator (<em>%&gt;%</em>).<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> The <em>%&gt;%</em> operator allows functions to be applied sequentially to the same source object in a concise manner, so that step-by-step transformations can be applied to the data. Therefore, we always call the source object first and then add each transformation step separated by the <em>%&gt;%</em> operator. Let’s illustrate this concept with an example. We’ll use the Starwars data set that you are already familiar with.</p>
 <div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="tutorial-data-management-with-tidyverse.html#cb142-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span>    <span class="co"># First, we define the source object, i.e. the data frame that we want to transform, followed by the pipe operator </span></span>
 <span id="cb142-2"><a href="tutorial-data-management-with-tidyverse.html#cb142-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()             <span class="co"># Second, we specify which function should be performed on the source object, here: scatterplot</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>Now, that’s not very impressive. We could do the same in <code>Base R</code> like this:</p>
 <div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="tutorial-data-management-with-tidyverse.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(starwars_data)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>However, <code>dplyr</code> gets really impressive when you chain functions sequentially. You can apply certain selection criteria to your data and plot it in one go. For example, we might exclude the variable <em>name</em> from our scatter plot, since it’s not a metric variable anyway. Also, we might want to look only at those Star Wars characters taller than 170 cm. Let’s try it in a single run!</p>
 <div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="tutorial-data-management-with-tidyverse.html#cb144-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span>              <span class="co"># Define the source object</span></span>
 <span id="cb144-2"><a href="tutorial-data-management-with-tidyverse.html#cb144-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(height, mass) <span class="sc">%&gt;%</span>     <span class="co"># Keep only the height and mass column</span></span>
 <span id="cb144-3"><a href="tutorial-data-management-with-tidyverse.html#cb144-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(height <span class="sc">&gt;</span> <span class="dv">170</span>) <span class="sc">%&gt;%</span>     <span class="co"># Filter all observations that are taller than 170cm  </span></span>
 <span id="cb144-4"><a href="tutorial-data-management-with-tidyverse.html#cb144-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()                       <span class="co"># Plot!</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <p>Now try to do the same in <code>Base R</code>:</p>
 <div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="tutorial-data-management-with-tidyverse.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(starwars_data[starwars_data<span class="sc">$</span>height<span class="sc">&gt;</span><span class="dv">170</span>,]<span class="sc">$</span>mass<span class="sc">~</span>starwars_data[starwars_data<span class="sc">$</span>height<span class="sc">&gt;</span><span class="dv">170</span>,]<span class="sc">$</span>height, <span class="at">xlab=</span><span class="st">&quot;height&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;mass&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>The <code>Base R</code> code is longer, more nested, and not as readable as the code written in <code>dplyr</code>. And the more selection criteria and functions you need to implement, the worse it gets. For example, imagine you would also want to exclude Star Wars characters with a mass bigger than 1200kg. Peace of cake with <code>dplyr</code>:</p>
 <div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="tutorial-data-management-with-tidyverse.html#cb146-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span>              </span>
 <span id="cb146-2"><a href="tutorial-data-management-with-tidyverse.html#cb146-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(height, mass) <span class="sc">%&gt;%</span>     </span>
 <span id="cb146-3"><a href="tutorial-data-management-with-tidyverse.html#cb146-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(height <span class="sc">&gt;</span> <span class="dv">170</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb146-4"><a href="tutorial-data-management-with-tidyverse.html#cb146-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(mass <span class="sc">&lt;</span> <span class="dv">1200</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb146-5"><a href="tutorial-data-management-with-tidyverse.html#cb146-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()                       </span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 </div>
 <div id="data-transformation-with-dplyr" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Data transformation with dplyr</h2>
@@ -519,19 +541,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb147-3"><a href="tutorial-data-management-with-tidyverse.html#cb147-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb147-4"><a href="tutorial-data-management-with-tidyverse.html#cb147-4" aria-hidden="true" tabindex="-1"></a>starwars_data             <span class="co"># print the content of the data frame to the console</span></span></code></pre></div>
 <pre><code>## # A tibble: 87 x 14
-##    name   height  mass hair_color skin_color eye_color birth_year sex   gender homeworld species
-##    &lt;chr&gt;   &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;  
-##  1 Luke ~    172    77 blond      fair       blue            19   male  mascu~ Tatooine  Human  
-##  2 C-3PO     167    75 &lt;NA&gt;       gold       yellow         112   none  mascu~ Tatooine  Droid  
-##  3 R2-D2      96    32 &lt;NA&gt;       white, bl~ red             33   none  mascu~ Naboo     Droid  
-##  4 Darth~    202   136 none       white      yellow          41.9 male  mascu~ Tatooine  Human  
-##  5 Leia ~    150    49 brown      light      brown           19   fema~ femin~ Alderaan  Human  
-##  6 Owen ~    178   120 brown, gr~ light      blue            52   male  mascu~ Tatooine  Human  
-##  7 Beru ~    165    75 brown      light      blue            47   fema~ femin~ Tatooine  Human  
-##  8 R5-D4      97    32 &lt;NA&gt;       white, red red             NA   none  mascu~ Tatooine  Droid  
-##  9 Biggs~    183    84 black      light      brown           24   male  mascu~ Tatooine  Human  
-## 10 Obi-W~    182    77 auburn, w~ fair       blue-gray       57   male  mascu~ Stewjon   Human  
-## # ... with 77 more rows, and 3 more variables: films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+##    name  height  mass hair_color skin_color eye_color birth_year sex   gender homeworld species films
+##    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;   &lt;lis&gt;
+##  1 Luke~    172    77 blond      fair       blue            19   male  mascu~ Tatooine  Human   &lt;chr&gt;
+##  2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   none  mascu~ Tatooine  Droid   &lt;chr&gt;
+##  3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   none  mascu~ Naboo     Droid   &lt;chr&gt;
+##  4 Dart~    202   136 none       white      yellow          41.9 male  mascu~ Tatooine  Human   &lt;chr&gt;
+##  5 Leia~    150    49 brown      light      brown           19   fema~ femin~ Alderaan  Human   &lt;chr&gt;
+##  6 Owen~    178   120 brown, gr~ light      blue            52   male  mascu~ Tatooine  Human   &lt;chr&gt;
+##  7 Beru~    165    75 brown      light      blue            47   fema~ femin~ Tatooine  Human   &lt;chr&gt;
+##  8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   none  mascu~ Tatooine  Droid   &lt;chr&gt;
+##  9 Bigg~    183    84 black      light      brown           24   male  mascu~ Tatooine  Human   &lt;chr&gt;
+## 10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  mascu~ Stewjon   Human   &lt;chr&gt;
+## # ... with 77 more rows, and 2 more variables: vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
 <p>For the sake of practice, let’s say we only want to analyze the <em>species</em>, <em>birth_year</em>, <em>mass</em>, and <em>height</em> of these characters. To simplify data handling, we want to keep only the respective columns.</p>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="tutorial-data-management-with-tidyverse.html#cb149-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span>                                 <span class="co"># define the source object</span></span>
 <span id="cb149-2"><a href="tutorial-data-management-with-tidyverse.html#cb149-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, species, birth_year, mass, height) <span class="co"># keep only the name, species, birth_year, mass and height column</span></span></code></pre></div>

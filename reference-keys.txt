@@ -1,4 +1,4 @@
-tab:unnamed-chunk-11
+tab:unnamed-chunk-8
 tutorial-installing-understanding-rr-studio
 installing-r
 installing-r-studio
@@ -131,3 +131,19 @@ task-3-3
 task-4-2
 task-5-2
 task-6-1
+tutorial-mediation-analysis
+introduction-to-mediation
+difference-between-mediation-and-moderation
+two-step-process-of-mediation
+statistical-representation-and-equations
+direct-effect-c
+indirect-effect-ab
+total-effect
+example
+knowing-your-data-1
+visual-inspection-of-linear-trends-1
+pearsons-r-1
+fit-models
+using-processr
+take-aways-8
+more-tutorials-on-this-7

@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-03-30" />
+<meta name="date" content="2022-04-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -313,6 +313,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.5" data-path="exercise-4-test-your-knowledge.html"><a href="exercise-4-test-your-knowledge.html#task-5-2"><i class="fa fa-check"></i><b>12.5</b> Task 5</a></li>
 <li class="chapter" data-level="12.6" data-path="exercise-4-test-your-knowledge.html"><a href="exercise-4-test-your-knowledge.html#task-6-1"><i class="fa fa-check"></i><b>12.6</b> Task 6</a></li>
 </ul></li>
+<li class="chapter" data-level="13" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html"><i class="fa fa-check"></i><b>13</b> Tutorial: Mediation Analysis</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#introduction-to-mediation"><i class="fa fa-check"></i><b>13.1</b> Introduction to mediation</a></li>
+<li class="chapter" data-level="13.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#difference-between-mediation-and-moderation"><i class="fa fa-check"></i><b>13.2</b> Difference between mediation and moderation</a></li>
+<li class="chapter" data-level="13.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#two-step-process-of-mediation"><i class="fa fa-check"></i><b>13.3</b> Two-step process of mediation</a></li>
+<li class="chapter" data-level="13.4" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#statistical-representation-and-equations"><i class="fa fa-check"></i><b>13.4</b> Statistical representation and equations</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#direct-effect-c"><i class="fa fa-check"></i><b>13.4.1</b> Direct effect <em>c′</em></a></li>
+<li class="chapter" data-level="13.4.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#indirect-effect-ab"><i class="fa fa-check"></i><b>13.4.2</b> Indirect effect <em>ab</em></a></li>
+<li class="chapter" data-level="13.4.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#total-effect"><i class="fa fa-check"></i><b>13.4.3</b> Total effect</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#example"><i class="fa fa-check"></i><b>13.5</b> Example</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#knowing-your-data-1"><i class="fa fa-check"></i><b>13.5.1</b> Knowing your data</a></li>
+<li class="chapter" data-level="13.5.2" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#visual-inspection-of-linear-trends-1"><i class="fa fa-check"></i><b>13.5.2</b> Visual inspection of linear trends</a></li>
+<li class="chapter" data-level="13.5.3" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#pearsons-r-1"><i class="fa fa-check"></i><b>13.5.3</b> Pearson’s r</a></li>
+<li class="chapter" data-level="13.5.4" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#fit-models"><i class="fa fa-check"></i><b>13.5.4</b> Fit models</a></li>
+<li class="chapter" data-level="13.5.5" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#using-processr"><i class="fa fa-check"></i><b>13.5.5</b> Using processR</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#take-aways-8"><i class="fa fa-check"></i><b>13.6</b> Take Aways</a></li>
+<li class="chapter" data-level="13.7" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#more-tutorials-on-this-7"><i class="fa fa-check"></i><b>13.7</b> More tutorials on this</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
@@ -388,12 +410,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb235-6"><a href="exercise-3-test-your-knowledge.html#cb235-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb235-7"><a href="exercise-3-test-your-knowledge.html#cb235-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
 <p>Familiarize yourself with the data set (<strong>Hint:</strong> use the <code>help()</code> / <code>?</code> function) and then try to reproduce this plot with <code>dplyr</code> and <code>ggplot2</code>. (<strong>Hint:</strong> You can hide the legend by adding <code>theme(legend.position = "none")</code> to your plot.)</p>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-86-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-83-1.png" width="60%" /></p>
 </div>
 <div id="task-2-2" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Task 2</h2>
 <p>Now, try to reproduce this graph. (<strong>Hint:</strong> You will need to recode the <em>ideology</em> variable in a way that higher values represent stronger attitudes, <em>independent of partisanship</em>.)</p>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-88-1.png" width="60%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-85-1.png" width="60%" /></p>
 </div>
 <div id="task-3-2" class="section level2" number="10.3">
 <h2><span class="header-section-number">10.3</span> Task 3</h2>
