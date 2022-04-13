@@ -469,7 +469,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <p><strong>Interpreting <em>b<sub>1</sub></em> and <em>b<sub>2</sub></em>, the conditional effects:</strong>
-You might have already noticed that when W = 0, then most parts of the above equation can be deleted (because multiplications with 0 result in 0). Therefore, we refer to <em>b<sub>1</sub></em> as the conditional effect of X on Y. This means that <em>b<sub>1</sub></em> quantifies how much two cases that differ by one unit on X, but are W = 0, are estimated to differ on Y. <em>The conditional effect quantifies the association between X and Y conditioned on W = 0.</em> Please, do not interpret <em>b<sub>1</sub></em> as the relationship between X and Y “controlling for W on average” or “controlling for W and XW”, which are common phrases in scientific papers but are incorrect. In addition, it is also not correct to call the conditional effect the “main effect of X”, which is a term that is often used in ANOVA and you might already be faimiliar with it, but it is incorrect.
+You might have already noticed that when W = 0, then most parts of the above equation can be deleted (because multiplications with 0 result in 0). Therefore, we refer to <em>b<sub>1</sub></em> as the conditional effect of X on Y. This means that <em>b<sub>1</sub></em> quantifies how much two cases that differ by one unit on X, but are W = 0, are estimated to differ on Y. <em>The conditional effect quantifies the association between X and Y conditioned on W = 0.</em> Please, do not interpret <em>b<sub>1</sub></em> as the relationship between X and Y “controlling for W on average” or “controlling for W and XW”, which are common phrases in scientific papers but are incorrect. In addition, it is also not correct to call the conditional effect the “main effect of X”, which is a term that is often used in ANOVA and you might already be familiar with it, but it is incorrect.
 Like <em>b<sub>1</sub></em>, <em>b<sub>2</sub></em> is a conditional effect and it quantifies how much two cases that differ by one unit on W are estimated to differ on Y conditioned on X = 0.</p>
 <table>
 <tbody>
@@ -478,14 +478,14 @@ Like <em>b<sub>1</sub></em>, <em>b<sub>2</sub></em> is a conditional effect and 
 </tr>
 </tbody>
 </table>
-<p><strong>Comparing these interpretations with multiple linear regression:</strong> It’s worth noting that the interpretations of <em>b1</em> and <em>b2</em> in moderation analysis differ significantly from the the interpretation of the <em>b1</em> and <em>b2</em> coefficients that you obtain when you run a multiple linear regression, i.e. when XW is not included as an antecedent variable and the regression equation looks like this: Y = i<sub>[Y]</sub> + b<sub>1</sub> * X + b<sub>2</sub> * W. In a multiple linear regression, <em>b1</em> and <em>b2</em> quantify how much two cases that differ by one unit on X are estimated to differ on Y holding W constant (<em>b<sub>1</sub></em>) and how much two cases that differ by one unit on W are estimated to differ on Y holding X constant (<em>b<sub>2</sub></em>). The meaning of conditional effects (conditioned on W = 0) and unconditional effects (controlling for W, i.e. holding W constant) are completely different. Please, try to not confuse the concept of <strong>conditioning</strong> with <strong>controlling</strong>.
-<em>Interpretation of controlling, i.e. multiple linear regression:</em> Two individuals who differ by one unit on X but are equal on W are estimated to differ by X’s regression coefficient units on Y.
-<em>Interpretation of conditioning, i.e. moderation analysis:</em> Two individuals who differ by one unit on X but have a zero score in W (W = 0) are estimated to differ by X’s regression coefficient units on Y.</p>
+<p><strong>Comparing these interpretations with multiple linear regression:</strong> It’s worth noting that the interpretations of <em>b1</em> and <em>b2</em> in moderation analysis differ significantly from the the interpretation of the <em>b1</em> and <em>b2</em> coefficients that you obtain when you run a multiple linear regression, i.e. when XW is not included as an antecedent variable and the regression equation looks like this: Y = i<sub>[Y]</sub> + b<sub>1</sub> * X + b<sub>2</sub> * W. In a multiple linear regression, <em>b1</em> and <em>b2</em> quantify how much two cases that differ by one unit on X are estimated to differ on Y holding W constant (<em>b<sub>1</sub></em>) and how much two cases that differ by one unit on W are estimated to differ on Y holding X constant (<em>b<sub>2</sub></em>). The meaning of conditional effects (conditioned on W = 0) and unconditional effects (controlling for W, i.e. holding W constant) are completely different. Please, try to not confuse the concept of <strong>conditioning</strong> with <strong>controlling</strong>.</p>
+<p><em>Interpretation of controlling, i.e. multiple linear regression:</em> Two individuals who differ by one unit on X but are equal on W are estimated to differ by X’s regression coefficient units on Y.</p>
+<p><em>Interpretation of conditioning, i.e. moderation analysis:</em> Two individuals who differ by one unit on X but have a zero score in W (W = 0) are estimated to differ by X’s regression coefficient units on Y.</p>
 <p><strong>Tip for advanced students:</strong> As a general rule, when XW is in the model and <em>b<sub>3</sub></em> is statistically significant, keep X and W in the model as well (even if inferential tests suggest otherwise). There are very little exceptions from this rule and you can read all about them in <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">Hayes, 2022</a>, if this should ever become relevant for you. However, if <em>b<sub>3</sub></em> is not statistically significant, you should omit XW altogether and perform multiple linear regression instead.</p>
 </div>
 <div id="example-1" class="section level2" number="14.4">
 <h2><span class="header-section-number">14.4</span> Example</h2>
-<p>That was a lot of high-level statistical input! Let’s take a mental break and turn to an actual example to help you understand the main concepts and how to interpret the model. Once again, we’ll use to the <em>glbwarm</em> data. This time, we’ll create a new variable and recode an old one for this tutorial, so please run this code first:</p>
+<p>That was a lot of high-level statistical input! Let’s take a mental break and turn to an actual example to help you understand the main concepts and how to interpret the model. Once again, we’ll use to the <em>glbwarm</em> data. This time, we’ll create two new variables for our tutorial, so please run this code first:</p>
 <div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="tutorial-moderation-analysis.html#cb278-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(processR)</span>
 <span id="cb278-2"><a href="tutorial-moderation-analysis.html#cb278-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb278-3"><a href="tutorial-moderation-analysis.html#cb278-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span>
@@ -506,7 +506,7 @@ Like <em>b<sub>1</sub></em>, <em>b<sub>2</sub></em> is a conditional effect and 
 <span id="cb278-18"><a href="tutorial-moderation-analysis.html#cb278-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">conservative_voter =</span> <span class="fu">factor</span>(conservative_voter, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;Liberal voter&quot;</span>, <span class="st">&quot;Conservative voter&quot;</span>)))</span></code></pre></div>
 <div id="knowing-your-data-2" class="section level3" number="14.4.1">
 <h3><span class="header-section-number">14.4.1</span> Knowing your data</h3>
-<p>You´ll now have three variables in this data set that we want to continue working with because they are great to learn moderation analysis with.</p>
+<p>You now have three variables in this data set that we want to continue working with because they are great for learning moderation analysis:</p>
 <ol style="list-style-type: decimal">
 <li><strong>govact</strong> (= support for government action):
 The variable is an index of how each participant answered five questions regarding how supportive he or she is of different policies or activities taken by the US government to address the threat of global climate change (e.g. “How much do you support or oppose increasing government investment for developing alternative energy like biofuels, wind, or solar by 25%?”).<br />
@@ -514,10 +514,10 @@ Response options were scaled from “Strongly opposed” (coded 1) or ”Strongl
 <li><strong>ideology_ext</strong> (= viewpoint extremity):
 The political ideology of respondents was measured on a liberalism-conservatism scale. Viewpoint extremity was calculated as the absolute difference of each respondents’ individual score from the liberalism-conservatism scale mean (4), resulting in an extremity score that ranged from 1 “no extremity” to 4 “maximum extremity”,</li>
 <li><strong>conservative_voter</strong> (= being Republican, yes/no):
-This variable measured self-identification as a voter of the U.S. Republican party, i.e. being a coservative voter. It is a binary / dichotomous variable with 1 = “Conservative voter” and 0 = “Liberal voter”.</li>
+This variable measured self-identification as a voter of the U.S. Republican party, i.e. being a conservative voter. It is a binary / dichotomous variable with 1 = “Conservative voter” and 0 = “Liberal voter”.</li>
 </ol>
-<p>Throughout this chapter, the following research question will guide us on our way to master mediation analysis:</p>
-<p><strong>Research Question:</strong> Is the relationship between viewpoint extremity and support for government action against climate change dependent on party identification, i.e. on voting for the Republican party? In other words, does the relationship between holding extreme viewpoints and support for government action on climate change differ between conservative and liberal voters?</p>
+<p>Throughout this chapter, the following research question will guide us on our way to master moderation analysis:</p>
+<p><strong>Research Question:</strong> Is the relationship between viewpoint extremity and support for government action against climate change dependent on vote choice, i.e. on voting for the Republican party? In other words, does the relationship between holding extreme viewpoints and support for government action on climate change differ between conservative and liberal voters?</p>
 </div>
 <div id="visual-inspection-of-linear-trends-2" class="section level3" number="14.4.2">
 <h3><span class="header-section-number">14.4.2</span> Visual inspection of linear trends</h3>
@@ -642,9 +642,10 @@ The regression coefficient for the conditional effect of W is <em>b<sub>2</sub><
 <div id="take-aways-9" class="section level2" number="14.5">
 <h2><span class="header-section-number">14.5</span> Take Aways</h2>
 <ul>
-<li><strong>explaning the when and circumstances</strong>: a moderation model helps you to determine the situations, events, or groups of people for which the impact of X on Y changes</li>
+<li><strong>explaning the when and the circumstances</strong>: a moderation model helps you to determine the situations, events, or groups of people for which the impact of X on Y changes</li>
 <li><strong><code>process</code></strong>: calculate the moderation model either by using the classic <code>lm()</code> function (multiple linear regression with a product of X and W) or by using the <code>process</code> function of the <code>process</code> script by A. F. Hayes</li>
-<li><strong>standardization</strong>: Is a great way to get meaningful regression coefficients for variables that are not mathematically between 0 and a finite value.</li>
+<li><strong><code>conditioning vs. controlling</code></strong>: do not confuse conditioning (W = 0) and controlling (W = constant)</li>
+<li><strong>standardization</strong>: a great way to get meaningful regression coefficients for variables that are not mathematically bound between 0 and a finite value</li>
 </ul>
 </div>
 <div id="more-tutorials-on-this-8" class="section level2" number="14.6">
