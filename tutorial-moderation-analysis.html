@@ -481,7 +481,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="example-1" class="section level2" number="14.4">
 <h2><span class="header-section-number">14.4</span> Example</h2>
-<p>That was a lot of high-level statistical input! Let’s take a mental break and turn to an actual example to help you understand the main concepts and how to interpret the model. Once again, we’ll use to the <em>glbwarm</em> data. This time, we’ll create a new variable a recode an old one for this tutorial, so please run this code first:</p>
+<p>That was a lot of high-level statistical input! Let’s take a mental break and turn to an actual example to help you understand the main concepts and how to interpret the model. Once again, we’ll use to the <em>glbwarm</em> data. This time, we’ll create a new variable and recode an old one for this tutorial, so please run this code first:</p>
 <div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="tutorial-moderation-analysis.html#cb278-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(processR)</span>
 <span id="cb278-2"><a href="tutorial-moderation-analysis.html#cb278-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb278-3"><a href="tutorial-moderation-analysis.html#cb278-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span>
@@ -508,7 +508,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 The variable is an index of how each participant answered five questions regarding how supportive he or she is of different policies or activities taken by the US government to address the threat of global climate change (e.g. “How much do you support or oppose increasing government investment for developing alternative energy like biofuels, wind, or solar by 25%?”).<br />
 Response options were scaled from “Strongly opposed” (coded 1) or ”Strongly support” (7).</li>
 <li><strong>ideology_ext</strong> (= viewpoint extremity):
-The political ideology of respondents was measured on a liberalism-conservatism scale. Viewpoint extremity was calculated as the absolute difference of each respondents’ individual score from the liberalism-conservatism scale mean (4), resulting in an extremity score that ranged from 0 “no extremity” to 4 “maximum extremity”,</li>
+The political ideology of respondents was measured on a liberalism-conservatism scale. Viewpoint extremity was calculated as the absolute difference of each respondents’ individual score from the liberalism-conservatism scale mean (4), resulting in an extremity score that ranged from 1 “no extremity” to 4 “maximum extremity”,</li>
 <li><strong>conservative_voter</strong> (= being Republican, yes/no):
 This variable measured self-identification as a voter of the U.S. Republican party, i.e. being a coservative voter. It is a binary / dichotomous variable with 1 = “Conservative voter” and 0 = “Liberal voter”.</li>
 </ol>
