@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-04-05" />
+<meta name="date" content="2022-04-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="exercise-4-test-your-knowledge.html"/>
-<link rel="next" href="solutions.html"/>
+<link rel="next" href="tutorial-moderation-analysis.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -335,6 +335,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.6" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#take-aways-8"><i class="fa fa-check"></i><b>13.6</b> Take Aways</a></li>
 <li class="chapter" data-level="13.7" data-path="tutorial-mediation-analysis.html"><a href="tutorial-mediation-analysis.html#more-tutorials-on-this-7"><i class="fa fa-check"></i><b>13.7</b> More tutorials on this</a></li>
 </ul></li>
+<li class="chapter" data-level="14" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html"><i class="fa fa-check"></i><b>14</b> Tutorial: Moderation analysis</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#introduction-to-moderation"><i class="fa fa-check"></i><b>14.1</b> Introduction to moderation</a></li>
+<li class="chapter" data-level="14.2" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#one-step-process-of-moderation"><i class="fa fa-check"></i><b>14.2</b> One-step process of moderation</a></li>
+<li class="chapter" data-level="14.3" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#statistical-representation-and-equations-1"><i class="fa fa-check"></i><b>14.3</b> Statistical representation and equations</a></li>
+<li class="chapter" data-level="14.4" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#example-1"><i class="fa fa-check"></i><b>14.4</b> Example</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#knowing-your-data-2"><i class="fa fa-check"></i><b>14.4.1</b> Knowing your data</a></li>
+<li class="chapter" data-level="14.4.2" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#visual-inspection-of-linear-trends-2"><i class="fa fa-check"></i><b>14.4.2</b> Visual inspection of linear trends</a></li>
+<li class="chapter" data-level="14.4.3" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#fit-models-1"><i class="fa fa-check"></i><b>14.4.3</b> Fit models</a></li>
+<li class="chapter" data-level="14.4.4" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#standardization"><i class="fa fa-check"></i><b>14.4.4</b> Standardization</a></li>
+<li class="chapter" data-level="14.4.5" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#using-processr-1"><i class="fa fa-check"></i><b>14.4.5</b> Using processR</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#take-aways-9"><i class="fa fa-check"></i><b>14.5</b> Take Aways</a></li>
+<li class="chapter" data-level="14.6" data-path="tutorial-moderation-analysis.html"><a href="tutorial-moderation-analysis.html#more-tutorials-on-this-8"><i class="fa fa-check"></i><b>14.6</b> More tutorials on this</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
@@ -414,7 +430,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="two-step-process-of-mediation" class="section level2" number="13.3">
 <h2><span class="header-section-number">13.3</span> Two-step process of mediation</h2>
-<p>Mediation analysis always assumes a two-step process. In the first step, an independent variable X influences a mediator variable M. In the second step, this mediator variable M then influences the dependent variable Y. However, in addition to the two-step effect mediated by M, which we call <strong>indirect effect</strong>, there will almost always be a <strong>direct effect</strong> of X on Y as well. To illustrate, see this image of a simple mediation model:</p>
+<p>Mediation analysis always assumes a two-step process. In the first step, an independent variable X influences a mediator variable M. In the second step, this mediator variable M then influences the dependent variable Y. However, in addition to the two-step effect mediated by M, which we call <strong>indirect effect</strong>, there will almost always be a <strong>direct effect</strong> of X on Y as well. To illustrate, see this conceptual diagram of a simple mediation model:</p>
 <table>
 <colgroup>
 <col width="100%" />
@@ -518,7 +534,7 @@ Response options were scaled from “Strongly opposed” (coded 1) or ”Strongl
 This index measures participants´ negative emotional reactions to the potential of climate change. Participants´ responses to a question asking how often they experience each of three emotions while thinking about global warming: “worried,” “alarmed,” and “concerned”.
 “Not at all,” “somewhat,” “a little bit,” “some,” “a fair lot,” and “a great deal” were among the response alternatives. These replies were numerically coded from 1 to 6, and the average of each participant´s responses across all three emotions was calculated. Higher scores reﬂect feeling stronger negative emotions.</li>
 <li><strong>ideology</strong> (= conservatism):
-This variable measures the political ideology of respondents on a conservatism scale. Replies range from 1 to 7. Higher scores reﬂect being more conservative, i.e. 1 “Very Liberal”, 2 “Liberal”, 3 “Somewhat Liberal”, 4 “Moderate, Middle of the Road”, 5 “Somewhat Conservative”, 6 “Conservative”, and 7 “Very Conservative”.</li>
+This variable measures the political ideology of respondents on a liberalism-conservatism scale. Replies range from 1 to 7. Higher scores reﬂect being more conservative, i.e. 1 “Very Liberal”, 2 “Liberal”, 3 “Somewhat Liberal”, 4 “Moderate, Middle of the Road”, 5 “Somewhat Conservative”, 6 “Conservative”, and 7 “Very Conservative”.</li>
 </ol>
 <p>Throughout this chapter, the following research question will guide us on our way to master mediation analysis:</p>
 <p><strong>Research Question:</strong> Is the relationship between conservatism and support for government action against climate change mediated by negative emotions about climate change? That is, do people who are more conservative develop fewer negative feelings about climate change, while negative emotions about climate change increase support for government action against climate change?</p>
@@ -533,7 +549,7 @@ This variable measures the political ideology of respondents on a conservatism s
 <span id="cb254-2"><a href="tutorial-mediation-analysis.html#cb254-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb254-3"><a href="tutorial-mediation-analysis.html#cb254-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb254-4"><a href="tutorial-mediation-analysis.html#cb254-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Conservatism&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> It seems that people who are more conservative are less supportive of government action against climate change. This correlation is far from perfect, but the pattern is evident.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>The relationship between conservatism and negative emotions about climate change (direct effect <em>a</em> of X on M)</strong></li>
@@ -542,7 +558,7 @@ This variable measures the political ideology of respondents on a conservatism s
 <span id="cb255-2"><a href="tutorial-mediation-analysis.html#cb255-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb255-3"><a href="tutorial-mediation-analysis.html#cb255-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb255-4"><a href="tutorial-mediation-analysis.html#cb255-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Conservatism&quot;</span>, <span class="at">y=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> This relationship is difficult to capture visually. There seems to be a small effect at play here, with more conservative people expressing fewer negative feelings about climate change. This pattern is not very evident, but you can imagine a diagonal from the top left corner to the bottom right corner through the thicker bubbles.</p>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>The relationship between negative emotions about climate change and support for government action against climate change (M on Y <em>without</em> controlling for X)</strong></li>
@@ -551,7 +567,7 @@ This variable measures the political ideology of respondents on a conservatism s
 <span id="cb256-2"><a href="tutorial-mediation-analysis.html#cb256-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb256-3"><a href="tutorial-mediation-analysis.html#cb256-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb256-4"><a href="tutorial-mediation-analysis.html#cb256-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-108-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> We can assume that people who express larger negative sentiments about climate change are also more supportive of government action. Again, this pattern is evident.</p>
 </div>
 <div id="pearsons-r-1" class="section level3" number="13.5.3">
@@ -608,7 +624,7 @@ This variable measures the political ideology of respondents on a conservatism s
 </div>
 <div id="fit-models" class="section level3" number="13.5.4">
 <h3><span class="header-section-number">13.5.4</span> Fit models</h3>
-<p>Now that we know our relationships a bit better, we can fit our models to investigate the actual mediation. Because we need to retrieve two regression equations to explain the two dependent variables M and Y (see <a href="tutorial-mediation-analysis.html#statistical-representation-and-equations">Statistical representation and equations</a>), we now will fit and interpret two models, namely a single linear regression model and a multiple linear regression model.</p>
+<p>Now that we know our relationships a bit better, we can fit our models to investigate the actual mediation. Because we need to retrieve two regression equations to explain the two dependent variables M and Y (see <a href="tutorial-moderation-analysis.html#statistical-representation-and-equations-1">Statistical representation and equations</a>), we now will fit and interpret two models, namely a single linear regression model and a multiple linear regression model.</p>
 <ol style="list-style-type: decimal">
 <li><strong>The simple linear regression model: The effect of conservatism on negative emotions about climate change (direct effect <em>a</em> of X on M)</strong></li>
 </ol>
@@ -762,7 +778,7 @@ We have a negative direct effect <em>a</em> = -0.35 of conservatism on negative 
 <p>Finally, you can draw a conceptual diagram of your simple mediation model:</p>
 <div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="tutorial-mediation-analysis.html#cb275-1" aria-hidden="true" tabindex="-1"></a>labels<span class="ot">=</span><span class="fu">list</span>(<span class="at">X=</span><span class="st">&quot;ideology&quot;</span>,<span class="at">M=</span><span class="st">&quot;negemot&quot;</span>,<span class="at">Y=</span><span class="st">&quot;govact&quot;</span>)</span>
 <span id="cb275-2"><a href="tutorial-mediation-analysis.html#cb275-2" aria-hidden="true" tabindex="-1"></a>processR<span class="sc">::</span><span class="fu">drawModel</span>(<span class="at">labels=</span>labels)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
 <p>In addition, you can also draw a diagram of your estimated simple mediation model, but you need to install/activate the <code>lavaan</code> package first:</p>
 <div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="tutorial-mediation-analysis.html#cb276-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
 <span id="cb276-2"><a href="tutorial-mediation-analysis.html#cb276-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(lavaan)) {</span>
@@ -774,7 +790,7 @@ We have a negative direct effect <em>a</em> = -0.35 of conservatism on negative 
 <span id="cb277-2"><a href="tutorial-mediation-analysis.html#cb277-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">tripleEquation</span>(<span class="at">X=</span><span class="st">&quot;ideology&quot;</span>,<span class="at">M=</span><span class="st">&quot;negemot&quot;</span>,<span class="at">Y=</span><span class="st">&quot;govact&quot;</span>) <span class="co"># retrieve the regression equations and save them into model</span></span>
 <span id="cb277-3"><a href="tutorial-mediation-analysis.html#cb277-3" aria-hidden="true" tabindex="-1"></a>semfit <span class="ot">&lt;-</span> <span class="fu">sem</span>(<span class="at">model=</span>model,<span class="at">data=</span>data) <span class="co"># use the retrieved equations to fit a lavaan model</span></span>
 <span id="cb277-4"><a href="tutorial-mediation-analysis.html#cb277-4" aria-hidden="true" tabindex="-1"></a><span class="fu">statisticalDiagram</span>(<span class="dv">4</span>,<span class="at">labels=</span>labels,<span class="at">fit=</span>semfit,<span class="at">whatLabel=</span><span class="st">&quot;est&quot;</span>) <span class="co"># 4 tells R to draw a simple mediation model with the lavaan fit, whatLabel=&quot;est&quot; sets your estimated coefficients as labels</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
 </div>
 </div>
 <div id="take-aways-8" class="section level2" number="13.6">
@@ -798,7 +814,7 @@ and Conditional Process Analysis</em> (p. 79-117) <a href="http://afhayes.com/i
 <div class="footnotes">
 <hr />
 <ol start="6">
-<li id="fn6"><p>That’s why moderator variables can be absolutely critical, especially in clinical medical research! Imagine that a drug shows a strong positive, curative effect in one group of patients (e.g. men) and a strong negative, toxic effect in another group (e.g. women). When prescribing this drug, it is essential that doctors pay attention to the moderator variable <em>gender</em>! However, a multiple linear regression may have overlooked this moderating effect of <em>gender</em>, finding only a (very small) positive effect of drug use in the overall population, e.g., if your sample includes more men than women.<a href="tutorial-mediation-analysis.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>That’s why moderator variables can be absolutely critical, especially in clinical medical research! Imagine that a drug shows a strong positive, curative effect in one group of patients (e.g. men) and a small negative, toxic effect in another group (e.g. women). When prescribing this drug, it is essential that doctors pay attention to the moderator variable <em>sex</em>! However, a multiple linear regression may have overlooked this moderating effect of <em>sex</em>, finding only a (small) positive effect of drug use in the overall population, e.g., if your sample includes more men than women.<a href="tutorial-mediation-analysis.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -807,7 +823,7 @@ and Conditional Process Analysis</em> (p. 79-117) <a href="http://afhayes.com/i
         </div>
       </div>
 <a href="exercise-4-test-your-knowledge.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="solutions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tutorial-moderation-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

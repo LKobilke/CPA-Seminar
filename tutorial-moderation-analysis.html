@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> 6 Exercise 1: Test your knowledge | R for Conditional Process Analysis</title>
+  <title> 14 Tutorial: Moderation analysis | R for Conditional Process Analysis</title>
   <meta name="description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" 6 Exercise 1: Test your knowledge | R for Conditional Process Analysis" />
+  <meta property="og:title" content=" 14 Tutorial: Moderation analysis | R for Conditional Process Analysis" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" 6 Exercise 1: Test your knowledge | R for Conditional Process Analysis" />
+  <meta name="twitter:title" content=" 14 Tutorial: Moderation analysis | R for Conditional Process Analysis" />
   
   <meta name="twitter:description" content="Using Conditional Process Analysis to evaluate communication theories - B.A. Seminar at IKMZ, FS 2022" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="tutorial-reading-data-inout.html"/>
-<link rel="next" href="tutorial-data-management-with-tidyverse.html"/>
+<link rel="prev" href="tutorial-mediation-analysis.html"/>
+<link rel="next" href="solutions.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -407,99 +407,237 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-1-test-your-knowledge" class="section level1" number="6">
-<h1><span class="header-section-number"> 6</span> Exercise 1: Test your knowledge</h1>
-<p><strong>After working through Exercise 1, you’ll…</strong></p>
+<div id="tutorial-moderation-analysis" class="section level1" number="14">
+<h1><span class="header-section-number"> 14</span> Tutorial: Moderation analysis</h1>
+<p>After working through Tutorial 15, you’ll…</p>
 <ul>
-<li>have assessed how well you know R and RStudio</li>
-<li>know what chapters and concepts you might want to repeat again</li>
-<li>have managed to apply the basic concepts of R to data</li>
+<li>have a good idea about what problems are best solved with moderation analysis</li>
+<li>know how to probe an interaction, i.e. perform and interpret a moderation analysis</li>
+<li>know how to visualize interaction effects</li>
 </ul>
-<div id="task-1" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Task 1</h2>
-<p>Below you will see multiple choice questions. Please try to identify the correct answers. 1, 2, 3 and 4 correct answers are possible for each question.</p>
-<p><strong>1. What panels are part of RStudio?</strong></p>
+<div id="introduction-to-moderation" class="section level2" number="14.1">
+<h2><span class="header-section-number">14.1</span> Introduction to moderation</h2>
+<p>Most of you will have had contact with moderation analysis before. Often, students are first exposed to moderation analysis / interactions in “Statistics I” when they learn how to perform an ANOVA (ANalysis Of VAriance) and how to probe an interaction, i.e., test whether the effect of an independent variable on the dependent variable differs at different levels of a second independent variable. ANOVAs are often used in experimental studies, for example, to test the effect of three different ad placements in newspapers (front page, middle section, ad page) on readers’ recall. You might probe an interaction in this experiment by adding another independent variable that influences the relationship between ad placement and recall, e.g. color choice (black/white, weakly saturated colors, strongly saturated colors). But even if you haven’t had any exposure to moderation analysis and experimental designs before, you should become familiar with the procedure very quickly with the following tutorial. In this tutorial, we will continue to use linear regression techniques because ANOVA is basically nothing more than a linear regression with an independent variable that is a categorical/factor variable.</p>
+<p>Before we start, recall again what linear regression is all about: Linear regression allows you to quantify the relationship between variables and answer the question <strong>whether two (or more) variables</strong> share a linear relationship. As mentioned in earlier chapters, it is of limited use to know that two variables are related, i.e., to ask <strong>whether</strong> two variables share a relationship. Just like asking <strong>why and how</strong> two variables are related (<em>mediation analysis</em>), asking <strong>when and under what circumstances</strong> two variables are related (<em>moderation analysis</em>) can be much more informative. Therefore, moderation analysis asks <strong>whether the effect size of this linear relationship depends on third variables</strong>, e.g., events or personality traits.</p>
+<p>The variable W is called a moderator of the relationship between a <em>focal</em> independent variable X and a dependent variable Y, when the size, sign, or strength of the effect of X on Y is dependent on the size of W. This effect of a moderating variable on the relationship between X and Y is also called <strong>interaction effect</strong>. Finding a moderator / interaction for an effect can help you to determine the situations, events, or groups of people for which the impact of X on Y is significant or non-significant (i.e. absent vs. present), small or strong, and even positive or negative.</p>
+<p><strong>Example for moderation:</strong> Knowing moderator variables can be critical, especially in clinical medical research. Imagine that a drug shows a strong positive, curative effect in one group of patients (e.g., men) and a small negative, toxic effect in another group (e.g., women). When prescribing this drug, it is essential that doctors pay attention to the moderator variable <em>sex</em>! However, a multiple linear regression may have overlooked this moderating effect of <em>sex</em>, finding only a (small) positive effect of drug use in the overall population, e.g., if your sample includes more men than women. Therefore, searching for moderator variables is an important step for researchers.</p>
+</div>
+<div id="one-step-process-of-moderation" class="section level2" number="14.2">
+<h2><span class="header-section-number">14.2</span> One-step process of moderation</h2>
+<p>Unlike mediation analysis, moderation analysis assumes a one-step process: The moderator W influences the relationship between X and Y directly. To see an illustration of how this relationship is influenced by W, see this conceptual diagram of a simple moderation process<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>:</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Image: A simple mediation model <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">(Source: Andrew F. Hayes, p. 235)</a></td>
+</tr>
+<tr class="even">
+<td><img src="images/Tut15_moderation_model.JPG" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>In summary, a simple moderation model contains a dependent variable (Y), a <em>focal</em> independent variable (X), and a moderator variable (W), where the relationship (e.g., effect size, effect direction, effect significance) between X and Y depends on the magnitude of W.</strong></p>
+</div>
+<div id="statistical-representation-and-equations-1" class="section level2" number="14.3">
+<h2><span class="header-section-number">14.3</span> Statistical representation and equations</h2>
+<p>When the effect of X is dependent on W, this means that for different values of W, X’s effect on Y is different. Statistically, we can rewrite the values of X, that depend on W, as a multiplication of X and W with an own coefficient (e.g., b * XW). Of course, we want to control for the pure effect of X on Y and for the pure effect of W on Y at the same time, which leads to this statistical representation of moderation effects that looks like this:</p>
+<ol style="list-style-type: decimal">
+<li>Y = i<sub>[Y]</sub> + b<sub>1</sub> * X + b<sub>2</sub> * W + b<sub>3</sub> * XW,</li>
+</ol>
+<p>where i<sub>[Y]</sub> represent the intercept, <em>b<sub>1</sub></em>, <em>b<sub>2</sub></em>, and <em>b<sub>3</sub></em> are the respective regression coefficients, and XW is a variable constructed as the product of X and W.</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Image: Statistical diagram of a simple moderation model <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">(Source: Andrew F. Hayes, p. 241)</a></td>
+</tr>
+<tr class="even">
+<td><img src="images/Tut15_moderation_model2.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Obviously, <em>b<sub>3</sub></em> has two interpretations, depending on whether X or W is construed as the moderator. When W is conceptualized as the moderator of X’s effect on Y, then <em>b<sub>3</sub></em> estimates how much the difference in Y between two cases that differ by a unit on X changes as W changes by one unit. But if X is conceptualized as the moderator of W’s eﬀect on Y, then <em>b<sub>3</sub></em> estimates how much the diﬀerence in Y between two cases that differ by a unit on W changes as X changes by one unit. Of course, the mathematics underlying the simple moderation model don’t know or care which variable you are conceptualizing as the moderator in your analysis. Both interpretations are valid.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><span style="color: darkred;">A generic interpretation of the interaction effect in a moderation analysis would be that two individuals who differ by one unit on X are estimated to differ by XW’s regression coefficient units on Y as W changes by one unit.</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>If W = 0, then most parts of the above equation can be deleted. Therefore, We refer to <em>b<sub>1</sub></em> as the conditional effect of X on Y. This means that <em>b<sub>1</sub></em> quantifies how much two cases that differ by one unit on X but with W = 0 are estimated to differ on Y. Thus, it is neither appropriate to interpret <em>b<sub>1</sub></em> as relationship between X and Y controlling for W “on average” or ”controlling for W and XW,” nor is it the “main eﬀect of X” (to use a term from ANOVA lingo). Rather, it represents the association between X and Y conditioned on W = 0. Like <em>b<sub>1</sub></em>, <em>b<sub>2</sub></em> is a conditional effect, in that it quantifies how much two cases that differ by one unit on W are estimated to differ on Y conditioned on X = 0.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><strong><span style="color: darkred;">A generic interpretation of the conditional effect in a moderation analysis would be that two individuals who differ by one unit on X are estimated to differ by X’s regression coefficient units on Y when W = 0.</span></strong></td>
+</tr>
+</tbody>
+</table>
+<p>Note that these interpretations of <em>b<sub>1</sub></em> and <em>b<sub>2</sub></em> are very different from their interpretation when XW is not included as an antecedent variable. When XW is present, <em>b<sub>1</sub></em> and <em>b<sub>2</sub></em> are conditional effects. Without XW as an antecedent, <em>b<sub>1</sub></em> and <em>b<sub>2</sub></em> are partial effects, i.e. unconditional effects. These effects quantify how much two cases that differ by one unit on X are estimated to differ on Y holding W constant (<em>b<sub>1</sub></em>) and how much two cases that differ by one unit on W are estimated to differ on Y holding X constant (<em>b<sub>2</sub></em>). The meaning of conditional effects (conditioned on W = 0) and unconditional effects (controlling for W, i.e. holding W contant) are completely different and have a substantially different interpretation.PLease, try not to confuse those meanings.</p>
+<p><strong>Tip for advanced students:</strong> As a general rule, when XW is in the model and <em>b<sub>3</sub></em> is statistically significant, keep X and W in the model as well (even if inferential tests suggest otherwise). There are very little exceptions from this rule and you can read all about them in <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">Hayes, 2022</a>, if this should ever become relevant for you. However, if <em>b<sub>3</sub></em> is not statistically significant, you should omit XW altogether and perform multiple linear regression instead.</p>
+</div>
+<div id="example-1" class="section level2" number="14.4">
+<h2><span class="header-section-number">14.4</span> Example</h2>
+<p>That was a lot of high-level statistical input! Let’s take a mental break and turn to an actual example to help you understand the main concepts and how to interpret the model. Once again, we’ll use to the <em>glbwarm</em> data. This time, we’ll create a new variable a recode an old one for this tutorial, so please run this code first:</p>
+<div id="knowing-your-data-2" class="section level3" number="14.4.1">
+<h3><span class="header-section-number">14.4.1</span> Knowing your data</h3>
+<p>You´ll now have three variables in this data set that we want to continue working with because they are great to learn moderation analysis with.</p>
+<ol style="list-style-type: decimal">
+<li><strong>govact</strong> (= support for government action):
+The variable is an index of how each participant answered five questions regarding how supportive he or she is of different policies or activities taken by the US government to address the threat of global climate change (e.g. “How much do you support or oppose increasing government investment for developing alternative energy like biofuels, wind, or solar by 25%?”).<br />
+Response options were scaled from “Strongly opposed” (coded 1) or ”Strongly support” (7).</li>
+<li><strong>ideology_ext</strong> (= viewpoint extremity):
+The political ideology of respondents was measured on a liberalism-conservatism scale. Viewpoint extremity was calculated as the absolute difference of each respondents’ individual score from the liberalism-conservatism scale mean (4), resulting in an extremity score that ranged from 0 “no extremity” to 4 “maximum extremity”,</li>
+<li><strong>conservative_voter</strong> (= being Republican, yes/no):
+This variable measured self-identification as a voter of the U.S. Republican party, i.e. being a coservative voter. It is a binary / dichotomous variable with 1 = “Conservative voter” and 0 = “Liberal voter”.</li>
+</ol>
+<p>Throughout this chapter, the following research question will guide us on our way to master mediation analysis:</p>
+<p><strong>Research Question:</strong> Is the relationship between viewpoint extremity and support for government action against climate change dependent on party identification, i.e. on voting for the Republican party? In other words, does the relationship between holding extreme viewpoints and support for government action on climate change differ between conservative and liberal voters?</p>
+</div>
+<div id="visual-inspection-of-linear-trends-2" class="section level3" number="14.4.2">
+<h3><span class="header-section-number">14.4.2</span> Visual inspection of linear trends</h3>
+<p>Our interest is in whether the effect of viewpoint extremity (X) on support for government action against climate change (Y) depends on on voting for the Republican party (W). Once again, to answer a research question, it’s extremely useful to have a look at your variables prior to your analysis. So let’s start by examining the relationship between <em>viewpoint extremity</em>, i.e. holding extreme political viewpoints, and <em>support for government action against climate change</em>:</p>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="tutorial-moderation-analysis.html#cb278-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb278-2"><a href="tutorial-moderation-analysis.html#cb278-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb278-3"><a href="tutorial-moderation-analysis.html#cb278-3" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>ideology_ext, <span class="at">y=</span>govact)) <span class="sc">+</span>                                         </span>
+<span id="cb278-4"><a href="tutorial-moderation-analysis.html#cb278-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
+<span id="cb278-5"><a href="tutorial-moderation-analysis.html#cb278-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
+<span id="cb278-6"><a href="tutorial-moderation-analysis.html#cb278-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Viewpoint extremity&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>) <span class="sc">+</span></span>
+<span id="cb278-7"><a href="tutorial-moderation-analysis.html#cb278-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span></span>
+<span id="cb278-8"><a href="tutorial-moderation-analysis.html#cb278-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">1.4</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-123-1.png" width="672" /></p>
+<p><strong>Evaluation:</strong> It is evident that <em>ideological extremism</em> and <em>support for government action against climate change</em> share a negative relationship.Individuals who hold more extreme political viewpoints are less likely to support for government action against climate change.</p>
+<p>What could be the explanation for a negative relationship? Perhaps U.S. citizens with extreme ideological attitudes have a poorer relationship with governments in general? It could be that radicalized citizens distrust government more and therefore do not want to support government action, even in the case of climate change. To test this hypothesis, we would need to conduct a mediation analysis with a mediator variable called “distrust in government” to determine whether distrust in government is indeed the missing link. However, our data does not provide such a variable. Too bad.</p>
+<p>But there might also be another explanation. Liberal voters care more about climate change, while conservative voters do not think climate change is an important political issue. Maybe the support for government action on climate change might differ between these to voter groups? Let’s make a visual check of this hypothesis by looking at the regression lines of both voter groups:</p>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="tutorial-moderation-analysis.html#cb279-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb279-2"><a href="tutorial-moderation-analysis.html#cb279-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb279-3"><a href="tutorial-moderation-analysis.html#cb279-3" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>ideology_ext, <span class="at">y=</span>govact, <span class="at">color =</span> conservative_voter)) <span class="sc">+</span>                                         </span>
+<span id="cb279-4"><a href="tutorial-moderation-analysis.html#cb279-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span></span>
+<span id="cb279-5"><a href="tutorial-moderation-analysis.html#cb279-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;Liberal voter&quot;</span> <span class="ot">=</span> <span class="st">&quot;mediumblue&quot;</span>, <span class="st">&quot;Conservative voter&quot;</span> <span class="ot">=</span> <span class="st">&quot;#CC0000&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb279-6"><a href="tutorial-moderation-analysis.html#cb279-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb279-7"><a href="tutorial-moderation-analysis.html#cb279-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb279-8"><a href="tutorial-moderation-analysis.html#cb279-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Viewpiont extremity&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>) <span class="sc">+</span></span>
+<span id="cb279-9"><a href="tutorial-moderation-analysis.html#cb279-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;#404040&quot;</span>) <span class="sc">+</span></span>
+<span id="cb279-10"><a href="tutorial-moderation-analysis.html#cb279-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">1.4</span>) <span class="sc">+</span> </span>
+<span id="cb279-11"><a href="tutorial-moderation-analysis.html#cb279-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>conservative_voter)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-124-1.png" width="672" /></p>
+<p>Instead of the regressions, you can also compare the mean values of the two groups if you like this form of presentation better:</p>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="tutorial-moderation-analysis.html#cb280-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb280-2"><a href="tutorial-moderation-analysis.html#cb280-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb280-3"><a href="tutorial-moderation-analysis.html#cb280-3" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb280-4"><a href="tutorial-moderation-analysis.html#cb280-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggline</span>(<span class="at">x =</span> <span class="st">&quot;ideology_ext&quot;</span>, <span class="at">y =</span> <span class="st">&quot;govact&quot;</span>, <span class="at">color =</span> <span class="st">&quot;conservative_voter&quot;</span>,</span>
+<span id="cb280-5"><a href="tutorial-moderation-analysis.html#cb280-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">add =</span> <span class="fu">c</span>(<span class="st">&quot;mean_ci&quot;</span>),</span>
+<span id="cb280-6"><a href="tutorial-moderation-analysis.html#cb280-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">palette =</span> <span class="fu">c</span>(<span class="st">&quot;mediumblue &quot;</span>, <span class="st">&quot;#CC0000&quot;</span>),</span>
+<span id="cb280-7"><a href="tutorial-moderation-analysis.html#cb280-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">linetype =</span> <span class="st">&quot;conservative_voter&quot;</span>, <span class="at">shape =</span> <span class="st">&quot;conservative_voter&quot;</span>, <span class="at">size=</span><span class="fl">1.0</span>,</span>
+<span id="cb280-8"><a href="tutorial-moderation-analysis.html#cb280-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend =</span> <span class="st">&quot;right&quot;</span>,</span>
+<span id="cb280-9"><a href="tutorial-moderation-analysis.html#cb280-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">ylab =</span> <span class="st">&quot;Support for goverment action against climate change&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;Viewpiont extremity&quot;</span>,</span>
+<span id="cb280-10"><a href="tutorial-moderation-analysis.html#cb280-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">legend.title =</span> <span class="st">&quot;&quot;</span>, <span class="at">title=</span><span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb280-11"><a href="tutorial-moderation-analysis.html#cb280-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-125-1.png" width="672" /></p>
+<p><strong>Evaluation:</strong> Obviously, there is an interaction at play here! The effect of <em>viewpoint extremity</em> on <em>support for government action against climate change</em> seems to be dependent on voting for the U.S. Republican party, i.e. being a liberal or a conservative voter. To be precise, moderate liberal and conservative voters, i.e. those who have low viewpoint extremity, do not differ in their support for government action against climate change. But extreme liberal and conservative voters, i.e. those who have high viewpoint extremity, differ significantly in their support for government action against climate change. While extreme liberal voters become more supportive of government action, extreme conservative voters become more opposed against government actions. In fact, <em>viewpoint extremity</em> has a positive effect on <em>support for government action against climate change</em> for liberal voters (b = 0.18), but a negative effect on <em>support for government action against climate change</em> for conservative voters (b = -0.53).</p>
+</div>
+<div id="fit-models-1" class="section level3" number="14.4.3">
+<h3><span class="header-section-number">14.4.3</span> Fit models</h3>
+<p>Now that we have a visual indicator that voting for the Republican party might be a relevant moderator of the relationship between <em>viewpoint extremity</em> and <em>support for government action against climate change</em> (it does change the direction of influence from negative to positive!), we should run a linear regression model to test these effects for their statistical significance. The linear model must include both the X (<em>viewpoint extremity</em>) and the W variable (<em>conservative_voter</em>) and their product XW (<em>viewpoint extremity</em> * <em>conservative_voter</em>). Let’s run such a model with the <code>lm()</code> function.</p>
+<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb281-1"><a href="tutorial-moderation-analysis.html#cb281-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(govact <span class="sc">~</span> ideology_ext<span class="sc">+</span>conservative_voter<span class="sc">+</span>ideology_ext<span class="sc">*</span>conservative_voter,<span class="at">data=</span>data))</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = govact ~ ideology_ext + conservative_voter + ideology_ext * 
+##     conservative_voter, data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.2790 -0.7421  0.0789  0.8579  3.6728 
+## 
+## Coefficients:
+##                                                   Estimate Std. Error t value             Pr(&gt;|t|)    
+## (Intercept)                                        4.56317    0.11337  40.249 &lt; 0.0000000000000002 ***
+## ideology_ext                                       0.17895    0.05268   3.397             0.000715 ***
+## conservative_voterConservative voter               0.67547    0.22961   2.942             0.003356 ** 
+## ideology_ext:conservative_voterConservative voter -0.70680    0.09098  -7.769   0.0000000000000239 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.237 on 811 degrees of freedom
+## Multiple R-squared:  0.1767, Adjusted R-squared:  0.1737 
+## F-statistic: 58.02 on 3 and 811 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<p><strong>Evaluation:</strong> We can infer the regression equation from this output: Y = 4.563 + 0.178 * X + 0.675 * W -0.706 * XW, where i<sub>[Y]</sub> = 4.563, <em>b<sub>1</sub></em> = 0.178, <em>b<sub>2</sub></em> = 0.675, and <em>b<sub>3</sub></em> = -0.706.
+Most importantly, <em>b<sub>3</sub></em> is statistically different from zero, t(811) = -7.769, <em>p</em> &lt; .001. This means that we can conclude that the effect of viewpoint extremity on support for government action against climate change is moderated by vote choice, i.e. voting for the Republican party. We now know that viewpoint extremity has a different effect on support for government action for different political groups. That’s an important finding! Had there been no evidence of moderation (i.e., <em>b<sub>3</sub></em> was not statistically different from zero), the most sensible approach would be to reestimate the model excluding the product XW (i.e. running a multiple linear regression!), thereby allowing X’s effect to be invariant across W.
+The interaction effect’s <em>b<sub>3</sub></em> coefficient quantifies how the effect of X on Y changes as W changes by
+one unit. Here, as vote choice changes by one point, i.e. from liberal voters (0) to conservative voters (1), the direction of the effect changes from positive (for liberal voters) to negative (for conservative voters), since <em>b<sub>3</sub></em> is negative. Specifically, conservative voters are estimated to drop -0.706 lower in their support for government action when there viewpoint extremity increases by one point.
+<em>b<sub>1</sub></em> and <em>b<sub>2</sub></em> are conditional effects. These regression coefficients estimate the effect of X when W = 0 and the effect of W when X = 0, respectively. You’ll realize soon that these coefficients aren’t always sensible, for instance, viewpoint extremity (X) can’t even become 0 on our chosen scale that ranges from 1 to 4. We’ll discuss that in a second.
+The regression coefficient for the conditional effect of X is <em>b<sub>1</sub></em> = 0.178 (<em>p</em> &lt; .001). This is the estimated difference in support for government action against climate change between two individuals who differ by one unit in their viewpoint extremity, but both score zero on the <em>conservative_voter</em> variable, i.e. are liberal voters. This score is positive, which implies that liberals who have a one unit increase in their viewpoint extremity are estimates to have a 0.178 increase in their support for government action.
+The regression coefficient for the conditional effect of W is <em>b<sub>2</sub></em> = 0.675 (<em>p</em> &lt; .01).This is the estimated difference in support for government action against climate change between liberals and conservatives who score zero on viewpoint extremity (X = 0), i.e. they are estimated to differ by 0.675 points. Although this interpretation is mathematically correct, substantively it is nonsense because the measure of viewpoint extremity in this study is mathematically bound between 1 and 4. An estimate of the effect of vote choice conditioned on a score of zero on viewpoint extremity has no meaning because no such people could even exist.</p>
+</div>
+<div id="standardization" class="section level3" number="14.4.4">
+<h3><span class="header-section-number">14.4.4</span> Standardization</h3>
+<p>You might already have guessed it, but a good way to get meaningful regression coefficients for variables that are not mathematically between 0 and a finite value is to standardize. Let’s run the model again with a standardized <em>viewpoint extremity</em> (do not standardize the binary vote choice variable <em>conservative_voter</em>!):</p>
+<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="tutorial-moderation-analysis.html#cb283-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ideology_ext_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>ideology_ext)</span>
+<span id="cb283-2"><a href="tutorial-moderation-analysis.html#cb283-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb283-3"><a href="tutorial-moderation-analysis.html#cb283-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(govact <span class="sc">~</span> ideology_ext_st<span class="sc">+</span>conservative_voter<span class="sc">+</span>ideology_ext_st<span class="sc">*</span>conservative_voter,<span class="at">data=</span>data))</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = govact ~ ideology_ext_st + conservative_voter + 
+##     ideology_ext_st * conservative_voter, data = data)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.2790 -0.7421  0.0789  0.8579  3.6728 
+## 
+## Coefficients:
+##                                                      Estimate Std. Error t value             Pr(&gt;|t|)    
+## (Intercept)                                           4.93797    0.05362  92.100 &lt; 0.0000000000000002 ***
+## ideology_ext_st                                       0.18709    0.05508   3.397             0.000715 ***
+## conservative_voterConservative voter                 -0.80491    0.09758  -8.248 0.000000000000000645 ***
+## ideology_ext_st:conservative_voterConservative voter -0.73895    0.09512  -7.769 0.000000000000023933 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 1.237 on 811 degrees of freedom
+## Multiple R-squared:  0.1767, Adjusted R-squared:  0.1737 
+## F-statistic: 58.02 on 3 and 811 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+<p><strong>Evaluation:</strong> With a standardized <em>viewpoint extremity</em> variable, you can now interpret scores of X = 0 as the mean (because standardization includes centering variables on their mean, i.e. the mean becomes zero!). <em>b<sub>2</sub></em> = -0.804 (<em>p</em> &lt; .001) is the estimated difference in support for government action against climate change between liberals and conservatives who score <strong>average</strong> on viewpoint extremity (X = 0). Conservatives who score <strong>average</strong> on viewpoint extremity are estimated to score -0.804 points lower on support for government action than liberals who score <strong>average</strong> on viewpoint extremity.</p>
+<p><strong>Note:</strong> Please remember that when you standardize a variable, the meaning of a one unit increase in that variable changes, i.e. it becomes a one-standard deviation increase. For example, <em>b<sub>1</sub></em> = 0.187 (<em>p</em> &lt; .001) now changes it’s meaning: Two liberal voters who have a one point standard deviation difference in their viewpoint extremity are estimated to differ by 0.187 points in their support for government action against climate change.</p>
+</div>
+<div id="using-processr-1" class="section level3" number="14.4.5">
+<h3><span class="header-section-number">14.4.5</span> Using processR</h3>
+<p>Finally, you can use the easy road an do everything with the <code>processR</code> function. Before using the function, you need to (download and) run the <code>processR</code> script again that you’ve already used in Tutorial 13, <a href="tutorial-moderation-analysis.html#using-processr-1">Using processR</a>.</p>
+<p>Once you’ve created the <code>process</code> function, perform the mediation analysis again, but this time we will use <code>process</code>:</p>
+</div>
+</div>
+<div id="take-aways-9" class="section level2" number="14.5">
+<h2><span class="header-section-number">14.5</span> Take Aways</h2>
 <ul>
-<li>source</li>
-<li>console</li>
-<li>input</li>
-<li>packages, files &amp; plots</li>
-</ul>
-<p><strong>2. How do you activate R packages after you have installed them?</strong></p>
-<ul>
-<li>import.packages()</li>
-<li>install.packages()</li>
-<li>package()</li>
-<li>library()</li>
-</ul>
-<p><strong>3. How do you create a vector in R with elements 1, 2, 3?</strong></p>
-<ul>
-<li>cbind(1,2,3)</li>
-<li>cb(1,2,3)</li>
-<li>c(1,2,3)</li>
-<li>cmb(1,2,3)</li>
-</ul>
-<p><strong>4. Imagine you have a vector called ‘vector’ with 10 numeric elements. How do you retrieve the 8th element?</strong></p>
-<ul>
-<li>vector[-2]</li>
-<li>vector[„-2“]</li>
-<li>vector[8]</li>
-<li>vector[„8“]</li>
-</ul>
-<p><strong>5. Imagine you have a vector called ‘hair’ with 5 elements: brown, black, red, blond, other. How do you retrieve the color ‘blond’?</strong></p>
-<ul>
-<li>hair[4]</li>
-<li>hair[„4“]</li>
-<li>hair[blond]</li>
-<li>hair[„blond“]</li>
+<li><strong>explaning the when and circumstances</strong>: a moderation model helps you to determine the situations, events, or groups of people for which the impact of X on Y changes</li>
+<li><strong><code>process</code></strong>: calculate the moderation model either by using the classic <code>lm()</code> function (multiple linear regression with a product of X and W) or by using the <code>process</code> function of the <code>process</code> script by A. F. Hayes</li>
+<li><strong>standardization</strong>: Is a great way to get meaningful regression coefficients for variables that are not mathematically between 0 and a finite value.</li>
 </ul>
 </div>
-<div id="task-2" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Task 2</h2>
-<p>Create a numeric vector with 8 values and assign the name <em>age</em> to the vector. First, display all elements of the vector. Then print only the 5th element. After that, display all elements except the 5th. Finally, display the elements at the positions 6 to 8.</p>
-</div>
-<div id="task-3" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Task 3</h2>
-<p>Create a non-numeric, i.e. character, vector with 4 elements and assign the name <em>eye_color</em> to the vector. First, print all elements of this vector to the console. Then have only the value in the 2nd element displayed, then all values except the 2nd element. At the end, display the elements at the positions 2 to 4.</p>
-</div>
-<div id="task-4" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Task 4</h2>
-<p>Create a data frame called <em>data</em>. The data frame should contain the following variables (in this order):</p>
+<div id="more-tutorials-on-this-8" class="section level2" number="14.6">
+<h2><span class="header-section-number">14.6</span> More tutorials on this</h2>
+<p>You still have questions? The following book can help you with that:</p>
 <ul>
-<li>a vector called <em>food</em>. It should contain 5 elements, namely the names of your five favorite dishes.</li>
-<li>a vector called <em>description</em>. For every dish mentioned in <em>food</em>, please describe the dish in a single sentence (for instance, if the first food you describe is “pizza”, you could write: “This is an Italian dish, which I prefer with a lot of cheese.”)</li>
-<li>a vector called <em>rating</em>. Rate every dish mentioned in <em>food</em> with 1-5 (using every number only once), i.e., by rating your absolute favorite dish out of all five with a 1 and your least favorite dish out of all five with a 5.</li>
+<li>Hayes, A. F. (2022). <em>Introduction to Mediation, Moderation
+and Conditional Process Analysis</em> (p. 233-281) <a href="http://afhayes.com/introduction-to-mediation-moderation-and-conditional-process-analysis.html">Link</a></li>
 </ul>
-<p><strong>Hint</strong>: For me, the data frame would look something like this:</p>
-<pre><code>##            food                                             description Rating
-## 1         pizza Italian dish, I actually prefer mine with little cheese      3
-## 2         pasta                                    Another Italian dish      1
-## 3     ice cream                             The perfect snack in summer      2
-## 4        crisps              Potatoes and oil - a luxurious combination      4
-## 5 passion fruit             A fruit that makes me think about  vacation      5</code></pre>
 </div>
-<div id="task-5" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> Task 5</h2>
-<p>Can you sort the data in your prior data set by rating - with your favorite dish (i.e., the one rated “1”) on top of the list and your least favorite dish (i.e., the one rated “5”) on the bottom?</p>
-<p><strong>Important</strong>: You do <em>not</em> yet know this command - you’ll have to google for the right solution. Please do and note down the exact search terms you used for googling.</p>
-<p><strong>Hint</strong>: For me, the data frame would look something like this:</p>
-<pre><code>##            food                                             description Rating
-## 1         pasta                                    Another Italian dish      1
-## 2     ice cream                             The perfect snack in summer      2
-## 3         pizza Italian dish, I actually prefer mine with little cheese      3
-## 4        crisps              Potatoes and oil - a luxurious combination      4
-## 5 passion fruit             A fruit that makes me think about  vacation      5</code></pre>
-<p>When you’re ready to look at the solutions, you can find them here: <a href="solutions.html#solutions-for-exercise-1">Solutions for Exercise 1</a>.</p>
-<p>Now that you’re well versed in data types and structures, let’s move on to data management in the tidyverse in the <a href="tutorial-data-management-with-tidyverse.html#tutorial-data-management-with-tidyverse">Tutorial: Data management with tidyverse</a>.</p>
 </div>
+<div class="footnotes">
+<hr />
+<ol start="7">
+<li id="fn7"><p>You should be aware that unlike mediation, where statistical equations and conceptual diagrams match perfectly, the conceptual diagram of a moderation model is different from the corresponding statistical diagram.<a href="tutorial-moderation-analysis.html#fnref7" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="tutorial-reading-data-inout.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="tutorial-data-management-with-tidyverse.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tutorial-mediation-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="solutions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
