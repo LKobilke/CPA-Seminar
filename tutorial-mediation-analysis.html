@@ -549,7 +549,7 @@ This variable measures the political ideology of respondents on a liberalism-con
 <span id="cb254-2"><a href="tutorial-mediation-analysis.html#cb254-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb254-3"><a href="tutorial-mediation-analysis.html#cb254-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb254-4"><a href="tutorial-mediation-analysis.html#cb254-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Conservatism&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> It seems that people who are more conservative are less supportive of government action against climate change. This correlation is far from perfect, but the pattern is evident.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>The relationship between conservatism and negative emotions about climate change (direct effect <em>a</em> of X on M)</strong></li>
@@ -558,7 +558,7 @@ This variable measures the political ideology of respondents on a liberalism-con
 <span id="cb255-2"><a href="tutorial-mediation-analysis.html#cb255-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb255-3"><a href="tutorial-mediation-analysis.html#cb255-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb255-4"><a href="tutorial-mediation-analysis.html#cb255-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Conservatism&quot;</span>, <span class="at">y=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> This relationship is difficult to capture visually. There seems to be a small effect at play here, with more conservative people expressing fewer negative feelings about climate change. This pattern is not very evident, but you can imagine a diagonal from the top left corner to the bottom right corner through the thicker bubbles.</p>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>The relationship between negative emotions about climate change and support for government action against climate change (M on Y <em>without</em> controlling for X)</strong></li>
@@ -567,7 +567,7 @@ This variable measures the political ideology of respondents on a liberalism-con
 <span id="cb256-2"><a href="tutorial-mediation-analysis.html#cb256-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb256-3"><a href="tutorial-mediation-analysis.html#cb256-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb256-4"><a href="tutorial-mediation-analysis.html#cb256-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-108-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> We can assume that people who express larger negative sentiments about climate change are also more supportive of government action. Again, this pattern is evident.</p>
 </div>
 <div id="pearsons-r-1" class="section level3" number="13.5.3">
@@ -778,7 +778,7 @@ We have a negative direct effect <em>a</em> = -0.35 of conservatism on negative 
 <p>Finally, you can draw a conceptual diagram of your simple mediation model:</p>
 <div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="tutorial-mediation-analysis.html#cb275-1" aria-hidden="true" tabindex="-1"></a>labels<span class="ot">=</span><span class="fu">list</span>(<span class="at">X=</span><span class="st">&quot;ideology&quot;</span>,<span class="at">M=</span><span class="st">&quot;negemot&quot;</span>,<span class="at">Y=</span><span class="st">&quot;govact&quot;</span>)</span>
 <span id="cb275-2"><a href="tutorial-mediation-analysis.html#cb275-2" aria-hidden="true" tabindex="-1"></a>processR<span class="sc">::</span><span class="fu">drawModel</span>(<span class="at">labels=</span>labels)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
 <p>In addition, you can also draw a diagram of your estimated simple mediation model, but you need to install/activate the <code>lavaan</code> package first:</p>
 <div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="tutorial-mediation-analysis.html#cb276-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
 <span id="cb276-2"><a href="tutorial-mediation-analysis.html#cb276-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(lavaan)) {</span>
@@ -790,7 +790,7 @@ We have a negative direct effect <em>a</em> = -0.35 of conservatism on negative 
 <span id="cb277-2"><a href="tutorial-mediation-analysis.html#cb277-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">tripleEquation</span>(<span class="at">X=</span><span class="st">&quot;ideology&quot;</span>,<span class="at">M=</span><span class="st">&quot;negemot&quot;</span>,<span class="at">Y=</span><span class="st">&quot;govact&quot;</span>) <span class="co"># retrieve the regression equations and save them into model</span></span>
 <span id="cb277-3"><a href="tutorial-mediation-analysis.html#cb277-3" aria-hidden="true" tabindex="-1"></a>semfit <span class="ot">&lt;-</span> <span class="fu">sem</span>(<span class="at">model=</span>model,<span class="at">data=</span>data) <span class="co"># use the retrieved equations to fit a lavaan model</span></span>
 <span id="cb277-4"><a href="tutorial-mediation-analysis.html#cb277-4" aria-hidden="true" tabindex="-1"></a><span class="fu">statisticalDiagram</span>(<span class="dv">4</span>,<span class="at">labels=</span>labels,<span class="at">fit=</span>semfit,<span class="at">whatLabel=</span><span class="st">&quot;est&quot;</span>) <span class="co"># 4 tells R to draw a simple mediation model with the lavaan fit, whatLabel=&quot;est&quot; sets your estimated coefficients as labels</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
 </div>
 </div>
 <div id="take-aways-8" class="section level2" number="13.6">

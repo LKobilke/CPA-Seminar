@@ -447,7 +447,7 @@ who feel such negative emotions to a lesser extent?</p>
 <span id="cb237-2"><a href="tutorial-linear-regression.html#cb237-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
 <span id="cb237-3"><a href="tutorial-linear-regression.html#cb237-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
 <span id="cb237-4"><a href="tutorial-linear-regression.html#cb237-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Support for government action against climate change&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> It seems that people who express larger negative sentiments about climate change are also more supportive of government action. This correlation is far from perfect, but the pattern is evident.</p>
 </div>
 <div id="pearsons-r" class="section level2" number="11.3">
@@ -506,7 +506,7 @@ We’ll now fit a regression line to our data. To print beautiful labels to this
 <span id="cb241-8"><a href="tutorial-linear-regression.html#cb241-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span> <span class="co"># This command adds the regression line to the bubble plot</span></span>
 <span id="cb241-9"><a href="tutorial-linear-regression.html#cb241-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="fu">aes</span>(<span class="at">label =</span>  ..rr.label..)) <span class="sc">+</span>  <span class="co"># This command adds the r-squared to the graph</span></span>
 <span id="cb241-10"><a href="tutorial-linear-regression.html#cb241-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">6.6</span>) <span class="co"># Controls the placement of the regression equation</span></span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> As you can see, the equation is Y = 2.8 + 0.51*X. For a person with a negative emotions score of X = 2, the model predicts Y = 2.8 + 0.51*2 = 2.8 + 1.02 = 3.82.</p>
 <p>Let´s suppose this person’s actual support for government action, Y, is 4.0. If so, then this person’s residual would be e = 4.0 - 3.82 = 0.18. Thus, the model very slightly overestimates this person’s support for government action by 0.18 units.</p>
 <p>Finally, R<sup>2</sup> provides an estimation of how much of the variance in Y can be explained by X. In this case, 33% of the variance in the support for government action can be explained by negative emotions about climate change.</p>
@@ -565,7 +565,7 @@ on support for government action (7-point scale). It is difficult to compare the
 <span id="cb245-8"><a href="tutorial-linear-regression.html#cb245-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="fl">2.0</span>) <span class="sc">+</span></span>
 <span id="cb245-9"><a href="tutorial-linear-regression.html#cb245-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Standardized negative emotions about climate change&quot;</span>, <span class="at">y=</span><span class="st">&quot;Standardized support for government action against climate change&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb245-10"><a href="tutorial-linear-regression.html#cb245-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>)                                </span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-101-1.png" width="672" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
 <div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="tutorial-linear-regression.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="ot">&lt;-</span><span class="fu">lm</span>(govact_st <span class="sc">~</span> negemot_st,<span class="at">data=</span>data)) <span class="co"># Finally, we run the actual model.</span></span></code></pre></div>
 <pre><code>## 
 ## Call:
