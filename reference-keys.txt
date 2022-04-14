@@ -156,6 +156,7 @@ knowing-your-data-2
 visual-inspection-of-linear-trends-2
 fit-models-1
 standardization
+follow-up-analysis-pobing-the-interaction
 using-processr-1
 take-aways-9
 more-tutorials-on-this-8
