@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-04-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,10 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
 
 
 <style type="text/css">
@@ -371,20 +375,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.5" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-5-4"><i class="fa fa-check"></i><b>16.5</b> Task 5</a></li>
 <li class="chapter" data-level="16.6" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-6-3"><i class="fa fa-check"></i><b>16.6</b> Task 6</a></li>
 </ul></li>
+<li class="chapter" data-level="17" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html"><i class="fa fa-check"></i><b>17</b> Tutorial: CPA and model fit</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#what-is-cpa"><i class="fa fa-check"></i><b>17.1</b> What is CPA?</a></li>
+<li class="chapter" data-level="17.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#fitting-models-with-lavaan"><i class="fa fa-check"></i><b>17.2</b> Fitting models with lavaan</a></li>
+<li class="chapter" data-level="17.3" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#example-evaluate-model-fit-for-complex-models"><i class="fa fa-check"></i><b>17.3</b> Example: Evaluate model fit for complex models</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#theory-driven-hypotheses"><i class="fa fa-check"></i><b>17.3.1</b> Theory-driven hypotheses</a></li>
+<li class="chapter" data-level="17.3.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#model-fit-and-evaluation"><i class="fa fa-check"></i><b>17.3.2</b> Model fit and evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#take-aways-10"><i class="fa fa-check"></i><b>17.4</b> Take-Aways</a></li>
+<li class="chapter" data-level="17.5" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#more-tutorials-on-this-9"><i class="fa fa-check"></i><b>17.5</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html"><i class="fa fa-check"></i><b>18</b> Exercise 7: Test your knowledge</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-1-6"><i class="fa fa-check"></i><b>18.1</b> Task 1</a></li>
+<li class="chapter" data-level="18.2" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-2-6"><i class="fa fa-check"></i><b>18.2</b> Task 2</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-6"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-6"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-6"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-5"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-5"><i class="fa fa-check"></i>Task 5</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-2"><i class="fa fa-check"></i>Solutions for Exercise 2</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-7"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-6"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-6"><i class="fa fa-check"></i>Task 5</a></li>
@@ -393,14 +414,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-3"><i class="fa fa-check"></i>Solutions for Exercise 3</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-8"><i class="fa fa-check"></i>Task 3</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-4"><i class="fa fa-check"></i>Solutions for Exercise 4</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-9"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-7"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-7"><i class="fa fa-check"></i>Task 5</a></li>
@@ -408,8 +429,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-5"><i class="fa fa-check"></i>Solutions for Exercise 5</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-10"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-8"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-8"><i class="fa fa-check"></i>Task 5</a></li>
@@ -418,12 +439,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-6"><i class="fa fa-check"></i>Solutions for Exercise 6</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-12"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-12"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-11"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-9"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-9"><i class="fa fa-check"></i>Task 5</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-6-7"><i class="fa fa-check"></i>Task 6</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-7"><i class="fa fa-check"></i>Solutions for Exercise 7</a>
+<ul>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-13"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-13"><i class="fa fa-check"></i>Task 2</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -656,40 +682,39 @@ Thus, you need to make your error replicable by giving the exact command and pot
 ## Matrix products: default
 ## 
 ## locale:
-## [1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252
-## [4] LC_NUMERIC=C                           LC_TIME=English_United States.1252    
+## [1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252 LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] dplyr_1.0.8      extrafont_0.17   bookdown_0.24    rsconnect_0.8.25
+##  [1] interactions_1.1.5 ggpubr_0.4.0       extrafont_0.17     bookdown_0.24      rsconnect_0.8.25   nonnest2_0.5-5     insight_0.16.0     performance_0.8.0  lavaanPlot_0.6.2  
+## [10] processR_0.2.6     lavaan_0.6-11      forcats_0.5.1      stringr_1.4.0      dplyr_1.0.8        purrr_0.3.4        readr_2.1.2        tidyr_1.2.0        tibble_3.1.6      
+## [19] ggplot2_3.3.5      tidyverse_1.3.1   
 ## 
 ## loaded via a namespace (and not attached):
-##   [1] utf8_1.2.2          tidyselect_1.1.2    lme4_1.1-29         htmlwidgets_1.5.4   grid_4.1.2          ztable_0.2.3        editData_0.1.8     
-##   [8] diagram_1.6.5       miscTools_0.6-26    jtools_2.1.4        munsell_0.5.0       codetools_0.2-18    effectsize_0.6.0.1  DT_0.21            
-##  [15] miniUI_0.1.1.1      ggiraphExtra_0.3.0  colorspace_2.0-3    highr_0.9           knitr_1.38          uuid_1.0-3          rstudioapi_0.13    
-##  [22] stats4_4.1.2        ggsignif_0.6.3      officer_0.4.1       shinyWidgets_0.6.4  Rttf2pt1_1.3.10     Rdpack_2.3          emmeans_1.7.2      
-##  [29] mnormt_2.0.2        datawizard_0.2.3    moonBook_0.3.1      coda_0.19-4         vctrs_0.3.8         generics_0.1.2      TH.data_1.1-0      
-##  [36] xfun_0.29           R6_2.5.1            ggiraph_0.8.2       predict3d_0.1.3.3   assertthat_0.2.1    promises_1.2.0.1    scales_1.2.0       
-##  [43] multcomp_1.4-18     nnet_7.3-16         gtable_0.3.0        sandwich_3.0-1      rlang_1.0.1         systemfonts_1.0.4   sjPlot_2.8.10      
-##  [50] splines_4.1.2       rstatix_0.7.0.999   extrafontdb_1.0     mycor_0.1.1         broom_0.8.0         checkmate_2.0.0     rgl_0.108.3        
-##  [57] yaml_2.3.5          reshape2_1.4.4      prediction_0.3.14   abind_1.4-5         modelr_0.1.8        backports_1.4.1     httpuv_1.6.5       
-##  [64] Hmisc_4.6-0         tools_4.1.2         collapse_1.7.6      psych_2.1.9         lavaan_0.6-11       ggplot2_3.3.5       ellipsis_0.3.2     
-##  [71] jquerylib_0.1.4     RColorBrewer_1.1-3  processR_0.2.6      devEMF_4.0-2        Rcpp_1.0.8          plyr_1.8.6          base64enc_0.1-3    
-##  [78] purrr_0.3.4         ggpubr_0.4.0        rpart_4.1-15        zoo_1.8-9           haven_2.4.3         ggrepel_0.9.1       cluster_2.1.2      
-##  [85] magrittr_2.0.2      data.table_1.14.2   openxlsx_4.2.5      flextable_0.6.10    lmtest_0.9-40       tmvnsim_1.0-2       mvtnorm_1.1-3      
-##  [92] sjmisc_2.8.9        hms_1.1.1           mime_0.12           evaluate_0.15       xtable_1.8-4        rio_0.5.29          sjstats_0.18.1     
-##  [99] jpeg_0.1-9          readxl_1.3.1        gridExtra_2.3       ggeffects_1.1.1     shape_1.4.6         compiler_4.1.2      bdsmatrix_1.3-4    
-## [106] tibble_3.1.6        crayon_1.5.1        minqa_1.2.4         htmltools_0.5.2     mgcv_1.8-38         later_1.3.0         tzdb_0.2.0         
-## [113] semTools_0.5-5      Formula_1.2-4       tidyr_1.2.0         DBI_1.1.2           rrtable_0.2.1       sjlabelled_1.1.8    ppcor_1.1          
-## [120] MASS_7.3-54         boot_1.3-28         Matrix_1.3-4        car_3.0-12          readr_2.1.2         cli_3.2.0           rbibutils_2.2.7    
-## [127] parallel_4.1.2      insight_0.16.0      forcats_0.5.1       pkgconfig_2.0.3     foreign_0.8-81      xml2_1.3.3          pbivnorm_0.6.0     
-## [134] bslib_0.3.1         plm_2.6-1           estimability_1.3    rvg_0.2.5           stringr_1.4.0       digest_0.6.29       parameters_0.16.0  
-## [141] rmarkdown_2.11      cellranger_1.1.0    htmlTable_2.4.0     gdtools_0.2.4       maxLik_1.5-2        curl_4.3.2          shiny_1.7.1        
-## [148] nloptr_2.0.0        lifecycle_1.0.1     nlme_3.1-153        jsonlite_1.8.0      carData_3.0-5       interactions_1.1.5  fansi_1.0.2        
-## [155] pillar_1.7.0        lattice_0.20-45     fastmap_1.1.0       survival_3.2-13     glue_1.6.2          bayestestR_0.11.5   zip_2.2.0          
-## [162] png_0.1-7           pander_0.6.4        stringi_1.7.6       sass_0.4.0          performance_0.8.0   latticeExtra_0.6-29</code></pre>
+##   [1] utf8_1.2.2          tidyselect_1.1.2    lme4_1.1-29         htmlwidgets_1.5.4   grid_4.1.2          ztable_0.2.3        editData_0.1.8      diagram_1.6.5      
+##   [9] miscTools_0.6-26    jtools_2.1.4        munsell_0.5.0       codetools_0.2-18    effectsize_0.6.0.1  DT_0.21             miniUI_0.1.1.1      ggiraphExtra_0.3.0 
+##  [17] withr_2.5.0         colorspace_2.0-3    highr_0.9           knitr_1.38          uuid_1.0-3          rstudioapi_0.13     stats4_4.1.2        ggsignif_0.6.3     
+##  [25] officer_0.4.1       shinyWidgets_0.6.4  Rttf2pt1_1.3.10     labeling_0.4.2      Rdpack_2.3          emmeans_1.7.2       mnormt_2.0.2        farver_2.1.0       
+##  [33] datawizard_0.2.3    moonBook_0.3.1      coda_0.19-4         vctrs_0.3.8         generics_0.1.2      TH.data_1.1-0       xfun_0.29           R6_2.5.1           
+##  [41] ggiraph_0.8.2       predict3d_0.1.3.3   assertthat_0.2.1    promises_1.2.0.1    scales_1.2.0        multcomp_1.4-18     nnet_7.3-16         gtable_0.3.0       
+##  [49] sandwich_3.0-1      rlang_1.0.1         systemfonts_1.0.4   sjPlot_2.8.10       splines_4.1.2       rstatix_0.7.0.999   extrafontdb_1.0     mycor_0.1.1        
+##  [57] checkmate_2.0.0     broom_0.8.0         rgl_0.108.3         yaml_2.3.5          reshape2_1.4.4      prediction_0.3.14   abind_1.4-5         modelr_0.1.8       
+##  [65] backports_1.4.1     httpuv_1.6.5        Hmisc_4.6-0         DiagrammeR_1.0.9    tools_4.1.2         collapse_1.7.6      psych_2.1.9         ellipsis_0.3.2     
+##  [73] jquerylib_0.1.4     RColorBrewer_1.1-3  polynom_1.4-0       devEMF_4.0-2        Rcpp_1.0.8          plyr_1.8.6          visNetwork_2.1.0    base64enc_0.1-3    
+##  [81] rpart_4.1-15        zoo_1.8-9           haven_2.4.3         ggrepel_0.9.1       cluster_2.1.2       fs_1.5.2            magrittr_2.0.2      data.table_1.14.2  
+##  [89] openxlsx_4.2.5      flextable_0.6.10    reprex_2.0.1        lmtest_0.9-40       tmvnsim_1.0-2       mvtnorm_1.1-3       sjmisc_2.8.9        hms_1.1.1          
+##  [97] mime_0.12           evaluate_0.15       xtable_1.8-4        rio_0.5.29          sjstats_0.18.1      jpeg_0.1-9          readxl_1.3.1        gridExtra_2.3      
+## [105] ggeffects_1.1.1     shape_1.4.6         compiler_4.1.2      bdsmatrix_1.3-4     crayon_1.5.1        minqa_1.2.4         htmltools_0.5.2     mgcv_1.8-38        
+## [113] later_1.3.0         tzdb_0.2.0          semTools_0.5-5      Formula_1.2-4       lubridate_1.8.0     DBI_1.1.2           rrtable_0.2.1       sjlabelled_1.1.8   
+## [121] dbplyr_2.1.1        ppcor_1.1           MASS_7.3-54         boot_1.3-28         Matrix_1.3-4        car_3.0-12          cli_3.2.0           rbibutils_2.2.7    
+## [129] parallel_4.1.2      pkgconfig_2.0.3     foreign_0.8-81      xml2_1.3.3          pbivnorm_0.6.0      bslib_0.3.1         plm_2.6-1           CompQuadForm_1.4.3 
+## [137] estimability_1.3    rvg_0.2.5           rvest_1.0.2         digest_0.6.29       parameters_0.16.0   rmarkdown_2.11      cellranger_1.1.0    htmlTable_2.4.0    
+## [145] gdtools_0.2.4       maxLik_1.5-2        curl_4.3.2          shiny_1.7.1         nloptr_2.0.0        lifecycle_1.0.1     nlme_3.1-153        jsonlite_1.8.0     
+## [153] carData_3.0-5       fansi_1.0.2         pillar_1.7.0        lattice_0.20-45     httr_1.4.2          fastmap_1.1.0       survival_3.2-13     glue_1.6.2         
+## [161] bayestestR_0.11.5   zip_2.2.0           png_0.1-7           pander_0.6.4        stringi_1.7.6       sass_0.4.0          latticeExtra_0.6-29</code></pre>
 </div>
 </div>
 <div id="interrupting-r" class="section level3" number="2.3.4">

@@ -24,14 +24,14 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-04-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exercise-6-test-your-knowledge.html"/>
+<link rel="prev" href="exercise-7-test-your-knowledge.html"/>
 
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -53,6 +53,10 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
 
 
 <style type="text/css">
@@ -371,20 +375,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.5" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-5-4"><i class="fa fa-check"></i><b>16.5</b> Task 5</a></li>
 <li class="chapter" data-level="16.6" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-6-3"><i class="fa fa-check"></i><b>16.6</b> Task 6</a></li>
 </ul></li>
+<li class="chapter" data-level="17" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html"><i class="fa fa-check"></i><b>17</b> Tutorial: CPA and model fit</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#what-is-cpa"><i class="fa fa-check"></i><b>17.1</b> What is CPA?</a></li>
+<li class="chapter" data-level="17.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#fitting-models-with-lavaan"><i class="fa fa-check"></i><b>17.2</b> Fitting models with lavaan</a></li>
+<li class="chapter" data-level="17.3" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#example-evaluate-model-fit-for-complex-models"><i class="fa fa-check"></i><b>17.3</b> Example: Evaluate model fit for complex models</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#theory-driven-hypotheses"><i class="fa fa-check"></i><b>17.3.1</b> Theory-driven hypotheses</a></li>
+<li class="chapter" data-level="17.3.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#model-fit-and-evaluation"><i class="fa fa-check"></i><b>17.3.2</b> Model fit and evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#take-aways-10"><i class="fa fa-check"></i><b>17.4</b> Take-Aways</a></li>
+<li class="chapter" data-level="17.5" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#more-tutorials-on-this-9"><i class="fa fa-check"></i><b>17.5</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html"><i class="fa fa-check"></i><b>18</b> Exercise 7: Test your knowledge</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-1-6"><i class="fa fa-check"></i><b>18.1</b> Task 1</a></li>
+<li class="chapter" data-level="18.2" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-2-6"><i class="fa fa-check"></i><b>18.2</b> Task 2</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-6"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-6"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-6"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-5"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-5"><i class="fa fa-check"></i>Task 5</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-2"><i class="fa fa-check"></i>Solutions for Exercise 2</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-7"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-6"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-6"><i class="fa fa-check"></i>Task 5</a></li>
@@ -393,14 +414,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-3"><i class="fa fa-check"></i>Solutions for Exercise 3</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-8"><i class="fa fa-check"></i>Task 3</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-4"><i class="fa fa-check"></i>Solutions for Exercise 4</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-9"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-7"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-7"><i class="fa fa-check"></i>Task 5</a></li>
@@ -408,8 +429,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-5"><i class="fa fa-check"></i>Solutions for Exercise 5</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-10"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-8"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-8"><i class="fa fa-check"></i>Task 5</a></li>
@@ -418,12 +439,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-6"><i class="fa fa-check"></i>Solutions for Exercise 6</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-12"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-12"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-11"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-9"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-9"><i class="fa fa-check"></i>Task 5</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-6-7"><i class="fa fa-check"></i>Task 6</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-7"><i class="fa fa-check"></i>Solutions for Exercise 7</a>
+<ul>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-13"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-13"><i class="fa fa-check"></i>Task 2</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -451,7 +477,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This is where you’ll find solutions for all of the tutorials.</p>
 <div id="solutions-for-exercise-1" class="section level2 unnumbered">
 <h2>Solutions for Exercise 1</h2>
-<div id="task-1-6" class="section level3 unnumbered">
+<div id="task-1-7" class="section level3 unnumbered">
 <h3>Task 1</h3>
 <p>Below you will see multiple choice questions. Please try to identify the correct answers. 1, 2, 3 and 4 correct answers are possible for each question.</p>
 <p><strong>1. What panels are part of RStudio?</strong></p>
@@ -482,32 +508,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>hair[4] (x)</li>
 </ul>
 </div>
-<div id="task-2-6" class="section level3 unnumbered">
+<div id="task-2-7" class="section level3 unnumbered">
 <h3>Task 2</h3>
 <p>Create a numeric vector with 8 values and assign the name <em>age</em> to the vector. First, display all elements of the vector. Then print only the 5th element. After that, display all elements except the 5th. Finally, display the elements at the positions 6 to 8.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="solutions.html#cb305-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">65</span>,<span class="dv">52</span>,<span class="dv">73</span>,<span class="dv">71</span>,<span class="dv">80</span>,<span class="dv">62</span>,<span class="dv">68</span>,<span class="dv">87</span>)</span>
-<span id="cb305-2"><a href="solutions.html#cb305-2" aria-hidden="true" tabindex="-1"></a>age</span></code></pre></div>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="solutions.html#cb325-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">65</span>,<span class="dv">52</span>,<span class="dv">73</span>,<span class="dv">71</span>,<span class="dv">80</span>,<span class="dv">62</span>,<span class="dv">68</span>,<span class="dv">87</span>)</span>
+<span id="cb325-2"><a href="solutions.html#cb325-2" aria-hidden="true" tabindex="-1"></a>age</span></code></pre></div>
 <pre><code>## [1] 65 52 73 71 80 62 68 87</code></pre>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="solutions.html#cb307-1" aria-hidden="true" tabindex="-1"></a>age[<span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="solutions.html#cb327-1" aria-hidden="true" tabindex="-1"></a>age[<span class="dv">5</span>]</span></code></pre></div>
 <pre><code>## [1] 80</code></pre>
-<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="solutions.html#cb309-1" aria-hidden="true" tabindex="-1"></a>age[<span class="sc">-</span><span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="solutions.html#cb329-1" aria-hidden="true" tabindex="-1"></a>age[<span class="sc">-</span><span class="dv">5</span>]</span></code></pre></div>
 <pre><code>## [1] 65 52 73 71 62 68 87</code></pre>
-<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="solutions.html#cb311-1" aria-hidden="true" tabindex="-1"></a>age[<span class="dv">6</span><span class="sc">:</span><span class="dv">8</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="solutions.html#cb331-1" aria-hidden="true" tabindex="-1"></a>age[<span class="dv">6</span><span class="sc">:</span><span class="dv">8</span>]</span></code></pre></div>
 <pre><code>## [1] 62 68 87</code></pre>
 </div>
 <div id="task-3-6" class="section level3 unnumbered">
 <h3>Task 3</h3>
 <p>Create a non-numeric, i.e. character, vector with 4 elements and assign the name <em>eye_color</em> to the vector. First, print all elements of this vector to the console. Then have only the value in the 2nd element displayed, then all values except the 2nd element. At the end, display the elements at the positions 2 to 4.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="solutions.html#cb313-1" aria-hidden="true" tabindex="-1"></a>eye_color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;brown&quot;</span>, <span class="st">&quot;other&quot;</span>)</span>
-<span id="cb313-2"><a href="solutions.html#cb313-2" aria-hidden="true" tabindex="-1"></a>eye_color</span></code></pre></div>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="solutions.html#cb333-1" aria-hidden="true" tabindex="-1"></a>eye_color <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;brown&quot;</span>, <span class="st">&quot;other&quot;</span>)</span>
+<span id="cb333-2"><a href="solutions.html#cb333-2" aria-hidden="true" tabindex="-1"></a>eye_color</span></code></pre></div>
 <pre><code>## [1] &quot;blue&quot;  &quot;green&quot; &quot;brown&quot; &quot;other&quot;</code></pre>
-<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="solutions.html#cb315-1" aria-hidden="true" tabindex="-1"></a>eye_color[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb335-1"><a href="solutions.html#cb335-1" aria-hidden="true" tabindex="-1"></a>eye_color[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;green&quot;</code></pre>
-<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb317-1"><a href="solutions.html#cb317-1" aria-hidden="true" tabindex="-1"></a>eye_color[<span class="sc">-</span><span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="solutions.html#cb337-1" aria-hidden="true" tabindex="-1"></a>eye_color[<span class="sc">-</span><span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;blue&quot;  &quot;brown&quot; &quot;other&quot;</code></pre>
-<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="solutions.html#cb319-1" aria-hidden="true" tabindex="-1"></a>eye_color[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="solutions.html#cb339-1" aria-hidden="true" tabindex="-1"></a>eye_color[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;green&quot; &quot;brown&quot; &quot;other&quot;</code></pre>
 </div>
 <div id="task-4-5" class="section level3 unnumbered">
@@ -519,14 +545,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>a vector called <em>rating</em>. Rate every dish mentioned in <em>food</em> with 1-5 (using every number only once), i.e., by rating your absolute favorite dish out of all five with a 1 and your least favorite dish out of all five with a 5.</li>
 </ul>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="solutions.html#cb321-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">&quot;food&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;pizza&quot;</span>, <span class="st">&quot;pasta&quot;</span>, <span class="st">&quot;ice cream&quot;</span>, <span class="st">&quot;crisps&quot;</span>, <span class="st">&quot;passion fruit&quot;</span>),</span>
-<span id="cb321-2"><a href="solutions.html#cb321-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;description&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Italian dish, I actually prefer mine with little cheese&quot;</span>,</span>
-<span id="cb321-3"><a href="solutions.html#cb321-3" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;Another Italian dish&quot;</span>,</span>
-<span id="cb321-4"><a href="solutions.html#cb321-4" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;The perfect snack in summer&quot;</span>,</span>
-<span id="cb321-5"><a href="solutions.html#cb321-5" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;Potatoes and oil - a luxurious combination&quot;</span>,</span>
-<span id="cb321-6"><a href="solutions.html#cb321-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;A fruit that makes me think about  vacation&quot;</span>),</span>
-<span id="cb321-7"><a href="solutions.html#cb321-7" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;Rating&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>))</span>
-<span id="cb321-8"><a href="solutions.html#cb321-8" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb341-1"><a href="solutions.html#cb341-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">&quot;food&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;pizza&quot;</span>, <span class="st">&quot;pasta&quot;</span>, <span class="st">&quot;ice cream&quot;</span>, <span class="st">&quot;crisps&quot;</span>, <span class="st">&quot;passion fruit&quot;</span>),</span>
+<span id="cb341-2"><a href="solutions.html#cb341-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;description&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Italian dish, I actually prefer mine with little cheese&quot;</span>,</span>
+<span id="cb341-3"><a href="solutions.html#cb341-3" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;Another Italian dish&quot;</span>,</span>
+<span id="cb341-4"><a href="solutions.html#cb341-4" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;The perfect snack in summer&quot;</span>,</span>
+<span id="cb341-5"><a href="solutions.html#cb341-5" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;Potatoes and oil - a luxurious combination&quot;</span>,</span>
+<span id="cb341-6"><a href="solutions.html#cb341-6" aria-hidden="true" tabindex="-1"></a>                                     <span class="st">&quot;A fruit that makes me think about  vacation&quot;</span>),</span>
+<span id="cb341-7"><a href="solutions.html#cb341-7" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;Rating&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>))</span>
+<span id="cb341-8"><a href="solutions.html#cb341-8" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
 <pre><code>##            food                                             description Rating
 ## 1         pizza Italian dish, I actually prefer mine with little cheese      3
 ## 2         pasta                                    Another Italian dish      1
@@ -539,9 +565,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Can you sort the data in your data set by rating - with your favorite dish (i.e., the one rated “1”) on top of the list and your least favorite dish (i.e., the one rated “5”) on the bottom?</p>
 <p><strong>Important</strong>: You do <em>not</em> yet know this command - you’ll have to google for the right solution. Please do and note down the exact search terms you used for googling.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="solutions.html#cb323-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span>
-<span id="cb323-2"><a href="solutions.html#cb323-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(Rating)</span>
-<span id="cb323-3"><a href="solutions.html#cb323-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
+<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb343-1"><a href="solutions.html#cb343-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;dplyr&quot;</span>)</span>
+<span id="cb343-2"><a href="solutions.html#cb343-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(Rating)</span>
+<span id="cb343-3"><a href="solutions.html#cb343-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
 <pre><code>##            food                                             description Rating
 ## 1         pasta                                    Another Italian dish      1
 ## 2     ice cream                             The perfect snack in summer      2
@@ -552,7 +578,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="solutions-for-exercise-2" class="section level2 unnumbered">
 <h2>Solutions for Exercise 2</h2>
-<div id="task-1-7" class="section level3 unnumbered">
+<div id="task-1-8" class="section level3 unnumbered">
 <h3>Task 1</h3>
 <p>Below you will see multiple choice questions. Please try to identify the correct answers. 1, 2, 3 and 4 correct answers are possible for each question.</p>
 <p><strong>1. What are the main characteristics of tidy data?</strong></p>
@@ -582,25 +608,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>starwars_data %&gt;% group_by(hair_color, species) %&gt;% summarize(count = n()) %&gt;% arrange(hair_color)</code> (x)</li>
 </ul>
 </div>
-<div id="task-2-7" class="section level3 unnumbered">
+<div id="task-2-8" class="section level3 unnumbered">
 <h3>Task 2</h3>
 <p>Now it’s you turn. Load the starwars data like this:</p>
-<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="solutions.html#cb325-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)              <span class="co"># to activate the dplyr package</span></span>
-<span id="cb325-2"><a href="solutions.html#cb325-2" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="ot">&lt;-</span> starwars   <span class="co"># to assign the pre-installed starwars data set (dplyr) into a source object in our environment</span></span></code></pre></div>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="solutions.html#cb345-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)              <span class="co"># to activate the dplyr package</span></span>
+<span id="cb345-2"><a href="solutions.html#cb345-2" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="ot">&lt;-</span> starwars   <span class="co"># to assign the pre-installed starwars data set (dplyr) into a source object in our environment</span></span></code></pre></div>
 <p>How many humans are contained in the starwars data overall? (Hint: use <code>summarize(count = n())</code> or <code>count()</code>)?</p>
 <p><em>Solution:</em></p>
 <p>You can use <code>summarize(count = n())</code>:</p>
-<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="solutions.html#cb326-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb326-2"><a href="solutions.html#cb326-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb326-3"><a href="solutions.html#cb326-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="solutions.html#cb346-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb346-2"><a href="solutions.html#cb346-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb346-3"><a href="solutions.html#cb346-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 1
 ##   count
 ##   &lt;int&gt;
 ## 1    35</code></pre>
 <p>Alternatively, you can use the <code>count()</code> function:</p>
-<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="solutions.html#cb328-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb328-2"><a href="solutions.html#cb328-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb328-3"><a href="solutions.html#cb328-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(species)</span></code></pre></div>
+<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="solutions.html#cb348-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb348-2"><a href="solutions.html#cb348-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb348-3"><a href="solutions.html#cb348-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(species)</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 2
 ##   species     n
 ##   &lt;chr&gt;   &lt;int&gt;
@@ -611,10 +637,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>How many humans are contained in starwars by gender?</p>
 <p><em>Solution:</em></p>
 <p>You can use <code>summarize(count = n())</code>:</p>
-<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="solutions.html#cb330-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb330-2"><a href="solutions.html#cb330-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb330-3"><a href="solutions.html#cb330-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, gender) <span class="sc">%&gt;%</span> </span>
-<span id="cb330-4"><a href="solutions.html#cb330-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb350-1"><a href="solutions.html#cb350-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb350-2"><a href="solutions.html#cb350-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb350-3"><a href="solutions.html#cb350-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species, gender) <span class="sc">%&gt;%</span> </span>
+<span id="cb350-4"><a href="solutions.html#cb350-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ## # Groups:   species [1]
 ##   species gender    count
@@ -622,9 +648,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 1 Human   feminine      9
 ## 2 Human   masculine    26</code></pre>
 <p>Alternatively, you can use the <code>count()</code> function:</p>
-<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="solutions.html#cb332-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb332-2"><a href="solutions.html#cb332-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb332-3"><a href="solutions.html#cb332-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(species, gender)</span></code></pre></div>
+<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="solutions.html#cb352-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb352-2"><a href="solutions.html#cb352-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">&quot;Human&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb352-3"><a href="solutions.html#cb352-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(species, gender)</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ##   species gender        n
 ##   &lt;chr&gt;   &lt;chr&gt;     &lt;int&gt;
@@ -635,10 +661,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Task 4</h3>
 <p>What is the most common eye_color among Star Wars characters? (Hint: use <code>arrange()</code>)__</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="solutions.html#cb334-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb334-2"><a href="solutions.html#cb334-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(eye_color) <span class="sc">%&gt;%</span> </span>
-<span id="cb334-3"><a href="solutions.html#cb334-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb334-4"><a href="solutions.html#cb334-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(count))</span></code></pre></div>
+<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="solutions.html#cb354-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb354-2"><a href="solutions.html#cb354-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(eye_color) <span class="sc">%&gt;%</span> </span>
+<span id="cb354-3"><a href="solutions.html#cb354-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb354-4"><a href="solutions.html#cb354-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(count))</span></code></pre></div>
 <pre><code>## # A tibble: 15 x 2
 ##    eye_color     count
 ##    &lt;chr&gt;         &lt;int&gt;
@@ -662,9 +688,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Task 5</h3>
 <p>What is the average mass of Star Wars characters that are not human and have yellow eyes? (Hint: remove all <code>NAs</code>)__</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="solutions.html#cb336-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb336-2"><a href="solutions.html#cb336-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">!=</span> <span class="st">&quot;Human&quot;</span> <span class="sc">&amp;</span> eye_color<span class="sc">==</span><span class="st">&quot;yellow&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb336-3"><a href="solutions.html#cb336-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="solutions.html#cb356-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb356-2"><a href="solutions.html#cb356-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">!=</span> <span class="st">&quot;Human&quot;</span> <span class="sc">&amp;</span> eye_color<span class="sc">==</span><span class="st">&quot;yellow&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb356-3"><a href="solutions.html#cb356-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_mass =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm=</span><span class="cn">TRUE</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 1
 ##   mean_mass
 ##       &lt;dbl&gt;
@@ -674,13 +700,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Task 6</h3>
 <p>Compare the mean, median, and standard deviation of mass for all humans and droids. (Hint: remove all <code>NAs</code>)__</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="solutions.html#cb338-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb338-2"><a href="solutions.html#cb338-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">&quot;Human&quot;</span> <span class="sc">|</span> species<span class="sc">==</span><span class="st">&quot;Droid&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb338-3"><a href="solutions.html#cb338-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span>                                </span>
-<span id="cb338-4"><a href="solutions.html#cb338-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">M =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb338-5"><a href="solutions.html#cb338-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">Med =</span> <span class="fu">median</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb338-6"><a href="solutions.html#cb338-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">SD =</span> <span class="fu">sd</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb338-7"><a href="solutions.html#cb338-7" aria-hidden="true" tabindex="-1"></a>            )</span></code></pre></div>
+<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="solutions.html#cb358-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb358-2"><a href="solutions.html#cb358-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">&quot;Human&quot;</span> <span class="sc">|</span> species<span class="sc">==</span><span class="st">&quot;Droid&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb358-3"><a href="solutions.html#cb358-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span>                                </span>
+<span id="cb358-4"><a href="solutions.html#cb358-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">M =</span> <span class="fu">mean</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb358-5"><a href="solutions.html#cb358-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">Med =</span> <span class="fu">median</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb358-6"><a href="solutions.html#cb358-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">SD =</span> <span class="fu">sd</span>(mass, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb358-7"><a href="solutions.html#cb358-7" aria-hidden="true" tabindex="-1"></a>            )</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 4
 ##   species     M   Med    SD
 ##   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -691,11 +717,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Task 7</h3>
 <p>Create a new variable in which you store the mass in gram. Add it to the data frame.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="solutions.html#cb340-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="ot">&lt;-</span> starwars_data <span class="sc">%&gt;%</span></span>
-<span id="cb340-2"><a href="solutions.html#cb340-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gr_mass =</span> mass<span class="sc">*</span><span class="dv">1000</span>)</span>
-<span id="cb340-3"><a href="solutions.html#cb340-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb340-4"><a href="solutions.html#cb340-4" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span> </span>
-<span id="cb340-5"><a href="solutions.html#cb340-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, species, mass, gr_mass)</span></code></pre></div>
+<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="solutions.html#cb360-1" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="ot">&lt;-</span> starwars_data <span class="sc">%&gt;%</span></span>
+<span id="cb360-2"><a href="solutions.html#cb360-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gr_mass =</span> mass<span class="sc">*</span><span class="dv">1000</span>)</span>
+<span id="cb360-3"><a href="solutions.html#cb360-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb360-4"><a href="solutions.html#cb360-4" aria-hidden="true" tabindex="-1"></a>starwars_data <span class="sc">%&gt;%</span> </span>
+<span id="cb360-5"><a href="solutions.html#cb360-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(name, species, mass, gr_mass)</span></code></pre></div>
 <pre><code>## # A tibble: 87 x 4
 ##    name               species  mass gr_mass
 ##    &lt;chr&gt;              &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt;
@@ -714,120 +740,120 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="solutions-for-exercise-3" class="section level2 unnumbered">
 <h2>Solutions for Exercise 3</h2>
-<div id="task-1-8" class="section level3 unnumbered">
+<div id="task-1-9" class="section level3 unnumbered">
 <h3>Task 1</h3>
 <p>Try to reproduce this plot with <code>dplyr</code> and <code>ggplot2</code>. (<strong>Hint:</strong> You can hide the legend by adding <code>theme(legend.position = "none")</code> to your plot.)</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="solutions.html#cb342-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb342-2"><a href="solutions.html#cb342-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">case_when</span>(</span>
-<span id="cb342-3"><a href="solutions.html#cb342-3" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;Female&quot;</span>,</span>
-<span id="cb342-4"><a href="solutions.html#cb342-4" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Male&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb342-5"><a href="solutions.html#cb342-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Party =</span> <span class="fu">case_when</span>(</span>
-<span id="cb342-6"><a href="solutions.html#cb342-6" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Democrat&quot;</span>,</span>
-<span id="cb342-7"><a href="solutions.html#cb342-7" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">&quot;Independent&quot;</span>,</span>
-<span id="cb342-8"><a href="solutions.html#cb342-8" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">&quot;Republican&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb342-9"><a href="solutions.html#cb342-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Party,<span class="at">y=</span>negemot, <span class="at">fill=</span>Party)) <span class="sc">+</span></span>
-<span id="cb342-10"><a href="solutions.html#cb342-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;bar&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
-<span id="cb342-11"><a href="solutions.html#cb342-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb342-12"><a href="solutions.html#cb342-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb342-13"><a href="solutions.html#cb342-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Climate change attitudes of U.S. partisans by gender&quot;</span>,</span>
-<span id="cb342-14"><a href="solutions.html#cb342-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
-<span id="cb342-15"><a href="solutions.html#cb342-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="solutions.html#cb362-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb362-2"><a href="solutions.html#cb362-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">case_when</span>(</span>
+<span id="cb362-3"><a href="solutions.html#cb362-3" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;Female&quot;</span>,</span>
+<span id="cb362-4"><a href="solutions.html#cb362-4" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Male&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb362-5"><a href="solutions.html#cb362-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Party =</span> <span class="fu">case_when</span>(</span>
+<span id="cb362-6"><a href="solutions.html#cb362-6" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Democrat&quot;</span>,</span>
+<span id="cb362-7"><a href="solutions.html#cb362-7" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">&quot;Independent&quot;</span>,</span>
+<span id="cb362-8"><a href="solutions.html#cb362-8" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">&quot;Republican&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb362-9"><a href="solutions.html#cb362-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Party,<span class="at">y=</span>negemot, <span class="at">fill=</span>Party)) <span class="sc">+</span></span>
+<span id="cb362-10"><a href="solutions.html#cb362-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">geom =</span> <span class="st">&quot;bar&quot;</span>, <span class="at">fun =</span> <span class="st">&quot;mean&quot;</span>) <span class="sc">+</span></span>
+<span id="cb362-11"><a href="solutions.html#cb362-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb362-12"><a href="solutions.html#cb362-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb362-13"><a href="solutions.html#cb362-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Climate change attitudes of U.S. partisans by gender&quot;</span>,</span>
+<span id="cb362-14"><a href="solutions.html#cb362-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
+<span id="cb362-15"><a href="solutions.html#cb362-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
 </div>
-<div id="task-2-8" class="section level3 unnumbered">
+<div id="task-2-9" class="section level3 unnumbered">
 <h3>Task 2</h3>
 <p>Now, try to reproduce this graph. (<strong>Hint:</strong> You will need to recode the <em>ideology</em> variable in a way that higher values represent stronger attitudes, <em>independent of partisanship</em>.)</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb343-1"><a href="solutions.html#cb343-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
-<span id="cb343-2"><a href="solutions.html#cb343-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ideology_ext =</span> <span class="fu">case_when</span>(</span>
-<span id="cb343-3"><a href="solutions.html#cb343-3" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
-<span id="cb343-4"><a href="solutions.html#cb343-4" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
-<span id="cb343-5"><a href="solutions.html#cb343-5" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
-<span id="cb343-6"><a href="solutions.html#cb343-6" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb343-7"><a href="solutions.html#cb343-7" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">5</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
-<span id="cb343-8"><a href="solutions.html#cb343-8" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
-<span id="cb343-9"><a href="solutions.html#cb343-9" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">7</span> <span class="sc">~</span> <span class="dv">4</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb343-10"><a href="solutions.html#cb343-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">case_when</span>(</span>
-<span id="cb343-11"><a href="solutions.html#cb343-11" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;Female&quot;</span>,</span>
-<span id="cb343-12"><a href="solutions.html#cb343-12" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Male&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb343-13"><a href="solutions.html#cb343-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Party =</span> <span class="fu">case_when</span>(</span>
-<span id="cb343-14"><a href="solutions.html#cb343-14" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Democrat&quot;</span>,</span>
-<span id="cb343-15"><a href="solutions.html#cb343-15" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">&quot;Independent&quot;</span>,</span>
-<span id="cb343-16"><a href="solutions.html#cb343-16" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">&quot;Republican&quot;</span>))</span></code></pre></div>
-<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb344-1"><a href="solutions.html#cb344-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb344-2"><a href="solutions.html#cb344-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Party,<span class="at">y=</span>ideology_ext, <span class="at">fill=</span>Party)) <span class="sc">+</span></span>
-<span id="cb344-3"><a href="solutions.html#cb344-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb344-4"><a href="solutions.html#cb344-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb344-5"><a href="solutions.html#cb344-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb344-6"><a href="solutions.html#cb344-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Ideological extremity of U.S. partisans by gender&quot;</span>,</span>
-<span id="cb344-7"><a href="solutions.html#cb344-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb344-8"><a href="solutions.html#cb344-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex)</span></code></pre></div>
+<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="solutions.html#cb363-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb363-2"><a href="solutions.html#cb363-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ideology_ext =</span> <span class="fu">case_when</span>(</span>
+<span id="cb363-3"><a href="solutions.html#cb363-3" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
+<span id="cb363-4"><a href="solutions.html#cb363-4" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb363-5"><a href="solutions.html#cb363-5" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb363-6"><a href="solutions.html#cb363-6" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb363-7"><a href="solutions.html#cb363-7" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">5</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb363-8"><a href="solutions.html#cb363-8" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">6</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb363-9"><a href="solutions.html#cb363-9" aria-hidden="true" tabindex="-1"></a>    ideology <span class="sc">==</span> <span class="dv">7</span> <span class="sc">~</span> <span class="dv">4</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb363-10"><a href="solutions.html#cb363-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">case_when</span>(</span>
+<span id="cb363-11"><a href="solutions.html#cb363-11" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;Female&quot;</span>,</span>
+<span id="cb363-12"><a href="solutions.html#cb363-12" aria-hidden="true" tabindex="-1"></a>    sex <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Male&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb363-13"><a href="solutions.html#cb363-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Party =</span> <span class="fu">case_when</span>(</span>
+<span id="cb363-14"><a href="solutions.html#cb363-14" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;Democrat&quot;</span>,</span>
+<span id="cb363-15"><a href="solutions.html#cb363-15" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">&quot;Independent&quot;</span>,</span>
+<span id="cb363-16"><a href="solutions.html#cb363-16" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">&quot;Republican&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="solutions.html#cb364-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb364-2"><a href="solutions.html#cb364-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Party,<span class="at">y=</span>ideology_ext, <span class="at">fill=</span>Party)) <span class="sc">+</span></span>
+<span id="cb364-3"><a href="solutions.html#cb364-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb364-4"><a href="solutions.html#cb364-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb364-5"><a href="solutions.html#cb364-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb364-6"><a href="solutions.html#cb364-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Ideological extremity of U.S. partisans by gender&quot;</span>,</span>
+<span id="cb364-7"><a href="solutions.html#cb364-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb364-8"><a href="solutions.html#cb364-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex)</span></code></pre></div>
 </div>
 <div id="task-3-8" class="section level3 unnumbered">
 <h3>Task 3</h3>
 <p>Can you make a chart that breaks down the relationship between <em>age</em>, <em>negative emotions about climate change</em>, and <em>ideological extremity</em> for the different <em>sexes</em> AND <em>parties</em>?</p>
 <p><em>Solution 1:</em></p>
-<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="solutions.html#cb345-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
-<span id="cb345-2"><a href="solutions.html#cb345-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age,<span class="at">y=</span>negemot, <span class="at">size=</span>ideology_ext, <span class="at">color =</span> Party)) <span class="sc">+</span></span>
-<span id="cb345-3"><a href="solutions.html#cb345-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb345-4"><a href="solutions.html#cb345-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">3</span>), <span class="at">name =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb345-5"><a href="solutions.html#cb345-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb345-6"><a href="solutions.html#cb345-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, </span><span class="sc">\n</span><span class="st"> and ideological extremity&quot;</span>,</span>
-<span id="cb345-7"><a href="solutions.html#cb345-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
-<span id="cb345-8"><a href="solutions.html#cb345-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
+<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="solutions.html#cb365-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb365-2"><a href="solutions.html#cb365-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age,<span class="at">y=</span>negemot, <span class="at">size=</span>ideology_ext, <span class="at">color =</span> Party)) <span class="sc">+</span></span>
+<span id="cb365-3"><a href="solutions.html#cb365-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb365-4"><a href="solutions.html#cb365-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">3</span>), <span class="at">name =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb365-5"><a href="solutions.html#cb365-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb365-6"><a href="solutions.html#cb365-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, </span><span class="sc">\n</span><span class="st"> and ideological extremity&quot;</span>,</span>
+<span id="cb365-7"><a href="solutions.html#cb365-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
+<span id="cb365-8"><a href="solutions.html#cb365-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>sex, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-180-1.png" width="672" /></p>
 <p><em>Solution 2:</em></p>
 <p>Alternatively, you might enjoy this look that you can create with <code>facet_grid()</code>:</p>
-<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="solutions.html#cb346-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb346-2"><a href="solutions.html#cb346-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age,<span class="at">y=</span>negemot, <span class="at">size=</span>ideology_ext, <span class="at">color =</span> Party)) <span class="sc">+</span></span>
-<span id="cb346-3"><a href="solutions.html#cb346-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb346-4"><a href="solutions.html#cb346-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">3</span>), <span class="at">name =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb346-5"><a href="solutions.html#cb346-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb346-6"><a href="solutions.html#cb346-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, and ideological extremity&quot;</span>,</span>
-<span id="cb346-7"><a href="solutions.html#cb346-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
-<span id="cb346-8"><a href="solutions.html#cb346-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="fu">vars</span>(sex), <span class="fu">vars</span>(Party))</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-148-1.png" width="672" /></p>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="solutions.html#cb366-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb366-2"><a href="solutions.html#cb366-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age,<span class="at">y=</span>negemot, <span class="at">size=</span>ideology_ext, <span class="at">color =</span> Party)) <span class="sc">+</span></span>
+<span id="cb366-3"><a href="solutions.html#cb366-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb366-4"><a href="solutions.html#cb366-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">3</span>), <span class="at">name =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb366-5"><a href="solutions.html#cb366-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb366-6"><a href="solutions.html#cb366-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, and ideological extremity&quot;</span>,</span>
+<span id="cb366-7"><a href="solutions.html#cb366-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
+<span id="cb366-8"><a href="solutions.html#cb366-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="fu">vars</span>(sex), <span class="fu">vars</span>(Party))</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-181-1.png" width="672" /></p>
 <p><em>Solution 3:</em></p>
 <p>Or even this look, also done with <code>facet_grid()</code>:</p>
-<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="solutions.html#cb347-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb347-2"><a href="solutions.html#cb347-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age,<span class="at">y=</span>negemot, <span class="at">size=</span>ideology_ext, <span class="at">color =</span> Party)) <span class="sc">+</span></span>
-<span id="cb347-3"><a href="solutions.html#cb347-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb347-4"><a href="solutions.html#cb347-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">3</span>), <span class="at">name =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
-<span id="cb347-5"><a href="solutions.html#cb347-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb347-6"><a href="solutions.html#cb347-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, and ideological extremity&quot;</span>,</span>
-<span id="cb347-7"><a href="solutions.html#cb347-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
-<span id="cb347-8"><a href="solutions.html#cb347-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>sex <span class="sc">+</span> Party)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="solutions.html#cb367-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb367-2"><a href="solutions.html#cb367-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age,<span class="at">y=</span>negemot, <span class="at">size=</span>ideology_ext, <span class="at">color =</span> Party)) <span class="sc">+</span></span>
+<span id="cb367-3"><a href="solutions.html#cb367-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb367-4"><a href="solutions.html#cb367-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">3</span>), <span class="at">name =</span> <span class="st">&quot;Ideological extremity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb367-5"><a href="solutions.html#cb367-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb367-6"><a href="solutions.html#cb367-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Relationship between age, climate change attitudes, and ideological extremity&quot;</span>,</span>
+<span id="cb367-7"><a href="solutions.html#cb367-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Age&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Negative emotions about climate change&quot;</span>) <span class="sc">+</span></span>
+<span id="cb367-8"><a href="solutions.html#cb367-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(<span class="sc">~</span>sex <span class="sc">+</span> Party)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-182-1.png" width="672" /></p>
 </div>
 </div>
 <div id="solutions-for-exercise-4" class="section level2 unnumbered">
 <h2>Solutions for Exercise 4</h2>
-<div id="task-1-9" class="section level3 unnumbered">
+<div id="task-1-10" class="section level3 unnumbered">
 <h3>Task 1</h3>
 <p>Let’s use the data set <em>glbwarm</em> again, which you should know well by now. Install / activate the <code>processR</code> package and assign the <em>glbwarm</em> data to a source object.</p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="solutions.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
-<span id="cb348-2"><a href="solutions.html#cb348-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
-<span id="cb348-3"><a href="solutions.html#cb348-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
-<span id="cb348-4"><a href="solutions.html#cb348-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
-<span id="cb348-5"><a href="solutions.html#cb348-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
-<span id="cb348-6"><a href="solutions.html#cb348-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb348-7"><a href="solutions.html#cb348-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="solutions.html#cb368-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb368-2"><a href="solutions.html#cb368-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb368-3"><a href="solutions.html#cb368-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb368-4"><a href="solutions.html#cb368-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb368-5"><a href="solutions.html#cb368-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb368-6"><a href="solutions.html#cb368-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb368-7"><a href="solutions.html#cb368-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>glbwarm</span></code></pre></div>
 <p>In this task, we want to tackle simple linear regression. More specifically, we want to predict the <em>ideology</em> of our respondents by their <em>age</em> because we assume that older respondents will hold more conservative viewpoints. The higher the values of the <em>ideology</em> variable, the more conservative the respondents are (coded from 1 ‘very liberal’ to 7 ‘very conservative’).</p>
 <p><strong>Research question:</strong> Do older U.S. Americans hold more conservative viewpoints than younger U.S. Americans?</p>
 <p>To answer this question, prepare a visual inspection of this relationship without fitting a regression line. Can you recognize a relationship? What is its nature?</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="solutions.html#cb349-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>ideology)) <span class="sc">+</span>                                         </span>
-<span id="cb349-2"><a href="solutions.html#cb349-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
-<span id="cb349-3"><a href="solutions.html#cb349-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
-<span id="cb349-4"><a href="solutions.html#cb349-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Conservatism&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-151-1.png" width="672" /></p>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="solutions.html#cb369-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>ideology)) <span class="sc">+</span>                                         </span>
+<span id="cb369-2"><a href="solutions.html#cb369-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
+<span id="cb369-3"><a href="solutions.html#cb369-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
+<span id="cb369-4"><a href="solutions.html#cb369-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Conservatism&quot;</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-184-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> We can observe a small, positive relationship between age and conservatism. (This can be inferred from the amount of bigger bubbles clustering on the top right corner of the graph.)</p>
 </div>
-<div id="task-2-9" class="section level3 unnumbered">
+<div id="task-2-10" class="section level3 unnumbered">
 <h3>Task 2</h3>
 <p>Next, try to quantify the association using Pearson’s r. Interpret the result.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb350-1"><a href="solutions.html#cb350-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(glbwarm<span class="sc">$</span>ideology,glbwarm<span class="sc">$</span>age, <span class="at">method=</span><span class="st">&quot;pearson&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="solutions.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(glbwarm<span class="sc">$</span>ideology,glbwarm<span class="sc">$</span>age, <span class="at">method=</span><span class="st">&quot;pearson&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Pearson&#39;s product-moment correlation
 ## 
@@ -845,29 +871,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Task 3</h3>
 <p>Using your graph from Task 1, fit a regression line to your data points (<strong>Hint:</strong> You will need to load the <code>ggpubr</code> package). Interpret the parameters of the regression line.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="solutions.html#cb352-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
-<span id="cb352-2"><a href="solutions.html#cb352-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(ggpubr)) {</span>
-<span id="cb352-3"><a href="solutions.html#cb352-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;ggpubr&quot;</span>); </span>
-<span id="cb352-4"><a href="solutions.html#cb352-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(ggpubr)</span>
-<span id="cb352-5"><a href="solutions.html#cb352-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load ggpubr</span></span></code></pre></div>
-<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb353-1"><a href="solutions.html#cb353-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb353-2"><a href="solutions.html#cb353-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>ideology)) <span class="sc">+</span>                                         </span>
-<span id="cb353-3"><a href="solutions.html#cb353-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                    </span>
-<span id="cb353-4"><a href="solutions.html#cb353-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb353-5"><a href="solutions.html#cb353-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  xlim(0,7) +</span></span>
-<span id="cb353-6"><a href="solutions.html#cb353-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  ylim(0,7.5) +</span></span>
-<span id="cb353-7"><a href="solutions.html#cb353-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Conservatism&quot;</span>) <span class="sc">+</span> </span>
-<span id="cb353-8"><a href="solutions.html#cb353-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span></span>
-<span id="cb353-9"><a href="solutions.html#cb353-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="fu">aes</span>(<span class="at">label =</span>  ..rr.label..)) <span class="sc">+</span> </span>
-<span id="cb353-10"><a href="solutions.html#cb353-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">6.2</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-154-1.png" width="672" /></p>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="solutions.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb372-2"><a href="solutions.html#cb372-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(ggpubr)) {</span>
+<span id="cb372-3"><a href="solutions.html#cb372-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;ggpubr&quot;</span>); </span>
+<span id="cb372-4"><a href="solutions.html#cb372-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(ggpubr)</span>
+<span id="cb372-5"><a href="solutions.html#cb372-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load ggpubr</span></span></code></pre></div>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="solutions.html#cb373-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb373-2"><a href="solutions.html#cb373-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>ideology)) <span class="sc">+</span>                                         </span>
+<span id="cb373-3"><a href="solutions.html#cb373-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                    </span>
+<span id="cb373-4"><a href="solutions.html#cb373-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb373-5"><a href="solutions.html#cb373-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  xlim(0,7) +</span></span>
+<span id="cb373-6"><a href="solutions.html#cb373-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  ylim(0,7.5) +</span></span>
+<span id="cb373-7"><a href="solutions.html#cb373-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Age&quot;</span>, <span class="at">y=</span><span class="st">&quot;Conservatism&quot;</span>) <span class="sc">+</span> </span>
+<span id="cb373-8"><a href="solutions.html#cb373-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">&#39;lm&#39;</span>, <span class="at">formula=</span> y<span class="sc">~</span>x, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span></span>
+<span id="cb373-9"><a href="solutions.html#cb373-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_cor</span>(<span class="fu">aes</span>(<span class="at">label =</span>  ..rr.label..)) <span class="sc">+</span> </span>
+<span id="cb373-10"><a href="solutions.html#cb373-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_regline_equation</span>(<span class="at">label.y =</span> <span class="fl">6.2</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-187-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> The equation is Y = 3.1 + 0.02*X. This means that a person who becomes one year older is estimated to become 0.02 points more conservative. Similarly, two U.S. Americans with an age difference of 10 years are estimated to differ by 0.2 points on the ideology scale. However, age is not a really good predictor of conservatism as the predictor only explains about 4.5% of the observed variance in conservatism scores (R<sup>2</sup>).</p>
 </div>
 <div id="task-4-7" class="section level3 unnumbered">
 <h3>Task 4</h3>
 <p>Run a linear model in R using the <em>ideology</em> and <em>age</em> variables. Interpret the results.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="solutions.html#cb354-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(ideology <span class="sc">~</span> age,<span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="solutions.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(ideology <span class="sc">~</span> age,<span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = ideology ~ age, data = data)
@@ -894,18 +920,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Note:</strong> In a linear regression model, we can only include metric variables and variables that are binary coded (0/1). However, <em>partyid</em> is a categorical, i.e. factor variable, since Democrats are coded 1, Independents 2, and Republicans 3. Therefore, you need to mutate <em>partyid</em> and create two new binary variables <em>democrat</em> (0/1) and <em>republican</em> (0/1), where 1 indicates that the respondent identifies with that political party. (You don’t need to create a variable <em>independent</em>, since that information would be redundant: someone who has a value of 0 for both <em>republican</em> AND <em>democrat</em> MUST be an independent, so you can derive party preference with just two variables).</p>
 <p>Then, run a multiple linear model that predicts <em>ideology</em> by <em>sex</em>, <em>democrat</em>, <em>republican</em>, and <em>age</em>. Interpret the results and the meaning of the age coefficient.</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="solutions.html#cb356-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb356-2"><a href="solutions.html#cb356-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">democrat =</span> <span class="fu">case_when</span>(</span>
-<span id="cb356-3"><a href="solutions.html#cb356-3" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb356-4"><a href="solutions.html#cb356-4" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
-<span id="cb356-5"><a href="solutions.html#cb356-5" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb356-6"><a href="solutions.html#cb356-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">republican =</span> <span class="fu">case_when</span>(</span>
-<span id="cb356-7"><a href="solutions.html#cb356-7" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
-<span id="cb356-8"><a href="solutions.html#cb356-8" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
-<span id="cb356-9"><a href="solutions.html#cb356-9" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">1</span>)</span>
-<span id="cb356-10"><a href="solutions.html#cb356-10" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb356-11"><a href="solutions.html#cb356-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb356-12"><a href="solutions.html#cb356-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(ideology <span class="sc">~</span> sex <span class="sc">+</span> republican <span class="sc">+</span> democrat <span class="sc">+</span> age,<span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="solutions.html#cb376-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb376-2"><a href="solutions.html#cb376-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">democrat =</span> <span class="fu">case_when</span>(</span>
+<span id="cb376-3"><a href="solutions.html#cb376-3" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb376-4"><a href="solutions.html#cb376-4" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb376-5"><a href="solutions.html#cb376-5" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb376-6"><a href="solutions.html#cb376-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">republican =</span> <span class="fu">case_when</span>(</span>
+<span id="cb376-7"><a href="solutions.html#cb376-7" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb376-8"><a href="solutions.html#cb376-8" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb376-9"><a href="solutions.html#cb376-9" aria-hidden="true" tabindex="-1"></a>    partyid <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">1</span>)</span>
+<span id="cb376-10"><a href="solutions.html#cb376-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb376-11"><a href="solutions.html#cb376-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb376-12"><a href="solutions.html#cb376-12" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(ideology <span class="sc">~</span> sex <span class="sc">+</span> republican <span class="sc">+</span> democrat <span class="sc">+</span> age,<span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = ideology ~ sex + republican + democrat + age, data = data)
@@ -933,10 +959,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Task 6</h3>
 <p>Standardize all relevant variables and run the model again (note that binary variables shouldn’t be standardized). How does the interpretation of the age coefficient change?</p>
 <p><em>Solution:</em></p>
-<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="solutions.html#cb358-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ideology_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>ideology)</span>
-<span id="cb358-2"><a href="solutions.html#cb358-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>age_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>age)</span>
-<span id="cb358-3"><a href="solutions.html#cb358-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb358-4"><a href="solutions.html#cb358-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(ideology_st <span class="sc">~</span> sex <span class="sc">+</span> republican <span class="sc">+</span> democrat <span class="sc">+</span> age_st,<span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="solutions.html#cb378-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>ideology_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>ideology)</span>
+<span id="cb378-2"><a href="solutions.html#cb378-2" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>age_st <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>age)</span>
+<span id="cb378-3"><a href="solutions.html#cb378-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb378-4"><a href="solutions.html#cb378-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(ideology_st <span class="sc">~</span> sex <span class="sc">+</span> republican <span class="sc">+</span> democrat <span class="sc">+</span> age_st,<span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = ideology_st ~ sex + republican + democrat + age_st, 
@@ -964,30 +990,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="solutions-for-exercise-5" class="section level2 unnumbered">
 <h2>Solutions for Exercise 5</h2>
-<p>In this Exercise, we will work with the <em>pmi</em> datatset. It’s a data set of a communication science experiment that was conducted by Tal-Or, Cohen, Tsfati, &amp; Gunther in 2010 and comes pre-installed with <code>processR</code>. The data set contains 123 observations of 6 variables. There are three variables of interest to us in this data set:</p>
+<p>In this Exercise, we will work with the <em>pmi</em> data set. It’s a data set of a communication science experiment that was conducted by Tal-Or, Cohen, Tsfati, &amp; Gunther in 2010 and comes pre-installed with <code>processR</code>. The data set contains 123 observations of 6 variables. There are three variables of interest to us in this data set:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>cond:</strong> article about sugar shortage was placed at the front (1) or interior (0) page of a newspaper</p></li>
 <li><p><strong>pmi</strong>: belief that others will be prompted to buy sugar as a result of exposure to the article (scale: 1-7)</p></li>
 <li><p><strong>reaction:</strong> intention to buy sugar (scale: 1-7)</p></li>
 </ol>
 <p>Let’s load <code>processR</code> and save the <em>pmi</em> data to a source object called <em>data</em>:</p>
-<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="solutions.html#cb360-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
-<span id="cb360-2"><a href="solutions.html#cb360-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
-<span id="cb360-3"><a href="solutions.html#cb360-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
-<span id="cb360-4"><a href="solutions.html#cb360-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
-<span id="cb360-5"><a href="solutions.html#cb360-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
-<span id="cb360-6"><a href="solutions.html#cb360-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb360-7"><a href="solutions.html#cb360-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>pmi</span></code></pre></div>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="solutions.html#cb380-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb380-2"><a href="solutions.html#cb380-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb380-3"><a href="solutions.html#cb380-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb380-4"><a href="solutions.html#cb380-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb380-5"><a href="solutions.html#cb380-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb380-6"><a href="solutions.html#cb380-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb380-7"><a href="solutions.html#cb380-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>pmi</span></code></pre></div>
 <p>The <strong>theory of presumed media influence</strong> suggests that people perceive some effect of a message on others and then react to that perception. Based on this theory, we assume that when the sugar article appears on the front page, the reader will be more likely to believe that others will be prompted to buy sugar. Therefore, the reader will act on this belief and show greater intention to buy sugar themselves (to avoid a personal shortage because others are buying sugar).</p>
 <p><strong>Research Question:</strong> Is the effect of article placement (front/interior) on the intention to buy sugar mediated by the belief that others will be prompted to buy sugar as a result of exposure to the article? That is, do participants who take part in the front-page experimental condition develop a greater belief that others will be prompted to buy sugar, while this belief increases their own intention to buy sugar?</p>
-<div id="task-1-10" class="section level3 unnumbered">
+<div id="task-1-11" class="section level3 unnumbered">
 <h3>Task 1</h3>
 <p><strong>What variables are X, Y, and M in this scenario? Write it down.</strong></p>
 <p>X = <em>cond</em>; article about sugar shortage was placed at the front (1) or interior (0) page of a newspaper</p>
 <p>Y = <em>reaction</em>; intention to buy sugar (scale: 1-7)</p>
 <p>M = <em>pmi</em>; belief that others will be prompted to buy sugar as a result of exposure to the article (scale: 1-7)</p>
 </div>
-<div id="task-2-10" class="section level3 unnumbered">
+<div id="task-2-11" class="section level3 unnumbered">
 <h3>Task 2</h3>
 <p><strong>Create three plots:</strong></p>
 <ol style="list-style-type: decimal">
@@ -999,42 +1025,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>The effect <em>c</em> of X on Y without controlling for M:</li>
 </ol>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="solutions.html#cb361-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb361-2"><a href="solutions.html#cb361-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cond =</span> <span class="fu">case_when</span>(</span>
-<span id="cb361-3"><a href="solutions.html#cb361-3" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;interior page&quot;</span>,</span>
-<span id="cb361-4"><a href="solutions.html#cb361-4" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;front page&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb361-5"><a href="solutions.html#cb361-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>cond, <span class="at">y=</span>reaction)) <span class="sc">+</span></span>
-<span id="cb361-6"><a href="solutions.html#cb361-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> cond), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
-<span id="cb361-7"><a href="solutions.html#cb361-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">6</span>,</span>
-<span id="cb361-8"><a href="solutions.html#cb361-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb361-9"><a href="solutions.html#cb361-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb361-10"><a href="solutions.html#cb361-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb361-11"><a href="solutions.html#cb361-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition&quot;</span>, <span class="at">y=</span><span class="st">&quot;Intention to buy sugar&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 1&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-159-1.png" width="672" /></p>
+<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="solutions.html#cb381-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb381-2"><a href="solutions.html#cb381-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cond =</span> <span class="fu">case_when</span>(</span>
+<span id="cb381-3"><a href="solutions.html#cb381-3" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;interior page&quot;</span>,</span>
+<span id="cb381-4"><a href="solutions.html#cb381-4" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;front page&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb381-5"><a href="solutions.html#cb381-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>cond, <span class="at">y=</span>reaction)) <span class="sc">+</span></span>
+<span id="cb381-6"><a href="solutions.html#cb381-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> cond), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
+<span id="cb381-7"><a href="solutions.html#cb381-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">6</span>,</span>
+<span id="cb381-8"><a href="solutions.html#cb381-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb381-9"><a href="solutions.html#cb381-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb381-10"><a href="solutions.html#cb381-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb381-11"><a href="solutions.html#cb381-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition&quot;</span>, <span class="at">y=</span><span class="st">&quot;Intention to buy sugar&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 1&quot;</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-192-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>The direct effect <em>a</em> of X on M:</li>
 </ol>
-<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="solutions.html#cb362-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb362-2"><a href="solutions.html#cb362-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cond =</span> <span class="fu">case_when</span>(</span>
-<span id="cb362-3"><a href="solutions.html#cb362-3" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;interior page&quot;</span>,</span>
-<span id="cb362-4"><a href="solutions.html#cb362-4" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;front page&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb362-5"><a href="solutions.html#cb362-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>cond, <span class="at">y=</span>pmi)) <span class="sc">+</span></span>
-<span id="cb362-6"><a href="solutions.html#cb362-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> cond), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
-<span id="cb362-7"><a href="solutions.html#cb362-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">6</span>,</span>
-<span id="cb362-8"><a href="solutions.html#cb362-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb362-9"><a href="solutions.html#cb362-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb362-10"><a href="solutions.html#cb362-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb362-11"><a href="solutions.html#cb362-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition&quot;</span>, <span class="at">y=</span><span class="st">&quot;Belief that others will be prompted to buy sugar</span><span class="sc">\n</span><span class="st"> as a result of exposure to the article&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 2&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-160-1.png" width="672" /></p>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="solutions.html#cb382-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb382-2"><a href="solutions.html#cb382-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">cond =</span> <span class="fu">case_when</span>(</span>
+<span id="cb382-3"><a href="solutions.html#cb382-3" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;interior page&quot;</span>,</span>
+<span id="cb382-4"><a href="solutions.html#cb382-4" aria-hidden="true" tabindex="-1"></a>    cond <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;front page&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb382-5"><a href="solutions.html#cb382-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>cond, <span class="at">y=</span>pmi)) <span class="sc">+</span></span>
+<span id="cb382-6"><a href="solutions.html#cb382-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> cond), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
+<span id="cb382-7"><a href="solutions.html#cb382-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">6</span>,</span>
+<span id="cb382-8"><a href="solutions.html#cb382-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb382-9"><a href="solutions.html#cb382-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb382-10"><a href="solutions.html#cb382-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb382-11"><a href="solutions.html#cb382-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition&quot;</span>, <span class="at">y=</span><span class="st">&quot;Belief that others will be prompted to buy sugar</span><span class="sc">\n</span><span class="st"> as a result of exposure to the article&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 2&quot;</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>The effect of M on Y without controlling for X:</li>
 </ol>
-<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="solutions.html#cb363-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb363-2"><a href="solutions.html#cb363-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>pmi, <span class="at">y=</span>reaction)) <span class="sc">+</span>                                         </span>
-<span id="cb363-3"><a href="solutions.html#cb363-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
-<span id="cb363-4"><a href="solutions.html#cb363-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
-<span id="cb363-5"><a href="solutions.html#cb363-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Belief that others will be prompted to buy sugar</span><span class="sc">\n</span><span class="st"> as a result of exposure to the article&quot;</span>, <span class="at">y=</span><span class="st">&quot;Intention to buy sugar&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 3&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-161-1.png" width="672" /></p>
+<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="solutions.html#cb383-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb383-2"><a href="solutions.html#cb383-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>pmi, <span class="at">y=</span>reaction)) <span class="sc">+</span>                                         </span>
+<span id="cb383-3"><a href="solutions.html#cb383-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>() <span class="sc">+</span>                                                                     </span>
+<span id="cb383-4"><a href="solutions.html#cb383-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                                       </span>
+<span id="cb383-5"><a href="solutions.html#cb383-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Belief that others will be prompted to buy sugar</span><span class="sc">\n</span><span class="st"> as a result of exposure to the article&quot;</span>, <span class="at">y=</span><span class="st">&quot;Intention to buy sugar&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 3&quot;</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-194-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> Visually, there seems to be an effect at play in all three plots. The intention to buy sugar is higher in the front page condition (Figure 1). Moreover, the belief that others will be prompted to buy sugar as a result of exposure to the article is higher in the front page experimental condition (Figure 2). And we can assume that participants who hold stronger beliefs that others will be prompted to buy sugar will act on this belief and show greater intention to buy sugar themselves (Figure 3).</p>
 </div>
 <div id="task-3-10" class="section level3 unnumbered">
@@ -1048,7 +1074,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Quantify the direct effect <em>a</em> of X on M:</li>
 </ol>
-<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="solutions.html#cb364-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(pmi <span class="sc">~</span> cond, <span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="solutions.html#cb384-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(pmi <span class="sc">~</span> cond, <span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = pmi ~ cond, data = data)
@@ -1073,7 +1099,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="2" style="list-style-type: decimal">
 <li>Quantify the direct effect <em>c’</em> of X on Y while controlling for M AND the direct effect <em>b</em> of M on Y while controlling for X</li>
 </ol>
-<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="solutions.html#cb366-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(reaction <span class="sc">~</span> cond <span class="sc">+</span> pmi, <span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb386"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb386-1"><a href="solutions.html#cb386-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(reaction <span class="sc">~</span> cond <span class="sc">+</span> pmi, <span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = reaction ~ cond + pmi, data = data)
@@ -1101,14 +1127,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="task-4-8" class="section level3 unnumbered">
 <h3>Task 4</h3>
 <p><strong>Calculate and interpret the indirect effect <em>ab</em>.</strong></p>
-<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="solutions.html#cb368-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ab <span class="ot">&lt;-</span> <span class="fl">0.476</span><span class="sc">*</span><span class="fl">0.506</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb388"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb388-1"><a href="solutions.html#cb388-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ab <span class="ot">&lt;-</span> <span class="fl">0.476</span><span class="sc">*</span><span class="fl">0.506</span>)</span></code></pre></div>
 <pre><code>## [1] 0.240856</code></pre>
 <p><strong>Evaluation:</strong> As a result of the effect of article placement on the belief that others would be encouraged to purchase sugar, which in turn influenced participants’ own purchase intentions, participants who read an article on the front page of the newspaper were 0.241 units more likely to purchase sugar than those who read it on the interior page.</p>
 </div>
 <div id="task-5-8" class="section level3 unnumbered">
 <h3>Task 5</h3>
 <p><strong>Calculate and interpret the total effect <em>c</em>.</strong></p>
-<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="solutions.html#cb370-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(reaction <span class="sc">~</span> cond, <span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb390-1"><a href="solutions.html#cb390-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(reaction <span class="sc">~</span> cond, <span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = reaction ~ cond, data = data)
@@ -1133,100 +1159,100 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="task-6-6" class="section level3 unnumbered">
 <h3>Task 6</h3>
 <p><strong>Now run the same analysis, but use <code>processR</code> (i.e., the <code>process</code> function). Only look at the <code>process</code> output and write down the coefficients <em>a</em>, <em>b</em>, <em>c’</em>, <em>ab</em>, and <em>c</em>.</strong></p>
-<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="solutions.html#cb372-1" aria-hidden="true" tabindex="-1"></a><span class="fu">process</span>(<span class="at">data=</span>data, <span class="at">y=</span><span class="st">&quot;reaction&quot;</span>, <span class="at">x=</span><span class="st">&quot;cond&quot;</span>, <span class="at">m=</span><span class="st">&quot;pmi&quot;</span>, </span>
-<span id="cb372-2"><a href="solutions.html#cb372-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">total=</span><span class="dv">1</span>, <span class="co"># calculate the total effect</span></span>
-<span id="cb372-3"><a href="solutions.html#cb372-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">normal=</span><span class="dv">1</span>, <span class="co"># calculate p-values with standard normal distribution</span></span>
-<span id="cb372-4"><a href="solutions.html#cb372-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">model=</span><span class="dv">4</span>, <span class="co"># run a simple mediation</span></span>
-<span id="cb372-5"><a href="solutions.html#cb372-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">seed=</span><span class="dv">42</span> <span class="co"># insert a number of your liking</span></span>
-<span id="cb372-6"><a href="solutions.html#cb372-6" aria-hidden="true" tabindex="-1"></a>         )</span></code></pre></div>
+<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="solutions.html#cb392-1" aria-hidden="true" tabindex="-1"></a><span class="fu">process</span>(<span class="at">data=</span>data, <span class="at">y=</span><span class="st">&quot;reaction&quot;</span>, <span class="at">x=</span><span class="st">&quot;cond&quot;</span>, <span class="at">m=</span><span class="st">&quot;pmi&quot;</span>, </span>
+<span id="cb392-2"><a href="solutions.html#cb392-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">total=</span><span class="dv">1</span>, <span class="co"># calculate the total effect</span></span>
+<span id="cb392-3"><a href="solutions.html#cb392-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">normal=</span><span class="dv">1</span>, <span class="co"># calculate p-values with standard normal distribution</span></span>
+<span id="cb392-4"><a href="solutions.html#cb392-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">model=</span><span class="dv">4</span>, <span class="co"># run a simple mediation</span></span>
+<span id="cb392-5"><a href="solutions.html#cb392-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">seed=</span><span class="dv">42</span> <span class="co"># insert a number of your liking</span></span>
+<span id="cb392-6"><a href="solutions.html#cb392-6" aria-hidden="true" tabindex="-1"></a>         )</span></code></pre></div>
 <p><img src="images/Tut14_processR_1.JPG" />
 <img src="images/Tut14_processR_2.JPG" /></p>
 </div>
 <div id="task-7-3" class="section level3 unnumbered">
 <h3>Task 7</h3>
 <p><strong>Finally, create a diagram that displays the results of your analysis.</strong></p>
-<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="solutions.html#cb373-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
-<span id="cb373-2"><a href="solutions.html#cb373-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb373-3"><a href="solutions.html#cb373-3" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">X=</span><span class="st">&quot;cond&quot;</span>,<span class="at">M=</span><span class="st">&quot;pmi&quot;</span>,<span class="at">Y=</span><span class="st">&quot;reaction&quot;</span>)</span>
-<span id="cb373-4"><a href="solutions.html#cb373-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">tripleEquation</span>(<span class="at">X=</span><span class="st">&quot;cond&quot;</span>,<span class="at">M=</span><span class="st">&quot;pmi&quot;</span>,<span class="at">Y=</span><span class="st">&quot;reaction&quot;</span>)</span>
-<span id="cb373-5"><a href="solutions.html#cb373-5" aria-hidden="true" tabindex="-1"></a>semfit <span class="ot">&lt;-</span> <span class="fu">sem</span>(<span class="at">model=</span>model,<span class="at">data=</span>data)</span>
-<span id="cb373-6"><a href="solutions.html#cb373-6" aria-hidden="true" tabindex="-1"></a><span class="fu">statisticalDiagram</span>(<span class="dv">4</span>,<span class="at">labels=</span>labels,<span class="at">fit=</span>semfit,<span class="at">whatLabel=</span><span class="st">&quot;est&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-167-1.png" width="672" /></p>
+<div class="sourceCode" id="cb393"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb393-1"><a href="solutions.html#cb393-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lavaan)</span>
+<span id="cb393-2"><a href="solutions.html#cb393-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb393-3"><a href="solutions.html#cb393-3" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">X=</span><span class="st">&quot;cond&quot;</span>,<span class="at">M=</span><span class="st">&quot;pmi&quot;</span>,<span class="at">Y=</span><span class="st">&quot;reaction&quot;</span>)</span>
+<span id="cb393-4"><a href="solutions.html#cb393-4" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">tripleEquation</span>(<span class="at">X=</span><span class="st">&quot;cond&quot;</span>,<span class="at">M=</span><span class="st">&quot;pmi&quot;</span>,<span class="at">Y=</span><span class="st">&quot;reaction&quot;</span>)</span>
+<span id="cb393-5"><a href="solutions.html#cb393-5" aria-hidden="true" tabindex="-1"></a>semfit <span class="ot">&lt;-</span> <span class="fu">sem</span>(<span class="at">model=</span>model,<span class="at">data=</span>data)</span>
+<span id="cb393-6"><a href="solutions.html#cb393-6" aria-hidden="true" tabindex="-1"></a><span class="fu">statisticalDiagram</span>(<span class="dv">4</span>,<span class="at">labels=</span>labels,<span class="at">fit=</span>semfit,<span class="at">whatLabel=</span><span class="st">&quot;est&quot;</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-200-1.png" width="672" /></p>
 </div>
 </div>
 <div id="solutions-for-exercise-6" class="section level2 unnumbered">
 <h2>Solutions for Exercise 6</h2>
-<p>In this Exercise, we will work with the <em>disaster</em> datatset. It’s a data set of a communication science experiment that was conducted by Chapman and Lickel in 2016 and comes pre-installed with <code>processR</code>. The data set contains 211 observations of 5 variables and investigates how framing of climate change disasters affects justifications for giving or withholding aid to disaster victims. There are three variables of interest to us in this data set:</p>
+<p>In this Exercise, we will work with the <em>disaster</em> data set. It’s a data set of a communication science experiment that was conducted by Chapman and Lickel in 2016 and comes pre-installed with <code>processR</code>. The data set contains 211 observations of 5 variables and investigates how framing of climate change disasters affects justifications for giving or withholding aid to disaster victims. There are three variables of interest to us in this data set:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>frame:</strong> article was framed as a naturally caused disaster (0) or article was framed as a climate change caused disaster (1)</p></li>
 <li><p><strong>skeptic</strong>: climate change skepticism, higher scores indicate greater skepticism about the reality of climate change (scale: 1-9)</p></li>
 <li><p><strong>justify:</strong> strength of a participant’s justifications for withholding aid, higher scores indicate a stronger sense that helping out the victims is not justified (scale: 1-7)</p></li>
 </ol>
 <p>Let’s load <code>processR</code> and save the <em>disaster</em> data to a source object called <em>data</em>:</p>
-<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="solutions.html#cb374-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
-<span id="cb374-2"><a href="solutions.html#cb374-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
-<span id="cb374-3"><a href="solutions.html#cb374-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
-<span id="cb374-4"><a href="solutions.html#cb374-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
-<span id="cb374-5"><a href="solutions.html#cb374-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
-<span id="cb374-6"><a href="solutions.html#cb374-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb374-7"><a href="solutions.html#cb374-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>disaster</span></code></pre></div>
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="solutions.html#cb394-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb394-2"><a href="solutions.html#cb394-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb394-3"><a href="solutions.html#cb394-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb394-4"><a href="solutions.html#cb394-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb394-5"><a href="solutions.html#cb394-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb394-6"><a href="solutions.html#cb394-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb394-7"><a href="solutions.html#cb394-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>disaster</span></code></pre></div>
 <p><strong>Framing theory</strong> suggests that the way a topic is presented to the audience (referred to as “frame”) affects how individuals interpret that information and thus evaluate the topic.</p>
 <p><strong>Research Question:</strong> Does framing a disaster as caused by climate change, rather than leaving the cause undetermined, affect people’s justification for not helping, and does this framing effect depend on people’s skepticism about climate change?</p>
-<div id="task-1-11" class="section level3 unnumbered">
+<div id="task-1-12" class="section level3 unnumbered">
 <h3>Task 1</h3>
 <p><strong>What variables are X, Y, and W in this scenario? Write it down.</strong></p>
 <p>X = <em>frame:</em>; article was framed as a naturally caused disaster (0) or article was framed as a climate change caused disaster (0)</p>
 <p>Y = <em>justify</em>; strength of a participant’s justifications for withholding aid to drought victims, higher scores indicate a stronger sense that helping out the victims is not justified (scale: 1-7)</p>
 <p>W = <em>skeptic</em>; climate change skepticism, higher scores indicate greater skepticism about the reality of climate change (scale: 1-9)</p>
 </div>
-<div id="task-2-11" class="section level3 unnumbered">
+<div id="task-2-12" class="section level3 unnumbered">
 <h3>Task 2</h3>
 <p><strong>Investigate the relationship between X and Y with a plot. Next, make a visual check if this effect depends on different levels of W. Finally, evaluate the figures.</strong></p>
 <p>There are many options to visualize the effects and a lot of these approaches are covered in [Moderation Analysis]. Here, we’ll use bar charts.</p>
 <ol style="list-style-type: decimal">
 <li>The effect of X on Y:</li>
 </ol>
-<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="solutions.html#cb375-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb375-2"><a href="solutions.html#cb375-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">frame =</span> <span class="fu">case_when</span>(</span>
-<span id="cb375-3"><a href="solutions.html#cb375-3" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;naturally caused drought&quot;</span>,</span>
-<span id="cb375-4"><a href="solutions.html#cb375-4" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;drought caused by climate change&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb375-5"><a href="solutions.html#cb375-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>frame, <span class="at">y=</span>justify)) <span class="sc">+</span></span>
-<span id="cb375-6"><a href="solutions.html#cb375-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> frame), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
-<span id="cb375-7"><a href="solutions.html#cb375-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">6</span>,</span>
-<span id="cb375-8"><a href="solutions.html#cb375-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb375-9"><a href="solutions.html#cb375-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb375-10"><a href="solutions.html#cb375-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
-<span id="cb375-11"><a href="solutions.html#cb375-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition&quot;</span>, <span class="at">y=</span><span class="st">&quot;Justifications to withhold aid to drought victims&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 1&quot;</span>)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-169-1.png" width="672" /></p>
+<div class="sourceCode" id="cb395"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb395-1"><a href="solutions.html#cb395-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb395-2"><a href="solutions.html#cb395-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">frame =</span> <span class="fu">case_when</span>(</span>
+<span id="cb395-3"><a href="solutions.html#cb395-3" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;naturally caused drought&quot;</span>,</span>
+<span id="cb395-4"><a href="solutions.html#cb395-4" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;drought caused by climate change&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb395-5"><a href="solutions.html#cb395-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>frame, <span class="at">y=</span>justify)) <span class="sc">+</span></span>
+<span id="cb395-6"><a href="solutions.html#cb395-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> frame), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
+<span id="cb395-7"><a href="solutions.html#cb395-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">6</span>,</span>
+<span id="cb395-8"><a href="solutions.html#cb395-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb395-9"><a href="solutions.html#cb395-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb395-10"><a href="solutions.html#cb395-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>) <span class="sc">+</span></span>
+<span id="cb395-11"><a href="solutions.html#cb395-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition&quot;</span>, <span class="at">y=</span><span class="st">&quot;Justifications to withhold aid to drought victims&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 1&quot;</span>)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-202-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>The effect of X on Y on different levels of W:</li>
 </ol>
-<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="solutions.html#cb376-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
-<span id="cb376-2"><a href="solutions.html#cb376-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">frame =</span> <span class="fu">case_when</span>(</span>
-<span id="cb376-3"><a href="solutions.html#cb376-3" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;naturally caused drought&quot;</span>,</span>
-<span id="cb376-4"><a href="solutions.html#cb376-4" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;drought caused by climate change&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb376-5"><a href="solutions.html#cb376-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">skeptic_fct =</span> <span class="fu">case_when</span>(</span>
-<span id="cb376-6"><a href="solutions.html#cb376-6" aria-hidden="true" tabindex="-1"></a>    skeptic <span class="sc">&gt;=</span> <span class="fl">6.0</span> <span class="sc">~</span> <span class="st">&quot;high skepticism&quot;</span>,</span>
-<span id="cb376-7"><a href="solutions.html#cb376-7" aria-hidden="true" tabindex="-1"></a>    skeptic <span class="sc">&gt;=</span> <span class="fl">3.0</span> <span class="sc">~</span> <span class="st">&quot;medium skepticism&quot;</span>,</span>
-<span id="cb376-8"><a href="solutions.html#cb376-8" aria-hidden="true" tabindex="-1"></a>    skeptic <span class="sc">&lt;</span> <span class="fl">3.0</span> <span class="sc">~</span> <span class="st">&quot;low skepticism&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb376-9"><a href="solutions.html#cb376-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">skeptic_fct =</span> <span class="fu">factor</span>(skeptic_fct, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;low skepticism&quot;</span>,<span class="st">&quot;medium skepticism&quot;</span>,<span class="st">&quot;high skepticism&quot;</span>))) <span class="sc">%&gt;%</span> </span>
-<span id="cb376-10"><a href="solutions.html#cb376-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>frame, <span class="at">y=</span>justify)) <span class="sc">+</span></span>
-<span id="cb376-11"><a href="solutions.html#cb376-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> frame), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
-<span id="cb376-12"><a href="solutions.html#cb376-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">4</span>,</span>
-<span id="cb376-13"><a href="solutions.html#cb376-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb376-14"><a href="solutions.html#cb376-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb376-15"><a href="solutions.html#cb376-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>, <span class="at">legend.title=</span><span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb376-16"><a href="solutions.html#cb376-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_blank</span>(),</span>
-<span id="cb376-17"><a href="solutions.html#cb376-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks.x=</span><span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb376-18"><a href="solutions.html#cb376-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition:&quot;</span>, <span class="at">y=</span><span class="st">&quot;Justifications to withhold aid to drought victims&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 2&quot;</span>) <span class="sc">+</span></span>
-<span id="cb376-19"><a href="solutions.html#cb376-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>skeptic_fct)</span></code></pre></div>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-170-1.png" width="672" /></p>
+<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="solutions.html#cb396-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb396-2"><a href="solutions.html#cb396-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">frame =</span> <span class="fu">case_when</span>(</span>
+<span id="cb396-3"><a href="solutions.html#cb396-3" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">&quot;naturally caused drought&quot;</span>,</span>
+<span id="cb396-4"><a href="solutions.html#cb396-4" aria-hidden="true" tabindex="-1"></a>    frame <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">&quot;drought caused by climate change&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb396-5"><a href="solutions.html#cb396-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">skeptic_fct =</span> <span class="fu">case_when</span>(</span>
+<span id="cb396-6"><a href="solutions.html#cb396-6" aria-hidden="true" tabindex="-1"></a>    skeptic <span class="sc">&gt;=</span> <span class="fl">6.0</span> <span class="sc">~</span> <span class="st">&quot;high skepticism&quot;</span>,</span>
+<span id="cb396-7"><a href="solutions.html#cb396-7" aria-hidden="true" tabindex="-1"></a>    skeptic <span class="sc">&gt;=</span> <span class="fl">3.0</span> <span class="sc">~</span> <span class="st">&quot;medium skepticism&quot;</span>,</span>
+<span id="cb396-8"><a href="solutions.html#cb396-8" aria-hidden="true" tabindex="-1"></a>    skeptic <span class="sc">&lt;</span> <span class="fl">3.0</span> <span class="sc">~</span> <span class="st">&quot;low skepticism&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb396-9"><a href="solutions.html#cb396-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">skeptic_fct =</span> <span class="fu">factor</span>(skeptic_fct, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;low skepticism&quot;</span>,<span class="st">&quot;medium skepticism&quot;</span>,<span class="st">&quot;high skepticism&quot;</span>))) <span class="sc">%&gt;%</span> </span>
+<span id="cb396-10"><a href="solutions.html#cb396-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>frame, <span class="at">y=</span>justify)) <span class="sc">+</span></span>
+<span id="cb396-11"><a href="solutions.html#cb396-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">fill =</span> frame), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;bar&quot;</span>) <span class="sc">+</span></span>
+<span id="cb396-12"><a href="solutions.html#cb396-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="fu">aes</span>(<span class="at">label=</span><span class="fu">round</span>(..y..,<span class="dv">2</span>)), <span class="at">fun=</span>mean, <span class="at">geom=</span><span class="st">&quot;text&quot;</span>, <span class="at">size=</span><span class="dv">4</span>,</span>
+<span id="cb396-13"><a href="solutions.html#cb396-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">vjust =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb396-14"><a href="solutions.html#cb396-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb396-15"><a href="solutions.html#cb396-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>, <span class="at">legend.title=</span><span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb396-16"><a href="solutions.html#cb396-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x=</span><span class="fu">element_blank</span>(),</span>
+<span id="cb396-17"><a href="solutions.html#cb396-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks.x=</span><span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb396-18"><a href="solutions.html#cb396-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Experimental condition:&quot;</span>, <span class="at">y=</span><span class="st">&quot;Justifications to withhold aid to drought victims&quot;</span>, <span class="at">title=</span><span class="st">&quot;Figure 2&quot;</span>) <span class="sc">+</span></span>
+<span id="cb396-19"><a href="solutions.html#cb396-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>skeptic_fct)</span></code></pre></div>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-203-1.png" width="672" /></p>
 <p><strong>Evaluation:</strong> Figure 1 shows that participants who read a report attributing droughts to climate change indicated a stronger justification for withholding aid (Ȳ = 2.94) than those who did not receive such a reference (Ȳ = 2.80). Figure 2 illustrates that the attribution of cause affects people differently depending on their opinions about the reality of climate change, implying that climate change skepticism moderates the effect of the ascribed cause of the drought. It appears that participants who have lower climate change skepticism scores report weaker justifications for withholding aid when told the drought was caused by climate change compared to when not so told. The opposite is true among people who rate high in climate change skepticism.</p>
 </div>
 <div id="task-3-11" class="section level3 unnumbered">
 <h3>Task 3</h3>
 <p><strong>Run a linear regression model that includes an interaction term of X and M. Note down the regression equation and interpret the coefficients.</strong></p>
-<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="solutions.html#cb377-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(justify <span class="sc">~</span> frame<span class="sc">+</span>skeptic<span class="sc">+</span>frame<span class="sc">*</span>skeptic,<span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb397"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb397-1"><a href="solutions.html#cb397-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(justify <span class="sc">~</span> frame<span class="sc">+</span>skeptic<span class="sc">+</span>frame<span class="sc">*</span>skeptic,<span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = justify ~ frame + skeptic + frame * skeptic, data = data)
@@ -1255,9 +1281,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="task-4-9" class="section level3 unnumbered">
 <h3>Task 4</h3>
 <p><strong>Mean-center the climate change skepticism variable and run the model again. How does the interpretation of <em>b<sub>1</sub></em> change?</strong></p>
-<div class="sourceCode" id="cb379"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb379-1"><a href="solutions.html#cb379-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>skeptic_mc <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>skeptic, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale=</span><span class="cn">FALSE</span>)</span>
-<span id="cb379-2"><a href="solutions.html#cb379-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb379-3"><a href="solutions.html#cb379-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(justify <span class="sc">~</span> frame<span class="sc">+</span>skeptic_mc<span class="sc">+</span>frame<span class="sc">*</span>skeptic_mc,<span class="at">data=</span>data))</span></code></pre></div>
+<div class="sourceCode" id="cb399"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb399-1"><a href="solutions.html#cb399-1" aria-hidden="true" tabindex="-1"></a>data<span class="sc">$</span>skeptic_mc <span class="ot">&lt;-</span> <span class="fu">scale</span>(data<span class="sc">$</span>skeptic, <span class="at">center=</span><span class="cn">TRUE</span>, <span class="at">scale=</span><span class="cn">FALSE</span>)</span>
+<span id="cb399-2"><a href="solutions.html#cb399-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb399-3"><a href="solutions.html#cb399-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(justify <span class="sc">~</span> frame<span class="sc">+</span>skeptic_mc<span class="sc">+</span>frame<span class="sc">*</span>skeptic_mc,<span class="at">data=</span>data))</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = justify ~ frame + skeptic_mc + frame * skeptic_mc, 
@@ -1284,10 +1310,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="task-5-9" class="section level3 unnumbered">
 <h3>Task 5</h3>
 <p><strong>Probe the interaction.</strong></p>
-<div class="sourceCode" id="cb381"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb381-1"><a href="solutions.html#cb381-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(interactions)</span>
-<span id="cb381-2"><a href="solutions.html#cb381-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb381-3"><a href="solutions.html#cb381-3" aria-hidden="true" tabindex="-1"></a>intrct_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(justify <span class="sc">~</span> frame<span class="sc">+</span>skeptic_mc<span class="sc">+</span>frame<span class="sc">*</span>skeptic_mc,<span class="at">data=</span>data)</span>
-<span id="cb381-4"><a href="solutions.html#cb381-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sim_slopes</span>(intrct_model, <span class="at">pred=</span>frame, <span class="at">modx=</span>skeptic_mc)</span></code></pre></div>
+<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="solutions.html#cb401-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(interactions)</span>
+<span id="cb401-2"><a href="solutions.html#cb401-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb401-3"><a href="solutions.html#cb401-3" aria-hidden="true" tabindex="-1"></a>intrct_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(justify <span class="sc">~</span> frame<span class="sc">+</span>skeptic_mc<span class="sc">+</span>frame<span class="sc">*</span>skeptic_mc,<span class="at">data=</span>data)</span>
+<span id="cb401-4"><a href="solutions.html#cb401-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sim_slopes</span>(intrct_model, <span class="at">pred=</span>frame, <span class="at">modx=</span>skeptic_mc)</span></code></pre></div>
 <pre><code>## JOHNSON-NEYMAN INTERVAL 
 ## 
 ## When skeptic_mc is OUTSIDE the interval [-2.21, 0.56], the slope of frame is p &lt; .05.
@@ -1314,24 +1340,284 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## ------ ------ -------- ------
 ##   0.53   0.16     3.32   0.00</code></pre>
 <p><strong>Evaluation:</strong> The results show that framing for participants who score low on climate change skepticism (here: -1 standard deviation from the mean, which is a score of X = -2.032) does not affect the strength of participants’ justifications for withdrawing aid for drought victims (<em>b</em> = -0.29, <em>p</em> = .07). However, the more extreme citizens’ climate change skepticism becomes, the more important the framing of the drought (as natural / climate change induced) becomes in determining how much participants justify withdrawal of aid for drought victims. For citizens that score average climate change skepticism (Mean = 0.000, <em>p</em> = .30), framing does still not affect justifications for withdrawal of aid. However, participants who score high on climate change skepticiism (here: +1 standard deviation from the mean, which is a score of X = +2.032) act differently based on framing of the disaster, i.e. their justification for withdrawal of aid increases (<em>b</em> = 0.53, <em>p</em> &lt; 001).</p>
-<div class="sourceCode" id="cb383"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb383-1"><a href="solutions.html#cb383-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jnPlot</span>(intrct_model, <span class="at">pred=</span><span class="st">&quot;frame&quot;</span>, <span class="at">modx=</span><span class="st">&quot;skeptic_mc&quot;</span>, <span class="at">plot =</span> <span class="cn">FALSE</span>,<span class="at">mode=</span><span class="dv">1</span>,<span class="at">addEq=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="solutions.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="fu">jnPlot</span>(intrct_model, <span class="at">pred=</span><span class="st">&quot;frame&quot;</span>, <span class="at">modx=</span><span class="st">&quot;skeptic_mc&quot;</span>, <span class="at">plot =</span> <span class="cn">FALSE</span>,<span class="at">mode=</span><span class="dv">1</span>,<span class="at">addEq=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## JOHNSON-NEYMAN INTERVAL 
 ## 
 ## When skeptic_mc is OUTSIDE the interval [-2.207, 0.556], the slope of frame is p &lt; .05.
 ## 
 ## Note: The range of observed values of skeptic_mc is [-2.378, 5.622]</code></pre>
-<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-174-1.png" width="160%" /></p>
+<p><img src="CPA-Seminar_files/figure-html/unnamed-chunk-207-1.png" width="160%" /></p>
 <p><strong>Evaluation:</strong> The plot shows that the frame effect on the strength of justifications for withdrawal of aid for drought victimrs turns insignificant for citizens who have a climate change score between -2.207 and 0.556. This means that for citizens who score very low on climate change skepticism and for citizens who score high on climate change skeptiicism, the strength of justifications for withdrawal of aid is dependent on framing of the disaster.</p>
 </div>
 <div id="task-6-7" class="section level3 unnumbered">
 <h3>Task 6</h3>
 <p><strong>Repeat the analysis using <code>processR</code> (i.e., the <code>process</code> function). Look only at the <code>processR</code> output and note down all the coefficients.</strong></p>
-<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="solutions.html#cb385-1" aria-hidden="true" tabindex="-1"></a><span class="fu">process</span>(<span class="at">data=</span>data, <span class="at">y=</span><span class="st">&quot;justify&quot;</span>, <span class="at">x=</span><span class="st">&quot;frame&quot;</span>, <span class="at">w=</span><span class="st">&quot;skeptic_mc&quot;</span>,<span class="at">model=</span><span class="dv">1</span>,<span class="at">plot=</span><span class="dv">1</span>,<span class="at">seed=</span><span class="dv">123</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="solutions.html#cb405-1" aria-hidden="true" tabindex="-1"></a><span class="fu">process</span>(<span class="at">data=</span>data, <span class="at">y=</span><span class="st">&quot;justify&quot;</span>, <span class="at">x=</span><span class="st">&quot;frame&quot;</span>, <span class="at">w=</span><span class="st">&quot;skeptic_mc&quot;</span>,<span class="at">model=</span><span class="dv">1</span>,<span class="at">plot=</span><span class="dv">1</span>,<span class="at">seed=</span><span class="dv">123</span>)</span></code></pre></div>
 <p><img src="images/Tut14_processR_3.JPG" /></p>
+</div>
+</div>
+<div id="solutions-for-exercise-7" class="section level2 unnumbered">
+<h2>Solutions for Exercise 7</h2>
+<p>In this Exercise, we will work with the <em>pmi</em> data set again. The data set contains 123 observations of 6 variables. There are four variables of interest to us in this data set:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>cond:</strong> article about sugar shortage was placed at the front (1) or interior (0) page of a newspaper</p></li>
+<li><p><strong>pmi</strong>: belief that others will be prompted to buy sugar as a result of exposure to the article (scale: 1-7)</p></li>
+<li><p><strong>import:</strong> belief that the article is on an important topic (scale: 1-7)</p></li>
+<li><p><strong>reaction:</strong> intention to buy sugar (scale: 1-7)</p></li>
+</ol>
+<p>Let’s load <code>processR</code> and save the <em>pmi</em> data to a source object called <em>data</em>:</p>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="solutions.html#cb406-1" aria-hidden="true" tabindex="-1"></a><span class="co"># installing/loading the package:</span></span>
+<span id="cb406-2"><a href="solutions.html#cb406-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(processR)) {</span>
+<span id="cb406-3"><a href="solutions.html#cb406-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;processR&quot;</span>); </span>
+<span id="cb406-4"><a href="solutions.html#cb406-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">require</span>(processR)</span>
+<span id="cb406-5"><a href="solutions.html#cb406-5" aria-hidden="true" tabindex="-1"></a>} <span class="co">#load / install+load processR</span></span>
+<span id="cb406-6"><a href="solutions.html#cb406-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb406-7"><a href="solutions.html#cb406-7" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> processR<span class="sc">::</span>pmi</span></code></pre></div>
+<p>Throughout this exercise, you will test two competing theories:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Following the first theory</strong>, we hypothesize that the effect of placement of the article (front page condition, X = 1; interior page condition, X = 0) on intentions to buy sugar is mediated by both the belief that others will be prompted to buy sugar (<em>pmi</em>) and perceived topic importance (<em>import</em>). We assume that presumed media influence and topic importance are <em>un</em>related and that the two mediator variables independently influence the intention to buy sugar. This is a <em>parallel multiple mediator model</em>:</li>
+</ol>
+<div id="htmlwidget-93202ca55a1978f53b7c" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-93202ca55a1978f53b7c">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Times ] \n node [shape = box] \n cond; import; pmi; reaction \n node [shape = oval] \n  \n cond [label = \"Exp. condition\"]\nimport [label = \"Topic importance\"]\npmi [label = \"Presumed media\n influence\"]\nreaction [label = \"Intention to\n buy sugar\"] \n edge [ color = black ] \n cond->import cond->pmi cond->reaction import->reaction pmi->reaction  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Following the second theory</strong>, we hypothesize that both presumed media influence and perceived topic importance are related. We assume that perceived topic importance influences the belief that others will be prompted to buy sugar because of the article. This means that we don’t assume that topic importance has a direct effect on buying intentions, but only an indirect effect. This is a <em>serial multiple mediator model</em>.</li>
+</ol>
+<div id="htmlwidget-9e84f8063f0c81253baf" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9e84f8063f0c81253baf">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Times ] \n node [shape = box] \n cond; import; pmi; reaction \n node [shape = oval] \n  \n cond [label = \"Exp. condition\"]\nimport [label = \"Topic importance\"]\npmi [label = \"Presumed media\n influence\"]\nreaction [label = \"Intention to\n buy sugar\"] \n edge [ color = black ] \n cond->import import->pmi cond->pmi pmi->reaction cond->reaction  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="task-1-13" class="section level3 unnumbered">
+<h3>Task 1</h3>
+<p>Fit both models in <code>lavaan</code> and compare their fit.</p>
+<p><strong>Model 1:</strong></p>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="solutions.html#cb407-1" aria-hidden="true" tabindex="-1"></a>model.SPE<span class="fl">.1</span> <span class="ot">&lt;-</span> </span>
+<span id="cb407-2"><a href="solutions.html#cb407-2" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;</span></span>
+<span id="cb407-3"><a href="solutions.html#cb407-3" aria-hidden="true" tabindex="-1"></a><span class="st"># simple linear regression, direct effect a of X on M1</span></span>
+<span id="cb407-4"><a href="solutions.html#cb407-4" aria-hidden="true" tabindex="-1"></a><span class="st">import ~ cond</span></span>
+<span id="cb407-5"><a href="solutions.html#cb407-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb407-6"><a href="solutions.html#cb407-6" aria-hidden="true" tabindex="-1"></a><span class="st"># simple linear regression, direct effect d of X on M2</span></span>
+<span id="cb407-7"><a href="solutions.html#cb407-7" aria-hidden="true" tabindex="-1"></a><span class="st">pmi ~ cond</span></span>
+<span id="cb407-8"><a href="solutions.html#cb407-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb407-9"><a href="solutions.html#cb407-9" aria-hidden="true" tabindex="-1"></a><span class="st"># multiple linear regression, direct effect b (M1 on Y while controlling for X and M2) AND direct effect c´ (X on Y while controlling for M1 and M2)</span></span>
+<span id="cb407-10"><a href="solutions.html#cb407-10" aria-hidden="true" tabindex="-1"></a><span class="st"># AND direct effect e (M2 on Y while controlling for X and M1)</span></span>
+<span id="cb407-11"><a href="solutions.html#cb407-11" aria-hidden="true" tabindex="-1"></a><span class="st">reaction ~  cond + import + pmi</span></span>
+<span id="cb407-12"><a href="solutions.html#cb407-12" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;</span></span>
+<span id="cb407-13"><a href="solutions.html#cb407-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb407-14"><a href="solutions.html#cb407-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Model Estimation</span></span>
+<span id="cb407-15"><a href="solutions.html#cb407-15" aria-hidden="true" tabindex="-1"></a>model.EST<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">sem</span>(model.SPE<span class="fl">.1</span>, <span class="at">data =</span> data, <span class="at">estimator  =</span> <span class="st">&quot;MLR&quot;</span>)</span>
+<span id="cb407-16"><a href="solutions.html#cb407-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb407-17"><a href="solutions.html#cb407-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Model Evaluation</span></span>
+<span id="cb407-18"><a href="solutions.html#cb407-18" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.EST<span class="fl">.1</span>,<span class="at">fit.measures =</span> <span class="cn">TRUE</span>,<span class="at">rsq =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## lavaan 0.6-11 ended normally after 1 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         8
+##                                                       
+##   Number of observations                           123
+##                                                       
+## Model Test User Model:
+##                                                Standard      Robust
+##   Test Statistic                                  8.459       8.079
+##   Degrees of freedom                                  1           1
+##   P-value (Chi-square)                            0.004       0.004
+##   Scaling correction factor                                   1.047
+##        Yuan-Bentler correction (Mplus variant)                     
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                                65.010      63.611
+##   Degrees of freedom                                 6           6
+##   P-value                                        0.000       0.000
+##   Scaling correction factor                                  1.022
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    0.874       0.877
+##   Tucker-Lewis Index (TLI)                       0.242       0.263
+##                                                                   
+##   Robust Comparative Fit Index (CFI)                         0.874
+##   Robust Tucker-Lewis Index (TLI)                            0.245
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -649.888    -649.888
+##   Scaling correction factor                                  0.989
+##       for the MLR correction                                      
+##   Loglikelihood unrestricted model (H1)       -645.659    -645.659
+##   Scaling correction factor                                  0.995
+##       for the MLR correction                                      
+##                                                                   
+##   Akaike (AIC)                                1315.776    1315.776
+##   Bayesian (BIC)                              1338.274    1338.274
+##   Sample-size adjusted Bayesian (BIC)         1312.978    1312.978
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.246       0.240
+##   90 Percent confidence interval - lower         0.114       0.110
+##   90 Percent confidence interval - upper         0.411       0.401
+##   P-value RMSEA &lt;= 0.05                          0.010       0.010
+##                                                                   
+##   Robust RMSEA                                               0.245
+##   90 Percent confidence interval - lower                     0.110
+##   90 Percent confidence interval - upper                     0.414
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.090       0.090
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                             Sandwich
+##   Information bread                           Observed
+##   Observed information based on                Hessian
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##   import ~                                            
+##     cond              0.627    0.308    2.032    0.042
+##   pmi ~                                               
+##     cond              0.477    0.233    2.045    0.041
+##   reaction ~                                          
+##     cond              0.103    0.236    0.437    0.662
+##     import            0.324    0.072    4.498    0.000
+##     pmi               0.397    0.075    5.265    0.000
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##    .import            2.893    0.286   10.132    0.000
+##    .pmi               1.675    0.291    5.761    0.000
+##    .reaction          1.609    0.178    9.050    0.000
+## 
+## R-Square:
+##                    Estimate
+##     import            0.033
+##     pmi               0.033
+##     reaction          0.281</code></pre>
+<p><strong>Model 2:</strong></p>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="solutions.html#cb409-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model specification with lavaan operators:</span></span>
+<span id="cb409-2"><a href="solutions.html#cb409-2" aria-hidden="true" tabindex="-1"></a>model.SPE<span class="fl">.2</span> <span class="ot">&lt;-</span> </span>
+<span id="cb409-3"><a href="solutions.html#cb409-3" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;</span></span>
+<span id="cb409-4"><a href="solutions.html#cb409-4" aria-hidden="true" tabindex="-1"></a><span class="st"># simple linear regression, direct effect a of X on M1</span></span>
+<span id="cb409-5"><a href="solutions.html#cb409-5" aria-hidden="true" tabindex="-1"></a><span class="st">import ~ cond</span></span>
+<span id="cb409-6"><a href="solutions.html#cb409-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb409-7"><a href="solutions.html#cb409-7" aria-hidden="true" tabindex="-1"></a><span class="st"># multiple linear regression, direct effect of X on M2 (while controlling for M1) AND direct effect of M1 on M2 (while controlling for X)</span></span>
+<span id="cb409-8"><a href="solutions.html#cb409-8" aria-hidden="true" tabindex="-1"></a><span class="st">pmi ~ import + cond</span></span>
+<span id="cb409-9"><a href="solutions.html#cb409-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb409-10"><a href="solutions.html#cb409-10" aria-hidden="true" tabindex="-1"></a><span class="st"># multiple linear regression, direct effect b (M1 on Y while controlling for X and M2) AND direct effect c´ (X on Y while controlling for M1 and M2)</span></span>
+<span id="cb409-11"><a href="solutions.html#cb409-11" aria-hidden="true" tabindex="-1"></a><span class="st"># AND direct effect e (M2 on Y while controlling for X and M1)</span></span>
+<span id="cb409-12"><a href="solutions.html#cb409-12" aria-hidden="true" tabindex="-1"></a><span class="st">reaction ~ pmi + cond</span></span>
+<span id="cb409-13"><a href="solutions.html#cb409-13" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;</span></span>
+<span id="cb409-14"><a href="solutions.html#cb409-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb409-15"><a href="solutions.html#cb409-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Model Estimation</span></span>
+<span id="cb409-16"><a href="solutions.html#cb409-16" aria-hidden="true" tabindex="-1"></a>model.EST<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">sem</span>(model.SPE<span class="fl">.2</span>, <span class="at">data =</span> data, <span class="at">estimator  =</span> <span class="st">&quot;MLR&quot;</span>)</span>
+<span id="cb409-17"><a href="solutions.html#cb409-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb409-18"><a href="solutions.html#cb409-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Model Evaluation</span></span>
+<span id="cb409-19"><a href="solutions.html#cb409-19" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.EST<span class="fl">.2</span>,<span class="at">fit.measures =</span> <span class="cn">TRUE</span>,<span class="at">rsq =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## lavaan 0.6-11 ended normally after 1 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         8
+##                                                       
+##   Number of observations                           123
+##                                                       
+## Model Test User Model:
+##                                                Standard      Robust
+##   Test Statistic                                 20.015      17.632
+##   Degrees of freedom                                  1           1
+##   P-value (Chi-square)                            0.000       0.000
+##   Scaling correction factor                                   1.135
+##        Yuan-Bentler correction (Mplus variant)                     
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                                65.010      63.611
+##   Degrees of freedom                                 6           6
+##   P-value                                        0.000       0.000
+##   Scaling correction factor                                  1.022
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    0.678       0.711
+##   Tucker-Lewis Index (TLI)                      -0.933      -0.732
+##                                                                   
+##   Robust Comparative Fit Index (CFI)                         0.679
+##   Robust Tucker-Lewis Index (TLI)                           -0.924
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -655.666    -655.666
+##   Scaling correction factor                                  0.978
+##       for the MLR correction                                      
+##   Loglikelihood unrestricted model (H1)       -645.659    -645.659
+##   Scaling correction factor                                  0.995
+##       for the MLR correction                                      
+##                                                                   
+##   Akaike (AIC)                                1327.332    1327.332
+##   Bayesian (BIC)                              1349.829    1349.829
+##   Sample-size adjusted Bayesian (BIC)         1324.534    1324.534
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.393       0.368
+##   90 Percent confidence interval - lower         0.255       0.238
+##   90 Percent confidence interval - upper         0.552       0.517
+##   P-value RMSEA &lt;= 0.05                          0.000       0.000
+##                                                                   
+##   Robust RMSEA                                               0.392
+##   90 Percent confidence interval - lower                     0.245
+##   90 Percent confidence interval - upper                     0.561
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.104       0.104
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                             Sandwich
+##   Information bread                           Observed
+##   Observed information based on                Hessian
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##   import ~                                            
+##     cond              0.627    0.308    2.032    0.042
+##   pmi ~                                               
+##     import            0.196    0.077    2.546    0.011
+##     cond              0.354    0.231    1.530    0.126
+##   reaction ~                                          
+##     pmi               0.506    0.077    6.543    0.000
+##     cond              0.254    0.254    1.001    0.317
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##    .import            2.893    0.286   10.132    0.000
+##    .pmi               1.564    0.248    6.306    0.000
+##    .reaction          1.893    0.197    9.609    0.000
+## 
+## R-Square:
+##                    Estimate
+##     import            0.033
+##     pmi               0.097
+##     reaction          0.206</code></pre>
+<p><strong>Evaluation:</strong> Both models fit terribly. The <em>chi<sup>2</sup></em> in both models is greater than 3. CFI and TLI are too low in both models. Finally, RMSEA and SRMR are greater than 0.08. This poor fit can have different reasons, e.g., the models are actually wrong OR the sample size is just too small. In this case, it is not unlikely to be the latter reason, since we have only 123 observations but are trying to fit a complex model.</p>
+</div>
+<div id="task-2-13" class="section level3 unnumbered">
+<h3>Task 2</h3>
+<p>Create a visual representation of your two models.</p>
+<p><strong>Model 1:</strong></p>
+<div id="htmlwidget-cce83894e731b009ab89" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cce83894e731b009ab89">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Times ] \n node [shape = box] \n cond; import; pmi; reaction \n node [shape = oval] \n  \n cond [label = \"Exp. condition\"]\nimport [label = \"Topic importance\"]\npmi [label = \"Presumed media\n influence\"]\nreaction [label = \"Intention to\n buy sugar\"] \n edge [ color = black ] \n cond->import [label = \"0.63*\"] cond->pmi [label = \"0.48*\"] cond->reaction [label = \"0.1\"] import->reaction [label = \"0.32***\"] pmi->reaction [label = \"0.4***\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p><strong>Model 2:</strong></p>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="solutions.html#cb411-1" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">cond=</span> <span class="st">&quot;Exp. condition&quot;</span>, <span class="at">import=</span> <span class="st">&quot;Topic importance&quot;</span>, <span class="at">pmi=</span> <span class="st">&quot;Presumed media</span><span class="sc">\n</span><span class="st"> influence&quot;</span>, <span class="at">reaction=</span> <span class="st">&quot;Intention to</span><span class="sc">\n</span><span class="st"> buy sugar&quot;</span>)</span>
+<span id="cb411-2"><a href="solutions.html#cb411-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lavaanPlot</span>(<span class="at">model =</span> model.EST<span class="fl">.2</span>, <span class="at">graph_options =</span> <span class="fu">list</span>(<span class="at">rankdir =</span> <span class="st">&quot;LR&quot;</span>), <span class="at">node_options =</span> <span class="fu">list</span>(<span class="at">shape =</span> <span class="st">&quot;box&quot;</span>, <span class="at">fontname =</span> <span class="st">&quot;Times&quot;</span>), <span class="at">edge_options =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">&quot;black&quot;</span>), <span class="at">coefs =</span> T, <span class="at">stars =</span> <span class="st">&quot;regress&quot;</span>, <span class="at">stand =</span> <span class="cn">FALSE</span>, <span class="at">labels =</span> labels)</span></code></pre></div>
+<div id="htmlwidget-e30673bfb7bd3a9f76a7" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e30673bfb7bd3a9f76a7">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Times ] \n node [shape = box] \n cond; import; pmi; reaction \n node [shape = oval] \n  \n cond [label = \"Exp. condition\"]\nimport [label = \"Topic importance\"]\npmi [label = \"Presumed media\n influence\"]\nreaction [label = \"Intention to\n buy sugar\"] \n edge [ color = black ] \n cond->import [label = \"0.63*\"] import->pmi [label = \"0.2*\"] cond->pmi [label = \"0.35\"] pmi->reaction [label = \"0.51***\"] cond->reaction [label = \"0.25\"]  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 </div>
 </div>
 </div>
+
 
 
 
@@ -1349,7 +1635,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="exercise-6-test-your-knowledge.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-7-test-your-knowledge.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

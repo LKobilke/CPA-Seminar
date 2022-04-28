@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-04-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,10 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
 
 
 <style type="text/css">
@@ -371,20 +375,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.5" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-5-4"><i class="fa fa-check"></i><b>16.5</b> Task 5</a></li>
 <li class="chapter" data-level="16.6" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-6-3"><i class="fa fa-check"></i><b>16.6</b> Task 6</a></li>
 </ul></li>
+<li class="chapter" data-level="17" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html"><i class="fa fa-check"></i><b>17</b> Tutorial: CPA and model fit</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#what-is-cpa"><i class="fa fa-check"></i><b>17.1</b> What is CPA?</a></li>
+<li class="chapter" data-level="17.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#fitting-models-with-lavaan"><i class="fa fa-check"></i><b>17.2</b> Fitting models with lavaan</a></li>
+<li class="chapter" data-level="17.3" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#example-evaluate-model-fit-for-complex-models"><i class="fa fa-check"></i><b>17.3</b> Example: Evaluate model fit for complex models</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#theory-driven-hypotheses"><i class="fa fa-check"></i><b>17.3.1</b> Theory-driven hypotheses</a></li>
+<li class="chapter" data-level="17.3.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#model-fit-and-evaluation"><i class="fa fa-check"></i><b>17.3.2</b> Model fit and evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#take-aways-10"><i class="fa fa-check"></i><b>17.4</b> Take-Aways</a></li>
+<li class="chapter" data-level="17.5" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#more-tutorials-on-this-9"><i class="fa fa-check"></i><b>17.5</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html"><i class="fa fa-check"></i><b>18</b> Exercise 7: Test your knowledge</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-1-6"><i class="fa fa-check"></i><b>18.1</b> Task 1</a></li>
+<li class="chapter" data-level="18.2" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-2-6"><i class="fa fa-check"></i><b>18.2</b> Task 2</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-6"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-6"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-6"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-5"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-5"><i class="fa fa-check"></i>Task 5</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-2"><i class="fa fa-check"></i>Solutions for Exercise 2</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-7"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-6"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-6"><i class="fa fa-check"></i>Task 5</a></li>
@@ -393,14 +414,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-3"><i class="fa fa-check"></i>Solutions for Exercise 3</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-8"><i class="fa fa-check"></i>Task 3</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-4"><i class="fa fa-check"></i>Solutions for Exercise 4</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-9"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-7"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-7"><i class="fa fa-check"></i>Task 5</a></li>
@@ -408,8 +429,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-5"><i class="fa fa-check"></i>Solutions for Exercise 5</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-10"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-8"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-8"><i class="fa fa-check"></i>Task 5</a></li>
@@ -418,12 +439,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-6"><i class="fa fa-check"></i>Solutions for Exercise 6</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-12"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-12"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-11"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-9"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-9"><i class="fa fa-check"></i>Task 5</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-6-7"><i class="fa fa-check"></i>Task 6</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-7"><i class="fa fa-check"></i>Solutions for Exercise 7</a>
+<ul>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-13"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-13"><i class="fa fa-check"></i>Task 2</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -449,7 +475,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">R for Conditional Process Analysis</h1>
 <p class="author"><em>Lara Kobilke, IKMZ, University of Zurich</em></p>
-<p class="date"><em>2022-04-19</em></p>
+<p class="date"><em>2022-04-28</em></p>
 </div>
 <div id="general-information-on-the-course" class="section level1 unnumbered">
 <h1>General information on the course</h1>

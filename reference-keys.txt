@@ -175,3 +175,14 @@ task-3-5
 task-4-4
 task-5-4
 task-6-3
+tutorial-cpa-and-model-fit
+what-is-cpa
+fitting-models-with-lavaan
+example-evaluate-model-fit-for-complex-models
+theory-driven-hypotheses
+model-fit-and-evaluation
+take-aways-10
+more-tutorials-on-this-9
+exercise-7-test-your-knowledge
+task-1-6
+task-2-6

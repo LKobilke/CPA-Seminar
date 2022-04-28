@@ -24,7 +24,7 @@
 <meta name="author" content="Lara Kobilke, IKMZ, University of Zurich" />
 
 
-<meta name="date" content="2022-04-19" />
+<meta name="date" content="2022-04-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,6 +53,10 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.9/grViz.js"></script>
 
 
 <style type="text/css">
@@ -371,20 +375,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.5" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-5-4"><i class="fa fa-check"></i><b>16.5</b> Task 5</a></li>
 <li class="chapter" data-level="16.6" data-path="exercise-6-test-your-knowledge.html"><a href="exercise-6-test-your-knowledge.html#task-6-3"><i class="fa fa-check"></i><b>16.6</b> Task 6</a></li>
 </ul></li>
+<li class="chapter" data-level="17" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html"><i class="fa fa-check"></i><b>17</b> Tutorial: CPA and model fit</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#what-is-cpa"><i class="fa fa-check"></i><b>17.1</b> What is CPA?</a></li>
+<li class="chapter" data-level="17.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#fitting-models-with-lavaan"><i class="fa fa-check"></i><b>17.2</b> Fitting models with lavaan</a></li>
+<li class="chapter" data-level="17.3" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#example-evaluate-model-fit-for-complex-models"><i class="fa fa-check"></i><b>17.3</b> Example: Evaluate model fit for complex models</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#theory-driven-hypotheses"><i class="fa fa-check"></i><b>17.3.1</b> Theory-driven hypotheses</a></li>
+<li class="chapter" data-level="17.3.2" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#model-fit-and-evaluation"><i class="fa fa-check"></i><b>17.3.2</b> Model fit and evaluation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#take-aways-10"><i class="fa fa-check"></i><b>17.4</b> Take-Aways</a></li>
+<li class="chapter" data-level="17.5" data-path="tutorial-cpa-and-model-fit.html"><a href="tutorial-cpa-and-model-fit.html#more-tutorials-on-this-9"><i class="fa fa-check"></i><b>17.5</b> More tutorials on this</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html"><i class="fa fa-check"></i><b>18</b> Exercise 7: Test your knowledge</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-1-6"><i class="fa fa-check"></i><b>18.1</b> Task 1</a></li>
+<li class="chapter" data-level="18.2" data-path="exercise-7-test-your-knowledge.html"><a href="exercise-7-test-your-knowledge.html#task-2-6"><i class="fa fa-check"></i><b>18.2</b> Task 2</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html"><i class="fa fa-check"></i>Solutions</a>
 <ul>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-1"><i class="fa fa-check"></i>Solutions for Exercise 1</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-6"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-6"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-6"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-5"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-5"><i class="fa fa-check"></i>Task 5</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-2"><i class="fa fa-check"></i>Solutions for Exercise 2</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-7"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-7"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-7"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-6"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-6"><i class="fa fa-check"></i>Task 5</a></li>
@@ -393,14 +414,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-3"><i class="fa fa-check"></i>Solutions for Exercise 3</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-8"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-8"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-8"><i class="fa fa-check"></i>Task 3</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-4"><i class="fa fa-check"></i>Solutions for Exercise 4</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-9"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-9"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-9"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-7"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-7"><i class="fa fa-check"></i>Task 5</a></li>
@@ -408,8 +429,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-5"><i class="fa fa-check"></i>Solutions for Exercise 5</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-10"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-10"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-10"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-8"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-8"><i class="fa fa-check"></i>Task 5</a></li>
@@ -418,12 +439,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-6"><i class="fa fa-check"></i>Solutions for Exercise 6</a>
 <ul>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-11"><i class="fa fa-check"></i>Task 1</a></li>
-<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-11"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-12"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-12"><i class="fa fa-check"></i>Task 2</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-3-11"><i class="fa fa-check"></i>Task 3</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-4-9"><i class="fa fa-check"></i>Task 4</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-5-9"><i class="fa fa-check"></i>Task 5</a></li>
 <li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-6-7"><i class="fa fa-check"></i>Task 6</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#solutions-for-exercise-7"><i class="fa fa-check"></i>Solutions for Exercise 7</a>
+<ul>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-1-13"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="solutions.html"><a href="solutions.html#task-2-13"><i class="fa fa-check"></i>Task 2</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -661,7 +687,7 @@ This variable measured self-identification as a voter of the U.S. Republican par
 </tr>
 </tbody>
 </table>
-<p>As you can see in the first table, support for government action decreases with larger values of viewpoint extremity for conservative voters (W = 1), but increases with larger values of viewpoint extremity for liberal voters (W = 0). Like table 1, table 2 shows that the difference in support for government action between conservative and liberal voters becomes greater as viewpoint diversity increases (from X= 1 to X = 3), i.e. the decrease in support for goverment action becomes greater. It is this pattern that is meant when we learn that the effect of X on Y will get more negative (get smaller) as W gets larger, and that the effect of W on Y will get more negative (get smaller) as X gets larger. In fact, we can interpret <em>b<sub>3</sub></em> as a “difference between differences” (Hayes, 2022, p. 255): Here, as viewpoint extremity increases by one unit, the difference in impact of vote choice on support for government action increases in a way that conservatists’ support for government action decreses by -0.706 units.</p>
+<p>As you can see in the first table, support for government action decreases with larger values of viewpoint extremity for conservative voters (W = 1), but increases with larger values of viewpoint extremity for liberal voters (W = 0). Like table 1, table 2 shows that the difference in support for government action between conservative and liberal voters becomes greater as viewpoint diversity increases (from X= 1 to X = 3), i.e. the decrease in support for government action becomes greater. It is this pattern that is meant when we learn that the effect of X on Y will get more negative (get smaller) as W gets larger, and that the effect of W on Y will get more negative (get smaller) as X gets larger. In fact, we can interpret <em>b<sub>3</sub></em> as a “difference between differences” (Hayes, 2022, p. 255): Here, the effect of viewpoint extremity on support for government action depends on vote choice, i.e., support for government action decreases by -0.706 with every one-point increase in viewpoint extremity for conservative voters (W = 1).</p>
 <p><em>General interpretation of b<sub>1</sub> and b<sub>2</sub>:</em> <em>b<sub>1</sub></em> and <em>b<sub>2</sub></em> are conditional effects. These regression coefficients estimate the effect of X when W = 0 and the effect of W when X = 0, respectively. You’ll realize soon that these coefficients aren’t always sensible, for instance, viewpoint extremity (X) can’t even become 0 on our chosen scale that ranges from 1 to 4. We’ll discuss that in a second.</p>
 <p><em>Interpretation of b<sub>1</sub>’s coefficient:</em> The regression coefficient for the conditional effect of X is <em>b<sub>1</sub></em> = 0.178 (<em>p</em> &lt; .001). This is the estimated difference in support for government action against climate change between two individuals who differ by one unit in their viewpoint extremity, but both score zero on the <em>conservative_voter</em> variable, i.e. are liberal voters. This score is positive, which implies that liberals who have a one unit increase in their viewpoint extremity are estimates to have a 0.178 increase in their support for government action.</p>
 <p><em>Interpretation of b<sub>2</sub>’s coefficient:</em> The regression coefficient for the conditional effect of W is <em>b<sub>2</sub></em> = 0.675 (<em>p</em> &lt; .01).This is the estimated difference in support for government action against climate change between liberals and conservatives who score zero on viewpoint extremity (X = 0), i.e. they are estimated to differ by 0.675 points. Although this interpretation is mathematically correct, substantively it is nonsense because the measure of viewpoint extremity in this study is mathematically bound between 1 and 4. An estimate of the effect of vote choice conditioned on a score of zero on viewpoint extremity has no meaning because no such people could even exist.</p>
